@@ -1,6 +1,6 @@
 import React from 'react';
 import './App.css';
-import Tags from './components/Tags';
+import Tagz from './components/Tagz';
 
 
 
@@ -8,7 +8,7 @@ function App() {
   return (
     <div className="App">
     <h1>Providence Athenæum</h1>
-    <Tags />
+    <Tagz />
 
     </div>
   );
