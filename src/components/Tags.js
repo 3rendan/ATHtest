@@ -1,24 +1,38 @@
-import React, {useEffect, useState} from 'react';
-import { useTags } from '../Calls';
+import React, { Component } from 'react'
+import axios from 'axios';
 
+class Tags extends Component {
+  constructor(props) {
+    super(props)
 
-const Tags = () => {
-  const tags = useTags();
-  console.log(tags)
-  return (
-    <div>
-    { tags.map(tag => {
-      return  (
-          <div key={tag.id} className="text-center">
-              <h3>{ tag.name }</h3> has<h3> { tag.id } for an id</h3>
-          </div>
-        )
-    })}
-    </div>
-  );
+    this.state = {
+      tags: []
+    }
+  }
+  componentDidMount() {
+    axios('http://digital.provath.org/api/tags')
+    .then(res => {
+      this.setState({ tags: res.data })
+    })
+    .catch(error => console.error(error))
+  }
+
+  render() {
+    const { tags } = this.state;
+    console.log(tags);
+
+    return (
+      <div>
+      { tags.map(tag => {
+        return  (
+            <div key={tag.id} className="text-center">
+                <h3>{ tag.name }</h3>
+            </div>
+          )
+      })}
+      </div>
+    )
+  }
 }
 
-
-
-
-export default Tags;
+export default Tags
