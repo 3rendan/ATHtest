@@ -1,6 +1,5 @@
 import React, { Component } from 'react'
 import axios from 'axios';
-import Metadata from './Metadata';
 
 class Items extends Component {
   constructor(props) {
@@ -20,7 +19,7 @@ class Items extends Component {
 
   render() {
     const { items } = this.state;
-    console.log(items);
+    console.log(this.state.data);
 
     return (
       <div>
@@ -29,7 +28,8 @@ class Items extends Component {
             <div key={item.id} className="text-center">
                 <h3>{ item.id }</h3>
                 <h3>{ item.url }</h3>
-                <Metadata />
+                {console.log(item.element_texts)}
+
 
             </div>
           )
