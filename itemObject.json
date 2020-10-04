@@ -1,0 +1,715 @@
+{
+  "id": 68,
+  "url": "http://digital.provath.org/api/items/68",
+  "public": true,
+  "featured": false,
+  "added": "2020-08-21T15:35:41+00:00",
+  "modified": "2020-09-25T13:25:53+00:00",
+  "item_type": {
+    "id": 6,
+    "url": "http://digital.provath.org/api/item_types/6",
+    "name": "Still Image",
+    "resource": "item_types"
+  },
+  "collection": {
+    "id": 1,
+    "url": "http://digital.provath.org/api/collections/1",
+    "resource": "collections"
+  },
+  "owner": {
+    "id": 1,
+    "url": "http://digital.provath.org/api/users/1",
+    "resource": "users"
+  },
+  "files": {
+    "count": 1,
+    "url": "http://digital.provath.org/api/files?item=68",
+    "resource": "files"
+  },
+  "tags": [
+    {
+      "id": 82,
+      "url": "http://digital.provath.org/api/tags/82",
+      "name": "18th century",
+      "resource": "tags"
+    },
+    {
+      "id": 81,
+      "url": "http://digital.provath.org/api/tags/81",
+      "name": "Bust",
+      "resource": "tags"
+    },
+    {
+      "id": 108,
+      "url": "http://digital.provath.org/api/tags/108",
+      "name": "Education",
+      "resource": "tags"
+    },
+    {
+      "id": 100,
+      "url": "http://digital.provath.org/api/tags/100",
+      "name": "English",
+      "resource": "tags"
+    },
+    {
+      "id": 98,
+      "url": "http://digital.provath.org/api/tags/98",
+      "name": "Feminism",
+      "resource": "tags"
+    },
+    {
+      "id": 99,
+      "url": "http://digital.provath.org/api/tags/99",
+      "name": "Philosophy",
+      "resource": "tags"
+    },
+    {
+      "id": 34,
+      "url": "http://digital.provath.org/api/tags/34",
+      "name": "Plaster",
+      "resource": "tags"
+    },
+    {
+      "id": 8,
+      "url": "http://digital.provath.org/api/tags/8",
+      "name": "Portrait",
+      "resource": "tags"
+    },
+    {
+      "id": 80,
+      "url": "http://digital.provath.org/api/tags/80",
+      "name": "Sculpture",
+      "resource": "tags"
+    },
+    {
+      "id": 107,
+      "url": "http://digital.provath.org/api/tags/107",
+      "name": "Women",
+      "resource": "tags"
+    },
+    {
+      "id": 39,
+      "url": "http://digital.provath.org/api/tags/39",
+      "name": "Writers",
+      "resource": "tags"
+    }
+  ],
+  "element_texts": [
+    {
+      "text": "Mary Wollstonecraft ",
+      "element_set": {
+        "id": 1,
+        "url": "http://digital.provath.org/api/element_sets/1",
+        "name": "Dublin Core",
+        "resource": "element_sets"
+      },
+      "element": {
+        "id": 50,
+        "url": "http://digital.provath.org/api/elements/50",
+        "name": "Title",
+        "resource": "elements"
+      }
+    },
+    {
+      "text": "<a href=\"https://id.loc.gov/authorities/names/n78095613.html\" target=\"_blank\" rel=\"noreferrer\">Wollstonecraft, Mary, 1759-1797</a>",
+      "element_set": {
+        "id": 1,
+        "url": "http://digital.provath.org/api/element_sets/1",
+        "name": "Dublin Core",
+        "resource": "element_sets"
+      },
+      "element": {
+        "id": 49,
+        "url": "http://digital.provath.org/api/elements/49",
+        "name": "Subject",
+        "resource": "elements"
+      }
+    },
+    {
+      "text": "In 2019, the Athenæum commissioned an original bust of Mary Wollstonecraft [1759-1797], English writer, philosopher, and pioneer of women’s rights, by artist Robert Shure of Skylight Studios, Woburn, MA. The bust was modeled after the painting of Wollstonecraft completed in 1797 by John Opie [1761-1807], for which she sat while pregnant with her daughter Mary Wollstonecraft Shelly (née Godwin) [1797-1851]. This is the first known sculpture of Wollstonecraft in North America. <br /><br />Wollstonecraft was born in London, the second of seven children in an unstable family environment. She left home at the age of 19 to earn her own livelihood and to pursue work as a writer. Wollstonecraft became immersed in the radical intellectual circles of London, and traveled to Paris in support of the French Revolution. Her most famous work, <em>A Vindication of the Rights of Woman</em> (1792), explores the concept of educational equality between the sexes, and is still considered a foundational work of feminist philosophy. <br /><br />After a relationship with Gilbert Imlay, American businessman and diplomat to the U.S. embassy in France (with whom she had a daughter, Fanny Imlay), Wollstonecraft married the philosopher and writer William Godwin. In 1797 she gave birth to their daughter, Mary (the future author of <em>Frankenstein</em>), and died from complications of childbirth. Although her posthumous reputation initially suffered as a result of a biography published by her husband that exposed her “immoral” lifestyle, her revolutionary work became a cornerstone treatise to future advocates of women’s rights. <br /><br />The Athenæum commissioned two other busts at the same time: those of Frederick Douglass and Louisa May Alcott.",
+      "element_set": {
+        "id": 1,
+        "url": "http://digital.provath.org/api/element_sets/1",
+        "name": "Dublin Core",
+        "resource": "element_sets"
+      },
+      "element": {
+        "id": 41,
+        "url": "http://digital.provath.org/api/elements/41",
+        "name": "Description",
+        "resource": "elements"
+      }
+    },
+    {
+      "text": "Shure, Robert (Skylight Studios)",
+      "element_set": {
+        "id": 1,
+        "url": "http://digital.provath.org/api/element_sets/1",
+        "name": "Dublin Core",
+        "resource": "element_sets"
+      },
+      "element": {
+        "id": 39,
+        "url": "http://digital.provath.org/api/elements/39",
+        "name": "Creator",
+        "resource": "elements"
+      }
+    },
+    {
+      "text": "2020",
+      "element_set": {
+        "id": 1,
+        "url": "http://digital.provath.org/api/element_sets/1",
+        "name": "Dublin Core",
+        "resource": "element_sets"
+      },
+      "element": {
+        "id": 40,
+        "url": "http://digital.provath.org/api/elements/40",
+        "name": "Date",
+        "resource": "elements"
+      }
+    },
+    {
+      "text": "No known rights issues.",
+      "element_set": {
+        "id": 1,
+        "url": "http://digital.provath.org/api/element_sets/1",
+        "name": "Dublin Core",
+        "resource": "element_sets"
+      },
+      "element": {
+        "id": 47,
+        "url": "http://digital.provath.org/api/elements/47",
+        "name": "Rights",
+        "resource": "elements"
+      }
+    },
+    {
+      "text": "<a href=\"https://id.loc.gov/authorities/names/nr91026286.html\" target=\"_blank\" rel=\"noreferrer\">Opie, John, 1761-1807</a>",
+      "element_set": {
+        "id": 1,
+        "url": "http://digital.provath.org/api/element_sets/1",
+        "name": "Dublin Core",
+        "resource": "element_sets"
+      },
+      "element": {
+        "id": 46,
+        "url": "http://digital.provath.org/api/elements/46",
+        "name": "Relation",
+        "resource": "elements"
+      }
+    },
+    {
+      "text": "image/jpeg",
+      "element_set": {
+        "id": 1,
+        "url": "http://digital.provath.org/api/element_sets/1",
+        "name": "Dublin Core",
+        "resource": "element_sets"
+      },
+      "element": {
+        "id": 42,
+        "url": "http://digital.provath.org/api/elements/42",
+        "name": "Format",
+        "resource": "elements"
+      }
+    },
+    {
+      "text": "StillImage",
+      "element_set": {
+        "id": 1,
+        "url": "http://digital.provath.org/api/element_sets/1",
+        "name": "Dublin Core",
+        "resource": "element_sets"
+      },
+      "element": {
+        "id": 51,
+        "url": "http://digital.provath.org/api/elements/51",
+        "name": "Type",
+        "resource": "elements"
+      }
+    },
+    {
+      "text": "PA-2020-04",
+      "element_set": {
+        "id": 1,
+        "url": "http://digital.provath.org/api/element_sets/1",
+        "name": "Dublin Core",
+        "resource": "element_sets"
+      },
+      "element": {
+        "id": 43,
+        "url": "http://digital.provath.org/api/elements/43",
+        "name": "Identifier",
+        "resource": "elements"
+      }
+    },
+    {
+      "text": "PA-2020-04",
+      "element_set": {
+        "id": 4,
+        "url": "http://digital.provath.org/api/element_sets/4",
+        "name": "MODS",
+        "resource": "element_sets"
+      },
+      "element": {
+        "id": 52,
+        "url": "http://digital.provath.org/api/elements/52",
+        "name": "Local accession",
+        "resource": "elements"
+      }
+    },
+    {
+      "text": "Mary Wollstonecraft",
+      "element_set": {
+        "id": 4,
+        "url": "http://digital.provath.org/api/element_sets/4",
+        "name": "MODS",
+        "resource": "element_sets"
+      },
+      "element": {
+        "id": 53,
+        "url": "http://digital.provath.org/api/elements/53",
+        "name": "Primary title",
+        "resource": "elements"
+      }
+    },
+    {
+      "text": "Shure, Robert (Skylight Studios)",
+      "element_set": {
+        "id": 4,
+        "url": "http://digital.provath.org/api/element_sets/4",
+        "name": "MODS",
+        "resource": "element_sets"
+      },
+      "element": {
+        "id": 57,
+        "url": "http://digital.provath.org/api/elements/57",
+        "name": "Name",
+        "resource": "elements"
+      }
+    },
+    {
+      "text": "personal",
+      "element_set": {
+        "id": 4,
+        "url": "http://digital.provath.org/api/element_sets/4",
+        "name": "MODS",
+        "resource": "element_sets"
+      },
+      "element": {
+        "id": 58,
+        "url": "http://digital.provath.org/api/elements/58",
+        "name": "Name Type",
+        "resource": "elements"
+      }
+    },
+    {
+      "text": "local",
+      "element_set": {
+        "id": 4,
+        "url": "http://digital.provath.org/api/element_sets/4",
+        "name": "MODS",
+        "resource": "element_sets"
+      },
+      "element": {
+        "id": 59,
+        "url": "http://digital.provath.org/api/elements/59",
+        "name": "Name Authority",
+        "resource": "elements"
+      }
+    },
+    {
+      "text": "<a href=\"https://id.loc.gov/vocabulary/relators/scl.html\" target=\"_blank\" rel=\"noreferrer\">Sculptor</a>",
+      "element_set": {
+        "id": 4,
+        "url": "http://digital.provath.org/api/element_sets/4",
+        "name": "MODS",
+        "resource": "element_sets"
+      },
+      "element": {
+        "id": 62,
+        "url": "http://digital.provath.org/api/elements/62",
+        "name": "Role",
+        "resource": "elements"
+      }
+    },
+    {
+      "text": "https://id.loc.gov/vocabulary/relators/scl.html",
+      "element_set": {
+        "id": 4,
+        "url": "http://digital.provath.org/api/element_sets/4",
+        "name": "MODS",
+        "resource": "element_sets"
+      },
+      "element": {
+        "id": 63,
+        "url": "http://digital.provath.org/api/elements/63",
+        "name": "Role Value URI",
+        "resource": "elements"
+      }
+    },
+    {
+      "text": "still image",
+      "element_set": {
+        "id": 4,
+        "url": "http://digital.provath.org/api/element_sets/4",
+        "name": "MODS",
+        "resource": "element_sets"
+      },
+      "element": {
+        "id": 64,
+        "url": "http://digital.provath.org/api/elements/64",
+        "name": "Type of resource",
+        "resource": "elements"
+      }
+    },
+    {
+      "text": "<a href=\"https://id.loc.gov/vocabulary/graphicMaterials/tgm000526.html\" target=\"_blank\" rel=\"noreferrer\">Objects</a>",
+      "element_set": {
+        "id": 4,
+        "url": "http://digital.provath.org/api/element_sets/4",
+        "name": "MODS",
+        "resource": "element_sets"
+      },
+      "element": {
+        "id": 65,
+        "url": "http://digital.provath.org/api/elements/65",
+        "name": "BASIC genre/form",
+        "resource": "elements"
+      }
+    },
+    {
+      "text": "https://id.loc.gov/vocabulary/graphicMaterials/tgm000526.html",
+      "element_set": {
+        "id": 4,
+        "url": "http://digital.provath.org/api/element_sets/4",
+        "name": "MODS",
+        "resource": "element_sets"
+      },
+      "element": {
+        "id": 66,
+        "url": "http://digital.provath.org/api/elements/66",
+        "name": "BASIC genre/form Value URI",
+        "resource": "elements"
+      }
+    },
+    {
+      "text": "<a href=\"https://id.loc.gov/vocabulary/graphicMaterials/tgm009291.html\" target=\"_blank\" rel=\"noreferrer\">Sculpture</a>",
+      "element_set": {
+        "id": 4,
+        "url": "http://digital.provath.org/api/element_sets/4",
+        "name": "MODS",
+        "resource": "element_sets"
+      },
+      "element": {
+        "id": 67,
+        "url": "http://digital.provath.org/api/elements/67",
+        "name": "SPECIFIC TGM genre/form",
+        "resource": "elements"
+      }
+    },
+    {
+      "text": "https://id.loc.gov/vocabulary/graphicMaterials/tgm009291.html",
+      "element_set": {
+        "id": 4,
+        "url": "http://digital.provath.org/api/element_sets/4",
+        "name": "MODS",
+        "resource": "element_sets"
+      },
+      "element": {
+        "id": 68,
+        "url": "http://digital.provath.org/api/elements/68",
+        "name": "SPECIFIC TGM Value URI",
+        "resource": "elements"
+      }
+    },
+    {
+      "text": "dateCreated",
+      "element_set": {
+        "id": 4,
+        "url": "http://digital.provath.org/api/element_sets/4",
+        "name": "MODS",
+        "resource": "element_sets"
+      },
+      "element": {
+        "id": 72,
+        "url": "http://digital.provath.org/api/elements/72",
+        "name": "Date type",
+        "resource": "elements"
+      }
+    },
+    {
+      "text": "2020",
+      "element_set": {
+        "id": 4,
+        "url": "http://digital.provath.org/api/element_sets/4",
+        "name": "MODS",
+        "resource": "element_sets"
+      },
+      "element": {
+        "id": 73,
+        "url": "http://digital.provath.org/api/elements/73",
+        "name": "Date (single date)",
+        "resource": "elements"
+      }
+    },
+    {
+      "text": "approximate",
+      "element_set": {
+        "id": 4,
+        "url": "http://digital.provath.org/api/element_sets/4",
+        "name": "MODS",
+        "resource": "element_sets"
+      },
+      "element": {
+        "id": 76,
+        "url": "http://digital.provath.org/api/elements/76",
+        "name": "Date qualifier",
+        "resource": "elements"
+      }
+    },
+    {
+      "text": "Plaster sculpture",
+      "element_set": {
+        "id": 4,
+        "url": "http://digital.provath.org/api/element_sets/4",
+        "name": "MODS",
+        "resource": "element_sets"
+      },
+      "element": {
+        "id": 77,
+        "url": "http://digital.provath.org/api/elements/77",
+        "name": "Physical description",
+        "resource": "elements"
+      }
+    },
+    {
+      "text": "reformatted digital",
+      "element_set": {
+        "id": 4,
+        "url": "http://digital.provath.org/api/element_sets/4",
+        "name": "MODS",
+        "resource": "element_sets"
+      },
+      "element": {
+        "id": 79,
+        "url": "http://digital.provath.org/api/elements/79",
+        "name": "Digital origin",
+        "resource": "elements"
+      }
+    },
+    {
+      "text": "In 2019, the Athenæum commissioned an original bust of Mary Wollstonecraft [1759-1797], English writer, philosopher, and pioneer of women’s rights, by artist Robert Shure of Skylight Studios, Woburn, MA. The bust was modeled after the painting of Wollstonecraft completed in 1797 by John Opie [1761-1807], for which she sat while pregnant with her daughter Mary Wollstonecraft Shelly (née Godwin) [1797-1851]. This is the first known sculpture of Wollstonecraft in North America.\r\n\r\nWollstonecraft was born in London, the second of seven children in an unstable family environment. She left home at the age of 19 to earn her own livelihood and to pursue work as a writer. Wollstonecraft became immersed in the radical intellectual circles of London, and traveled to Paris in support of the French Revolution. Her most famous work, A Vindication on the Rights of Woman (1792), explores the concept of educational equality between the sexes, and is still considered a foundational work of feminist philosophy.   \r\n\r\nAfter a relationship with Gilbert Imlay, American businessman and diplomat to the U.S. embassy in France (with whom she had a daughter, Fanny Imlay), Wollstonecraft married the philosopher and writer William Godwin. In 1797 she gave birth to their daughter, Mary (the future author of Frankenstein), and died from complications of childbirth. Although her posthumous reputation initially suffered as a result of a biography published by her husband that exposed her “immoral” lifestyle, her revolutionary work became a cornerstone treatise to future advocates of women’s rights. \r\n\r\nThe Athenæum commissioned two other busts at the same time: those of Frederick Douglass and Louisa May Alcott.\r\n",
+      "element_set": {
+        "id": 4,
+        "url": "http://digital.provath.org/api/element_sets/4",
+        "name": "MODS",
+        "resource": "element_sets"
+      },
+      "element": {
+        "id": 80,
+        "url": "http://digital.provath.org/api/elements/80",
+        "name": "Summary/Abstract",
+        "resource": "elements"
+      }
+    },
+    {
+      "text": "Hayden Special Collections Development Fund",
+      "element_set": {
+        "id": 4,
+        "url": "http://digital.provath.org/api/element_sets/4",
+        "name": "MODS",
+        "resource": "element_sets"
+      },
+      "element": {
+        "id": 84,
+        "url": "http://digital.provath.org/api/elements/84",
+        "name": "Acquisition note(s)",
+        "resource": "elements"
+      }
+    },
+    {
+      "text": "<p>\"The Bust Project/Mary Wollstonecraft.\"  <i>The Providence </i><i>Athenæum</i>, 2020, <a href=\"https://providenceathenaeum.org/collections/the-bust-project/mary-wollstonecraft/\" target=\"_blank\" rel=\"noreferrer\">www.providenceathenaeum.org/collections/the-bust-project/mary-wollstonecraft/</a>.  Accessed 19 Sep. 2020.<br /><br />Opie, John.  <i>Mary Wollstonecraft</i>.  1797.  National Portrait Gallery, London. <i>National Portrait Gallery</i>, <a href=\"https://www.npg.org.uk/collections/search/portrait/mw02603\" target=\"_blank\" rel=\"noreferrer\">www.npg.org.uk/collections/search/portrait/mw02603</a>.  Accessed 1 Apr. 2020.<br /><br />“Robert Shure – Sculptor &amp; President of Skylight Studios.” <i>Skylight Studios</i>, <a href=\"https://www.skylightstudiosinc.com/a/robert-shure-sculptor-president-skylight-studios/\" target=\"_blank\" rel=\"noreferrer\">www.skylightstudiosinc.com/a/robert-shure-sculptor-president-skylight-studios/</a>. Accessed 31 Mar. 2020.<br /><br /><i>Skylight Studios</i>. Skylight Studios, Inc., 2018, <a href=\"https://www.skylightstudiosinc.com/\" target=\"_blank\" rel=\"noreferrer\">www.skylightstudiosinc.com/</a>.  Accessed 1 Sep. 2020.</p>",
+      "element_set": {
+        "id": 4,
+        "url": "http://digital.provath.org/api/element_sets/4",
+        "name": "MODS",
+        "resource": "element_sets"
+      },
+      "element": {
+        "id": 88,
+        "url": "http://digital.provath.org/api/elements/88",
+        "name": "Citation/reference note(s)",
+        "resource": "elements"
+      }
+    },
+    {
+      "text": "<a href=\"https://id.loc.gov/authorities/names/n78095613.html\" target=\"_blank\" rel=\"noreferrer\">Wollstonecraft, Mary, 1759-1797</a>",
+      "element_set": {
+        "id": 4,
+        "url": "http://digital.provath.org/api/element_sets/4",
+        "name": "MODS",
+        "resource": "element_sets"
+      },
+      "element": {
+        "id": 105,
+        "url": "http://digital.provath.org/api/elements/105",
+        "name": "Proper name subject",
+        "resource": "elements"
+      }
+    },
+    {
+      "text": "Personal",
+      "element_set": {
+        "id": 4,
+        "url": "http://digital.provath.org/api/element_sets/4",
+        "name": "MODS",
+        "resource": "element_sets"
+      },
+      "element": {
+        "id": 106,
+        "url": "http://digital.provath.org/api/elements/106",
+        "name": "Proper name subject Type",
+        "resource": "elements"
+      }
+    },
+    {
+      "text": "naf",
+      "element_set": {
+        "id": 4,
+        "url": "http://digital.provath.org/api/element_sets/4",
+        "name": "MODS",
+        "resource": "element_sets"
+      },
+      "element": {
+        "id": 107,
+        "url": "http://digital.provath.org/api/elements/107",
+        "name": "Proper name subject Authority",
+        "resource": "elements"
+      }
+    },
+    {
+      "text": "https://id.loc.gov/authorities/names/n78095613.html",
+      "element_set": {
+        "id": 4,
+        "url": "http://digital.provath.org/api/element_sets/4",
+        "name": "MODS",
+        "resource": "element_sets"
+      },
+      "element": {
+        "id": 108,
+        "url": "http://digital.provath.org/api/elements/108",
+        "name": "Proper name subject Value URI",
+        "resource": "elements"
+      }
+    },
+    {
+      "text": "Providence Athenæum",
+      "element_set": {
+        "id": 4,
+        "url": "http://digital.provath.org/api/element_sets/4",
+        "name": "MODS",
+        "resource": "element_sets"
+      },
+      "element": {
+        "id": 123,
+        "url": "http://digital.provath.org/api/elements/123",
+        "name": "Host collection",
+        "resource": "elements"
+      }
+    },
+    {
+      "text": "Main Library",
+      "element_set": {
+        "id": 4,
+        "url": "http://digital.provath.org/api/element_sets/4",
+        "name": "MODS",
+        "resource": "element_sets"
+      },
+      "element": {
+        "id": 134,
+        "url": "http://digital.provath.org/api/elements/134",
+        "name": "Physical location (library)",
+        "resource": "elements"
+      }
+    },
+    {
+      "text": "No known rights issues.",
+      "element_set": {
+        "id": 4,
+        "url": "http://digital.provath.org/api/element_sets/4",
+        "name": "MODS",
+        "resource": "element_sets"
+      },
+      "element": {
+        "id": 137,
+        "url": "http://digital.provath.org/api/elements/137",
+        "name": "Rights",
+        "resource": "elements"
+      }
+    },
+    {
+      "text": "This work is licensed under a <a href=\"http://creativecommons.org/licenses/by-nc-sa/4.0/\" target=\"_blank\" rel=\"noreferrer\">Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License</a>.",
+      "element_set": {
+        "id": 4,
+        "url": "http://digital.provath.org/api/element_sets/4",
+        "name": "MODS",
+        "resource": "element_sets"
+      },
+      "element": {
+        "id": 138,
+        "url": "http://digital.provath.org/api/elements/138",
+        "name": "License",
+        "resource": "elements"
+      }
+    },
+    {
+      "text": "Sculpture",
+      "element_set": {
+        "id": 3,
+        "url": "http://digital.provath.org/api/element_sets/3",
+        "name": "Item Type Metadata",
+        "resource": "element_sets"
+      },
+      "element": {
+        "id": 7,
+        "url": "http://digital.provath.org/api/elements/7",
+        "name": "Original Format",
+        "resource": "elements"
+      }
+    },
+    {
+      "text": "27.5 x 14 x 11 in.",
+      "element_set": {
+        "id": 3,
+        "url": "http://digital.provath.org/api/element_sets/3",
+        "name": "Item Type Metadata",
+        "resource": "element_sets"
+      },
+      "element": {
+        "id": 143,
+        "url": "http://digital.provath.org/api/elements/143",
+        "name": "Dimensions",
+        "resource": "elements"
+      }
+    },
+    {
+      "text": "Plaster",
+      "element_set": {
+        "id": 3,
+        "url": "http://digital.provath.org/api/element_sets/3",
+        "name": "Item Type Metadata",
+        "resource": "element_sets"
+      },
+      "element": {
+        "id": 144,
+        "url": "http://digital.provath.org/api/elements/144",
+        "name": "Medium",
+        "resource": "elements"
+      }
+    }
+  ],
+  "extended_resources": []
+}

@@ -17,19 +17,27 @@ class Items extends Component {
     .catch(error => console.error(error))
   }
 
+
   render() {
     const { items } = this.state;
+    
     console.log(this.state.data);
+
 
     return (
       <div>
       { items.map(item => {
-        return  (
-            <div key={item.id} className="text-center">
-                <h3>{ item.id }</h3>
-                <h3>{ item.url }</h3>
-                {console.log(item.element_texts)}
 
+        console.log()
+        return  (
+            <div key={item.id} className="text-center card-4">
+                <small> {item.element_texts[0].element.name} : {item.element_texts[0].text}</small>
+                <small> {item.element_texts[1].element.name} : {item.element_texts[1].text}</small>
+                <small> {item.element_texts[2].element.name} : {item.element_texts[2].text}</small>
+                <small> {item.element_texts[3].element.name} : {item.element_texts[3].text}</small>
+                <small> {item.element_texts[4].element.name} : {item.element_texts[4].text}</small>
+                <small> {item.element_texts[5].element.name} : {item.element_texts[5].text}</small>
+                <small> {item.element_texts[6].element.name} : {item.element_texts[6].text}</small>
 
             </div>
           )
