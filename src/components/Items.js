@@ -20,29 +20,31 @@ export default class Items extends Component {
 render(){
   const { images, items } = this.state;
   const imgBrowse = {
-    maxWidth: '100%',
+    maxWidth: '99%',
     margin: 'auto'
   };
   const cardBrowse = {
-    maxWidth: '200px',
-    margin: 'auto',
-    border: '1px #000 solid',
-    float: 'left',
-    padding: '10px',
+    display: 'flex',
+    justifyContent: 'space-around'
   };
+  const singleBrowse = {
+    flexBasis: '20%',
+    margin: '10px',
+    border: '1px #000 solid',
+    padding: '5px',
+
+  }
   return (
-    <div>
+    <div className="row col-md-10 offset-md-1" style={cardBrowse}>
       { items.map(item => {
         return  (
-            <div key={item.id} className="card-3" style={cardBrowse}>
-            <div className="row" style="flex-container">
+            <div key={item.id} className="card text-center" style={singleBrowse}>
              <img style={imgBrowse} src={images[29].file_urls.thumbnail} alt={item.element_texts[0].text} />
-             <div className="card-body text-center">
+             <div className="card-body">
                <h3>{item.element_texts[0].text}</h3>
                <small> {item.element_texts[5].element.name} : {item.element_texts[5].text}</small>
               </div>
               </div>
-            </div>
           )})
         }
       </div>

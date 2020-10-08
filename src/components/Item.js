@@ -35,7 +35,5 @@ render(){
                 <h4> {item.element_texts[5].element.name} : {item.element_texts[5].text}</h4>
                 <h4> {item.element_texts[13].element.name} : {item.element_texts[13].text}</h4>
 
-
-
             </div>
           )})
