@@ -1,14 +1,32 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
+import { BrowserRouter as Router } from "react-router-dom";
+import { createBrowserHistory } from "history";
+import Route from "react-router-dom/Route";
+import App from './App.js';
+import Header from "./components/Header.js";
+import Footer from "./components/Footer.js";
+// import Navigation from "./views/Navigation.js";
+import About from "./views/About.js";
+import Item from "./views/Item.js";
+import Items from "./views/Items.js";
+// import indexRoutes from "./routes/indexRoutes.js";
+
 import * as serviceWorker from './serviceWorker';
 
+let hist = createBrowserHistory();
+
 ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
-  document.getElementById('root')
+  <Router history={hist}>
+    <div className='App'>
+      <Header />
+      <Route path='/' exact strict component={ App } />
+      <Route path='/items' exact strict component={ Items } />
+      <Route path='/item/:id' exact strict component={ Item } />
+      <Footer />
+    </div>
+  </Router>,
+  document.getElementById("root")
 );
 
 // If you want your app to work offline and load faster, you can change
