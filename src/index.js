@@ -21,8 +21,9 @@ ReactDOM.render(
     <div className='App'>
       <Header />
       <Route path='/' exact strict component={ App } />
+      <Route path='/about' exact strict component={ About } />
       <Route path='/items' exact strict component={ Items } />
-      <Route path='/item/:id' exact strict component={ Item } />
+      <Route path='/item' exact strict component={ Item } />
       <Footer />
     </div>
   </Router>,

@@ -20,8 +20,8 @@ render(){
   const { images, items } = this.state;
   // using id as param passed from items.js link rather than Map function
   return (
-    <div>
-      <h1>info about single item</h1>
+    <div class="text-center">
+      <h1>info about a single item</h1>
     </div>
   )
 }}
