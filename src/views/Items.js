@@ -33,19 +33,18 @@ render(){
     border: '1px #000 solid',
     padding: '5px',
   }
-  function getId (obj){
-    let id = obj.id;
-    return id;
+
+  function getURL(x) {
+    return images[x].file_urls.thumbnail;
   }
   return (
     <div className="row col-md-10 offset-md-1" style={cardBrowse}>
       { items.map(item => {
         return  (
-            <div key={getId(item.id)} className="card text-center" style={singleBrowse}>
-             <img style={imgBrowse} src={images.find((image, item.id) => {
-               console.log(image[item.id].file_urls.thumbnail);
-               return image[item.id].file_urls.thumbnail;
-             })}
+            <div key={item.id} className="card text-center" style={singleBrowse}>
+             <img
+             style={imgBrowse}
+             src={ images[30].file_urls.thumbnail }
              alt={item.element_texts[0].text} />
              <div className="card-body">
                <p>{item.element_texts[0].text}</p>
