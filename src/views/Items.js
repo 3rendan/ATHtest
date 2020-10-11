@@ -42,11 +42,7 @@ render(){
             <div key={item.id} className="card text-center" style={singleBrowse}>
              <img
              style={imgBrowse}
-             src={ images.find(image => {
-               if(image.id === item.id){
-                 console.log(image.file_urls.thumbnail);
-               }
-             })}
+             src={ images.find(image => (image.id === item.id))) }
              alt={item.element_texts[0].text} />
 
               <div className="card-body">
