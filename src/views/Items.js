@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import axios from 'axios';
 
+
 export default class Items extends Component {
   state = {
       items: [],
@@ -34,9 +35,6 @@ render(){
     padding: '5px',
   }
 
-  function getURL(x) {
-    return images[x].file_urls.thumbnail;
-  }
   return (
     <div className="row col-md-10 offset-md-1" style={cardBrowse}>
       { items.map(item => {
@@ -44,13 +42,18 @@ render(){
             <div key={item.id} className="card text-center" style={singleBrowse}>
              <img
              style={imgBrowse}
-             src={ images[30].file_urls.thumbnail }
+             src={ images.find(image => {
+               if(image.id === item.id){
+                 console.log(image.file_urls.thumbnail);
+               }
+             })}
              alt={item.element_texts[0].text} />
-             <div className="card-body">
-               <p>{item.element_texts[0].text}</p>
-               <small> {item.element_texts[5].element.name} : {item.element_texts[5].text}</small>
+
+              <div className="card-body">
+                 <p>{item.element_texts[0].text}</p>
+                 <small> {item.element_texts[5].element.name} : {item.element_texts[5].text}</small>
               </div>
-              </div>
+            </div>
           )})
         }
       </div>

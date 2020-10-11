@@ -1,8 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { BrowserRouter as Router } from "react-router-dom";
+import { Route, BrowserRouter as Router } from "react-router-dom";
 import { createBrowserHistory } from "history";
-import Route from "react-router-dom/Route";
 import App from './App.js';
 import Header from "./components/Header.js";
 import Footer from "./components/Footer.js";
