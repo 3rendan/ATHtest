@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import axios from 'axios';
+//import axios from 'axios';
 //import BrowseImage from '../components/BrowseImage'
 import { Link } from "react-router-dom";
 import { useItems } from '../Calls';
@@ -19,11 +19,12 @@ const singleBrowse = {
   padding: '5px',
 }
 const Items = () => {
-  console.log(useItems());
+  const items   = useItems();
   console.log(items)
-  // console.log(images)
   return (
-    
+    <div>
+    <p>hello</p>
+    </div>
     )
   }
 export default Items;

@@ -1,17 +1,15 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import axios from 'axios';
 
 
 export const useItems = () => {
-  axios.all([
-    axios.get('http://digital.provath.org/api/items'),
-    axios.get('http://digital.provath.org/api/files')
-  ])
-  .then(res => {
-    this.setState({ items: res[0].data, images: res[1].data })
+  useEffect(() =>{
+    axios('http://digital.provath.org/api/items')
+    .then(res => { this.setState({ items: {res} })})
+    .catch(error => console.error(error))
   })
-  .catch(error => console.error(error))
 }
+
 // export const useItem = (param) => {
 //   const [item, setItem] = useState([]);
 //   useEffect(() =>{
