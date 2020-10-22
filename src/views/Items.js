@@ -50,10 +50,11 @@ render(){
     padding: '5px',
   }
   const getUrl = (x) => {
-    let obj  = images.find(image => (image.id === x));
+    let obj  = images.find(image => (image.item.id === x));
     if (obj != undefined){
-      return obj.file_urls.thumbnail
+      return obj.file_urls.square_thumbnail
     } else {
+      console.log(x)
       return images[45].file_urls.thumbnail;
     }
   }
