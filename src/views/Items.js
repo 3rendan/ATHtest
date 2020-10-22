@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import axios from 'axios';
+
 //import BrowseImage from '../components/BrowseImage'
 import { Link } from "react-router-dom";
 // import { useItems } from '../Calls';
@@ -35,28 +36,9 @@ export default class Items extends Component {
   }
 render(){
   const { images, items } = this.state;
-  const imgBrowse = {
-    maxWidth: '99%',
-    margin: 'auto'
-  };
-  const cardBrowse = {
-    display: 'flex',
-    justifyContent: 'space-around'
-  };
-  const singleBrowse = {
-    flexBasis: '20%',
-    margin: '10px',
-    border: '1px #000 solid',
-    padding: '5px',
-  }
   const getUrl = (x) => {
     let obj  = images.find(image => (image.item.id === x));
-    if (obj != undefined){
-      return obj.file_urls.square_thumbnail
-    } else {
-      console.log(x)
-      return images[45].file_urls.thumbnail;
-    }
+    return obj.file_urls.square_thumbnail;
   }
   return (
     <div className="row col-md-10 offset-md-1" style={cardBrowse}>

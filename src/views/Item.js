@@ -1,27 +1,25 @@
-import React, { Component } from 'react'
-import axios from 'axios';
+import React, { useEffect, useState } from 'react';
+import { Link } from "react-router-dom";
+import axios from 'axios'
 
-export default class Items extends Component {
-  state = {
-      items: [],
-      images: []
+const useItem = (param) => {
+  const [item, setItem] = useState([]);
+  console.log(item)
+  useEffect(() =>{
+    axios.get('https://digital.provath.org/api/items/' + item.id)
+      .then(data => setItem(data))
+      .catch(error => console.error(error))
+    }, [])
+    return item;
   }
-  componentDidMount(){
-    axios.all([
-      axios.get('http://digital.provath.org/api/items'),
-      axios.get('http://digital.provath.org/api/files')
-    ])
-    .then(res => {
-      this.setState({ items: res[0].data, images: res[1].data })
-    })
-    .catch(error => console.error(error))
+
+  const Item = () => {
+    const item = useItem();
+    console.log(item)
+    return (
+      <div>
+        <h1> single item</h1>
+      </div>
+    )
   }
-render(){
-  const { images, items } = this.state;
-  // using id as param passed from items.js link rather than Map function
-  return (
-    <div class="text-center">
-      <h1>info about a single item</h1>
-    </div>
-  )
-}}
+  export default Item

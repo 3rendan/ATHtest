@@ -1,5 +1,4 @@
-'use strict';
-const React = require('react');
+import React from 'react';
 
 const myStyles = React.StyleSheet.create({
   imgBrowse: {
@@ -12,7 +11,13 @@ const myStyles = React.StyleSheet.create({
     border: '1px #000 solid',
     float: 'left',
     padding: '10px',
+  },
+  singleBrowse: {
+    flexBasis: '20%',
+    margin: '10px',
+    border: '1px #000 solid',
+    padding: '5px',
   }
 })
 
-module.exports = myStyles;
+export default myStyles;
