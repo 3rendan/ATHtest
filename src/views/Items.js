@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import axios from 'axios';
 //import BrowseImage from '../components/BrowseImage'
-// import { Link } from "react-router-dom";
+import { Link } from "react-router-dom";
 // import { useItems } from '../Calls';
 
 const imgBrowse = {
@@ -63,14 +63,15 @@ render(){
       { items.map(item => {
         return  (
             <div key={item.id} className="card text-center" style={singleBrowse}>
+            <Link to={`item/${item.id}`} item={item}>
              <img
              style={imgBrowse}
              src={ getUrl(item.id) }
              alt={item.element_texts[0].text} />
              <div className="card-body">
                <p>{item.element_texts[0].text}</p>
-               <small> {item.element_texts[5].element.name} : {item.element_texts[5].text}</small>
               </div>
+              </Link>
               </div>
           )})
         }
