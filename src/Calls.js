@@ -5,7 +5,7 @@ import axios from 'axios';
 export const useItems = () => {
   useEffect(() =>{
     axios('http://digital.provath.org/api/items')
-    .then(res => { this.setState({ items: {res} })})
+    .then(res => { this.setState({ items: res })})
     .catch(error => console.error(error))
   })
 }
