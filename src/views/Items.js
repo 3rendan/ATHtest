@@ -45,7 +45,7 @@ render(){
       { items.map(item => {
         return  (
             <div key={item.id} className="card text-center" style={singleBrowse}>
-            <Link to={`item/${item.id}`} item={item}>
+            <Link to={`item/${item.id}`} item={item.id}>
              <img
              style={imgBrowse}
              src={ getUrl(item.id) }
