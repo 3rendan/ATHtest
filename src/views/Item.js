@@ -6,7 +6,7 @@ import useItem from '../Calls'
 
   const Item = () => {
     const item = useItem();
-    console.log(item)
+    //console.log(item)
     return (
       <div>
         <h1> hello</h1>

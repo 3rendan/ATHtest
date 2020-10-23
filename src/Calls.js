@@ -12,11 +12,13 @@ import axios from 'axios';
 
 const useItem = (param) => {
   const [item, setItem] = useState([]);
+  //console.log(param.id)
   useEffect(() =>{
-    axios.get(`http://digital.provath.org/api/items/` + 44)  //if you use a num with corresponding id an object is returned
+    axios.get(`http://digital.provath.org/api/items/`)  //if you use a num with corresponding id an object is returned
       .then(res => setItem(res))
       .catch(error => console.error(error))
     }, [])
+    console.log(item)
     return item;
   }
 export default useItem
