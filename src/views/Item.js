@@ -2,14 +2,15 @@ import React, { useEffect, useState } from 'react';
 import { Link } from "react-router-dom";
 import axios from 'axios'
 
-import useItem from '../Calls'
+import { useItem } from '../Calls'
 
-  const Item = () => {
-    const item = useItem();
-    //console.log(item)
+  const Item = (item) => {
+    console.log(item.match.params.id)
+    const singleItem = useItem(item.match.params.id);
+    console.log(singleItem.data)
     return (
       <div>
-        <h1> hello</h1>
+        <h1>how do I pass item props</h1>
       </div>
     )
   }

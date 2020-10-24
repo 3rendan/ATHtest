@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import axios from 'axios';
+import Item from './Item'
 
 //import BrowseImage from '../components/BrowseImage'
 import { Link } from "react-router-dom";
@@ -45,7 +46,7 @@ render(){
       { items.map(item => {
         return  (
             <div key={item.id} className="card text-center" style={singleBrowse}>
-            <Link to={`item/${item.id}`} item={item.id}>
+            <Link to={`item/${item.id}`} item={item}>
              <img
              style={imgBrowse}
              src={ getUrl(item.id) }
