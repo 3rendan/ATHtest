@@ -6,8 +6,8 @@ import useItem  from '../Calls'
 
   const Item = (item) => {
     let x = useItem(item.match.params.id);
-    console.log(x)
-    console.log(x.id)
+    console.log(item.match.params)
+
 
 
     return (
