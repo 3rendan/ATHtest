@@ -2,11 +2,10 @@ import React, { useEffect, useState } from 'react';
 import { Link } from "react-router-dom";
 import axios from 'axios';
 
-import { useItem, useItems }  from '../Calls'
+import { useItem, useItems, getUrl }  from '../Calls'
 
   const Item = (item) => {
     let x = useItem(item.match.params.id);
-    console.log(item.match.params)
 
     return (
 
