@@ -1,15 +1,16 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 
-
-// export const useItems = () => {
-//   useEffect(() =>{
-//     axios('http://digital.provath.org/api/items')
-//     .then(res => { this.setState({ items: res })})
-//     .catch(error => console.error(error))
-//   })
-// }
-
+const useItems = () => {
+  const [items, setItems] = useState([]);
+  useEffect(() => {
+    axios.get('http://digital.provath.org/api/items')
+      .then((res) => setItems(res.data))
+      .catch(error => console.error(error))
+    }, [])
+  console.log(items);
+  return items;
+}
 const useItem = (param) => {
   const [item, setItem] = useState([]);
   useEffect(() =>{
@@ -20,4 +21,5 @@ const useItem = (param) => {
     console.log(item)
     return item;
   }
-export default useItem;
+
+  export { useItem, useItems }
