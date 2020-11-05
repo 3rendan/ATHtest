@@ -35,8 +35,8 @@ const Items = () => {
     .then((res) => { setImages(res.data) })
     .catch(error => console.error(error))
   }, [])
-  console.log(images)
-  console.log(items)
+  // console.log(images)
+  // console.log(items)
 
 
   return (

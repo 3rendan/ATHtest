@@ -12,9 +12,14 @@ const useItem = (param) => {
     console.log(item)
     return item;
   }
+
   const getUrl = (plural, x) => {
-    let obj  = plural.find(image => (image.item.id === x));
+    const obj  = plural.find(image => (image.item.id === x));
     return obj.file_urls.square_thumbnail;
   }
+  const ggetUrl = (plural, x) => {
 
-  export { useItem, getUrl }
+    return plural.find(image => (image.item.id === x));
+  }
+
+  export { useItem, ggetUrl, getUrl }
