@@ -7,7 +7,7 @@ import { getDes, getUrl }  from '../Calls'
 
   const Item = (param) => {
     const [item, setItem ] = useState([]);
-    const [images, setImages ] = useState([]);
+    const [image, setImage ] = useState([]);
     let id = param.match.params.id;
     useEffect(() => {
       axios.get('http://digital.provath.org/api/items/' + id)
@@ -15,18 +15,18 @@ import { getDes, getUrl }  from '../Calls'
       .catch(error => console.error(error))
     }, [])
     useEffect(() => {
-    	axios.get('http://digital.provath.org/api/files')
-    	.then((res) => { setImages(res.data) })
+    	axios.get('http://digital.provath.org/api/files/' + id)
+    	.then(res => { setImage(res.data) })
     	.catch(error => console.error(error))
     }, [])
-    const gus  = item.element_texts;
+
     // g etUrl(images, item.id)
     return (
 
       <div>
         <h1>{item.element_texts && item.element_texts[0].text }</h1>
-        { item.element_texts && console.log(getDes(gus, "Description"))}
-        <img src={ id }
+        { console.log(image.file_urls && image.file_urls.square_thumbnail) }
+        <img src={ image.file_urls && image.file_urls.square_thumbnail }
         alt="nothing"/>
       </div>
     )
