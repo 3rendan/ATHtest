@@ -36,7 +36,7 @@ const Items = () => {
     .catch(error => console.error(error))
   }, [])
   // console.log(images)
-  // console.log(items)
+  console.log(items)
 
 
   return (

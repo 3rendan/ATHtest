@@ -1,8 +1,9 @@
 import React, { useEffect, useState } from 'react';
 import { Link } from "react-router-dom";
 import axios from 'axios';
+import { getDes, getUrl }  from '../Calls'
 
-import { useItem, ggetUrl }  from '../Calls'
+
 
   const Item = (param) => {
     const [item, setItem ] = useState([]);
@@ -10,7 +11,7 @@ import { useItem, ggetUrl }  from '../Calls'
     let id = param.match.params.id;
     useEffect(() => {
       axios.get('http://digital.provath.org/api/items/' + id)
-      .then((res) => { setItem(res.data) })
+      .then(res => { setItem(res.data) })
       .catch(error => console.error(error))
     }, [])
     useEffect(() => {
@@ -18,16 +19,14 @@ import { useItem, ggetUrl }  from '../Calls'
     	.then((res) => { setImages(res.data) })
     	.catch(error => console.error(error))
     }, [])
-
+    const gus  = item.element_texts;
     // g etUrl(images, item.id)
     return (
 
       <div>
-        <h1>{item.id}</h1>
-        <img src={
-          pic  = ggetUrl(images, item.id);
-          console.log(pic);
-        }
+        <h1>{item.element_texts && item.element_texts[0].text }</h1>
+        { item.element_texts && console.log(getDes(gus, "Description"))}
+        <img src={ id }
         alt="nothing"/>
       </div>
     )
