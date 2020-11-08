@@ -5,29 +5,29 @@ import { getDes, getUrl }  from '../Calls'
 
 
 
-  const Item = (param) => {
+  const Item = (props) => {
+    console.log(props.url)
     const [item, setItem ] = useState([]);
-    const [image, setImage ] = useState([]);
-    let id = param.match.params.id;
+    const [images, setImages ] = useState([]);
     useEffect(() => {
-      axios.get('http://digital.provath.org/api/items/' + id)
+      axios.get('http://digital.provath.org/api/items/' + props.match.params.id)
       .then(res => { setItem(res.data) })
       .catch(error => console.error(error))
     }, [])
     useEffect(() => {
-    	axios.get('http://digital.provath.org/api/files/' + id)
-    	.then(res => { setImage(res.data) })
+    	axios.get('http://digital.provath.org/api/files/')
+    	.then(res => { setImages(res.data) })
     	.catch(error => console.error(error))
     }, [])
-
+    // const properImg = getUrl(images.item.id, id);
     // g etUrl(images, item.id)
     return (
 
       <div>
+
         <h1>{item.element_texts && item.element_texts[0].text }</h1>
-        { console.log(image.file_urls && image.file_urls.square_thumbnail) }
-        <img src={ image.file_urls && image.file_urls.square_thumbnail }
-        alt="nothing"/>
+        {console.log(props.url)}
+
       </div>
     )
   }
