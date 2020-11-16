@@ -1,0 +1,18 @@
+/*
+COLORS
+   light grey: #eee;
+   grey: #b6b6b6;
+   dark grey: #999999;;
+   green: #C4D425;
+   */
+/* COMMON */
+* {
+    border: 1px solid transparent;
+}
+html {
+    font-family: 'Montserrat', sans-serif;
+    width: 100%;
+    background-color: #000;
+    -webkit-text-size-adjust: 100%;
+    -ms-text-size-adjust: 100%;
+}
