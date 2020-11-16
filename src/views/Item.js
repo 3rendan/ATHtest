@@ -2,11 +2,12 @@ import React, { useEffect, useState } from 'react';
 import { Link } from "react-router-dom";
 import axios from 'axios';
 import { getDes, getUrl }  from '../Calls'
+import Items from './Items'
+import App from '../App'
 
 
 
   const Item = (props) => {
-    console.log(props.url)
     const [item, setItem ] = useState([]);
     const [images, setImages ] = useState([]);
     useEffect(() => {
@@ -24,10 +25,8 @@ import { getDes, getUrl }  from '../Calls'
     return (
 
       <div>
-
-        <h1>{item.element_texts && item.element_texts[0].text }</h1>
-        {console.log(props.url)}
-
+        <h1>{ item.element_texts && item.element_texts[0].text }</h1>
+        <h1>{ props.element_texts[0].text }</h1>
       </div>
     )
   }
