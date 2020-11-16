@@ -3,11 +3,14 @@ import { Link, useParams, useNavigate } from "react-router-dom";
 import useFetch from '../services/useFetch';
 import Item from './Item'
 import App from '../App'
+import Spinner from '../components/Spinner'
 // import myStyles from '../style/Main'
 
 
 const Items = (props) => {
   const { data: items, loading, error } = useFetch('items');
+  if (error) throw error;
+  if (loading) return <Spinner />;
   return (
     <div className="row col-md-10 offset-md-1">
   		{ items.map(item => {
