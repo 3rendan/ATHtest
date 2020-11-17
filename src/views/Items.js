@@ -1,29 +1,36 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { Link, useParams, useNavigate } from "react-router-dom";
 import useFetch from '../services/useFetch';
-import useImages from '../services/useImages';
 import Item from './Item'
 import Spinner from '../components/Spinner';
-import SqImg from '../services/SqImg'
+
 // import myStyles from '../style/Main'
 
 
 const Items = (props) => {
   const { data: items, loading, error } = useFetch('items');
-  const { images } = useImages();
+  const { data: images } = useFetch('files');
   console.log(images)
+  const [ url, setUrl] = useState([]);
+
+
+
   if (error) throw error;
   if (loading) return <Spinner />;
   return (
     <div className="row col-md-10 offset-md-1">
   		{ items.map(item => {
   			return  (
-  					<div key={item.id} className="card text-center">
+  					<div key={item.id} className="card">
   					<Link to={`item/${item.id}`}>
-            <SqImg/>
-  					 <div className="card-body">
+            <img
+            className='image-top'
+            src='https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse1.mm.bing.net%2Fth%3Fid%3DOIP.yeMID4Q_2H8Ya1kTIQxPDAHaHa%26pid%3DApi&f=1'
+            style={{ width: '33rem'}}
+             alt={item.element_texts[0].text} />
+  					 <section className="card-body">
   						 <p>{item.element_texts[0].text}</p>
-  						</div>
+  						</section>
   						</Link>
   						</div>
   				)})

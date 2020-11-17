@@ -1,16 +1,12 @@
 import React, { useState, useEffect } from 'react';
-import useImages from '../services/useImages';
+import { useParams } from 'react-router-dom';
 
 
 const SqImg = (props) => {
-  const { images } = useImages();
+  const { id } = useParams();
   const [ url, setUrl ] = useState([]);
-  // console.log(props.match.params.id)
 
-  useEffect(() => {
-    const picture  = images.find(image => (image.item.id === props.match.params.id));
-    setUrl(picture);
-  }, [])
+  console.log(url)
   return (
       <div>
         <img

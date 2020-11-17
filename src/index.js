@@ -2,11 +2,8 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import { Route, BrowserRouter as Router } from "react-router-dom";
 import { createBrowserHistory } from "history";
-import style from './App.css';
 import Header from "./components/Header";
 import Footer from "./components/Footer";
-import SqImg from "./services/SqImg";
-// import Navigation from "./views/Navigation";
 import App from "./App";
 import About from "./views/About";
 import Item from "./views/Item";
@@ -23,7 +20,6 @@ ReactDOM.render(
       <Header />
       <Route path='/' exact strict component={ About } />
       <Route path='/x' exact strict component={ App } />
-      <Route path='/b' exact strict component={ SqImg } />
       <Route path='/items' exact strict component={ Items } />
       <Route path='/item/:id' exact strict component={ Item } />
       <Footer />
