@@ -2,14 +2,14 @@ import styled from 'styled-components';
 
 
 const Tombstone = styled.table`
-  background-color: #999999;
-  color: white;
+  background-color: white;
   display: flex;
   height: 370px;
   flex-wrap: wrap;
-  color: #000;
-  font-family: 'EB Garamond', serif;
   overflow: scroll;
+  font-size: 1.1em;
+  vertical-align: middle;
+  width: 100%;
 `;
 
 

@@ -10,7 +10,7 @@ import Style from '../style/CardBrowse'
 const Items = (props) => {
   const { data: items, loading, error } = useFetch('items');
   const { data: images } = useFetch('files');
-  console.log(images)
+  console.log(items)
   const [ url, setUrl] = useState([]);
 
 

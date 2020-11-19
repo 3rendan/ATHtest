@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { getUrl } from '../services/imgServices';
+import { getUrl } from '../services/global';
 import { Link } from 'react-router-dom';
 
 export default function ImageCard(props) {

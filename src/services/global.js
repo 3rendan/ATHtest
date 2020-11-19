@@ -2,6 +2,7 @@ import React from 'react';
 
 const imgUrl = 'http://digital.provath.org/api/files/';
 
+
 export function getCollection(id) {
     switch(id){
       case 1:

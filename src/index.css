@@ -11,10 +11,13 @@ COMPONENT LEVEL STYLING ALL OCCURS IN THE /STYLE FOLDER
                 ----------------------------------
 */
 @import url(https://fonts.googleapis.com/css?family=EB+Garamond|Montserrat);
-
-body {
-    font-family: 'Montserrat', sans-serif;
-    font-size: 1.2rem;
+td, th {
+  margin: .25rem;
+  padding: .25rem;
+  border: 2px solid white;
+  background-color: #999999;
+  color: white;
+  width: 99%;
 }
 h1 {
     text-align: center;
@@ -50,4 +53,8 @@ a:hover {
 a:visited {
   color: #e6e6e6;
   text-decoration: none;
+}
+.mtdt {
+  font-family: 'Montserrat', serif;
+  text-transform: uppercase;
 }
