@@ -1,0 +1,35 @@
+/*
+COLORS
+   light grey: #eee;
+   grey: #b6b6b6;
+   dark grey: #999999;;
+   green: #C4D425;
+   */
+/* COMMON */
+* {
+    border: 1px solid transparent;
+}
+html {
+    font-family: 'Montserrat', sans-serif;
+    width: 100%;
+    background-color: #000;
+    -webkit-text-size-adjust: 100%;
+    -ms-text-size-adjust: 100%;
+}
+imgBrowse: {
+  maxWidth: '100%',
+  margin: 'auto'
+},
+cardBrowse: {
+  maxWidth: '200px',
+  margin: 'auto',
+  border: '1px #000 solid',
+  float: 'left',
+  padding: '10px',
+},
+singleBrowse: {
+  flexBasis: '20%',
+  margin: '10px',
+  border: '1px #000 solid',
+  padding: '5px',
+}
