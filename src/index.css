@@ -1,13 +1,53 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
+/*
+ALL GENERAL STYLING RULES FOR SPA ARE IN THIS FILE
+COMPONENT LEVEL STYLING ALL OCCURS IN THE /STYLE FOLDER
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+                ----------------------------------
+                COLORS
+                   light grey: #eee;
+                   grey: #b6b6b6;
+                   dark grey: #999999;;
+                   green: #C4D425;
+                ----------------------------------
+*/
+@import url(https://fonts.googleapis.com/css?family=EB+Garamond|Montserrat);
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.2rem;
+}
+h1 {
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 1.5rem;
+}
+/* for subheading of header */
+h3 {
+  padding: 2rem 0 .5rem 1rem;
+  font-size: 2rem;
+  font-family: 'EB Garamond', serif;
+  color: black;
+  font-style: italic;
+}
+h4 {
+  font-size: 1.25rem;
+  font-family: 'EB Garamond', serif;
+  margin-bottom: 0;
+  font-style: italic;
+}
+h5 {
+  padding: 0 0 2rem 2rem;
+  font-size: 1.25rem;
+  font-family: 'Montserrat', sans-serif;
+  margin-bottom: 0;
+}
+a {
+  color: #C4D425;
+}
+a:hover {
+  color: #e6e6e6;
+}
+a:visited {
+  color: #e6e6e6;
+  text-decoration: none;
 }

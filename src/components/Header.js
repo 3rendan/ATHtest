@@ -1,11 +1,11 @@
-import React, { Component } from 'react'
+import React from 'react';
+import Style from '../style/Header'
 
-export default class Header extends Component {
-render(){
+export default function Header() {
   return (
-    <div className="text-center">
-      <h1>Providence Athenaeum</h1>
+    <Style>
+      <a href="https://provath.org" alt="Providence Athenaeum"><h1>Providence Athenaeum</h1></a>
       <h4>Digital Art Collection</h4>
-    </div>
+    </Style>
   )
-}}
+}

@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from 'react';
 import { Link, useParams, useNavigate } from "react-router-dom";
 import useFetch from '../services/useFetch';
-import Item from './Item'
 import Spinner from '../components/Spinner';
+import Style from '../style/CardBrowse'
 
 // import myStyles from '../style/Main'
 
@@ -28,9 +28,9 @@ const Items = (props) => {
             src='https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse1.mm.bing.net%2Fth%3Fid%3DOIP.yeMID4Q_2H8Ya1kTIQxPDAHaHa%26pid%3DApi&f=1'
             style={{ width: '33rem'}}
              alt={item.element_texts[0].text} />
-  					 <section className="card-body">
-  						 <p>{item.element_texts[0].text}</p>
-  						</section>
+  					 <Style>
+  						 <h5>{item.element_texts[0].text}</h5>
+  						</Style>
   						</Link>
   						</div>
   				)})

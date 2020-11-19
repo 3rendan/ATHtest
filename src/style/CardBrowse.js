@@ -1,14 +1,10 @@
 import styled from 'styled-components';
 
 
-const StyledHeader = styled.div`
-  background-color: black;
-  color: white;
+const CardBrowse = styled.section`
+  color: black;
   text-align: center;
-  :h1 {
-    text-tranform: uppercase,
-  }
 `;
 
 
-export default StyledHeader;
+export default CardBrowse;
