@@ -1,4 +1,4 @@
-import React from 'react';
+
 
 const imgUrl = 'http://digital.provath.org/api/files/';
 

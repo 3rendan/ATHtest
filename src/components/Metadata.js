@@ -1,39 +1,19 @@
-import React, { Component } from 'react'
-import axios from 'axios';
+import React from 'react'
+import Tombstone from './Tombstone'
 
-class Metadata extends Component {
-  constructor(props) {
-    super(props)
+const showCategory = ['Creator', 'Subject', 'Rights', 'Identifier'];
 
-    this.state = {
-      items: []
-    }
-  }
-  componentDidMount() {
-    axios('http://digital.provath.org/api/items')
-    .then(res => {
-      this.setState({ items: res.data })
-    })
-    .catch(error => console.error(error))
-  }
-
-  render() {
-    const { items } = this.state;
-    console.log(items);
-
-    return (
-      <div>
-      { items.map(item => {
-        return  (
-            <div key={item.id} className="text-center">
-                <h3>{ item.id }</h3>
-                <h3>{ item.url }</h3>
-            </div>
-          )
-      })}
-      </div>
-    )
-  }
+export default function Metadata(props) {
+  return (
+    { props.item.element_texts.some(marcTag => showCategory.includes(marcTag) {
+      return (
+        <>
+        <tr>
+          <th className="mtdt">{ marcTag.element.name }:</th>
+          <td>{ marcTag.text }</td>
+        </tr>
+        </>       
+      )
+    )}
+  )
 }
-
-export default Metadata
