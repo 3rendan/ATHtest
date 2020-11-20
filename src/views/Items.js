@@ -22,7 +22,7 @@ const Items = (props) => {
   		{ items.map(item => {
   			return  (
   					<div key={item.id} className="card">
-  					<Link to={`item/${item.id}`}>
+  					<Link to={`item/${item.id}`} item={item}>
             <img
             className='image-top'
             src='https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse1.mm.bing.net%2Fth%3Fid%3DOIP.yeMID4Q_2H8Ya1kTIQxPDAHaHa%26pid%3DApi&f=1'
