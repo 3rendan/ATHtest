@@ -3,6 +3,7 @@ import useFetch from '../services/useFetch';
 import Spinner from '../components/Spinner';
 import { getCollection } from '../services/global';
 import Tombstone from '../components/Tombstone'
+import NavTabs from '../components/NavTabs'
 // import myStyles from '../style/Main'
 
 
@@ -12,12 +13,11 @@ import Tombstone from '../components/Tombstone'
     if (error) throw error;
     if (loading) return <Spinner />;
     return (
-      <section>
+      <section  className='col-sm-5'>
         <h3>{ item.element_texts[0].text }</h3>
-        <h5>Sculpture</h5>
-        <Tombstone item={item} className='col-sm-5' />
-
-
+        <h5>{ getCollection(item.collection.id)}</h5>
+        <NavTabs item={item}/>
+        <Tombstone item={item} />
       </section>
     )
   }

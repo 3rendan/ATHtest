@@ -1,12 +1,13 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { Route, BrowserRouter as Router } from "react-router-dom";
+import { Router, Route } from "react-router-dom";
 import { createBrowserHistory } from "history";
 import './index.css'
 import Header from "./components/Header";
 import Footer from "./components/Footer";
 import App from "./App";
 import About from "./components/About";
+import Navigation from "./components/Navigation";
 import Item from "./views/Item";
 import Items from "./views/Items";
 
@@ -19,6 +20,7 @@ ReactDOM.render(
   <Router history={hist}>
     <div className='App'>
       <Header />
+      <Navigation />
       <section className='container'>
       <Route path='/' exact strict component={ About } />
       <Route path='/x' exact strict component={ App } />

@@ -1,8 +1,11 @@
-import React, { useState } from 'react';
-import { Link } from "react-router-dom";
-import useFetch from '../services/useFetch';
-import Spinner from '../components/Spinner';
+import React, { useState } from 'react'
+import { Link } from "react-router-dom"
+import useFetch from '../services/useFetch'
+import Spinner from '../components/Spinner'
 import Style from '../style/CardBrowse'
+import { getUrl } from '../services/global'
+import NavTabs from '../components/NavTabs'
+
 
 // import myStyles from '../style/Main'
 
@@ -18,16 +21,15 @@ const Items = (props) => {
   if (error) throw error;
   if (loading) return <Spinner />;
   return (
-    <div className="row col-md-10 offset-md-1">
-  		{ items.map(item => {
+    <Style className="single-browse">
+  		{ items.map((item) => {
   			return  (
   					<div key={item.id} className="card">
   					<Link to={`item/${item.id}`} item={item}>
             <img
             className='image-top'
-            src='https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse1.mm.bing.net%2Fth%3Fid%3DOIP.yeMID4Q_2H8Ya1kTIQxPDAHaHa%26pid%3DApi&f=1'
-            style={{ width: '33rem'}}
-             alt={item.element_texts[0].text} />
+            src={ images.find(image => getUrl(image, item.id))}
+            alt={item.element_texts[0].text} />
   					 <Style>
   						 <h5>{item.element_texts[0].text}</h5>
   						</Style>
@@ -35,7 +37,7 @@ const Items = (props) => {
   						</div>
   				)})
   			}
-  		</div>
+  		</Style>
   	)
   }
 

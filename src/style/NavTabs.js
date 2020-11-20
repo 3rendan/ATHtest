@@ -1,13 +1,13 @@
 import styled from 'styled-components';
 
 
-const Tombstone = styled.table`
-  background-color: white;
+const NavTabs = styled.nav`
+  background-color: black;
+  color: white;
   display: flex;
-  max-height: 40%;
   flex-wrap: wrap;
   overflow: scroll;
-  font-size: 1.1em;
+  font-size: 1.1rem;
   vertical-align: middle;
   width: 100%;
   justify-content: space-between;
@@ -15,4 +15,4 @@ const Tombstone = styled.table`
 `;
 
 
-export default Tombstone;
+export default NavTabs;

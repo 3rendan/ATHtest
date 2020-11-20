@@ -24,5 +24,10 @@ export function getCollection(id) {
         return 'Prints';
         break;
     }
-
   }
+
+export function getUrl(arr, x) {
+  if(arr.item.id === x){
+    return arr.file_urls.thumbnail;;
+  }
+}

@@ -11,12 +11,23 @@ COMPONENT LEVEL STYLING ALL OCCURS IN THE /STYLE FOLDER
                 ----------------------------------
 */
 @import url(https://fonts.googleapis.com/css?family=EB+Garamond|Montserrat);
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  line-height: 2;
+  color: black;
+}
+table td, th {
+  border-left:10px solid #fff;
+  border-bottom:10px solid #fff;
+  padding: 10px;
+  width: 100;
+}
 td, th {
-  margin: .25rem;
-  padding: .25rem;
-  border: 2px solid white;
-  background-color: #999999;
-  color: white;
+  background-color: #e6e6e6;
+}
+th {
+  width: 30%;
 }
 h1 {
     text-align: center;
@@ -56,4 +67,16 @@ a:visited {
 .mtdt {
   font-family: 'Montserrat', serif;
   text-transform: uppercase;
+}
+.single-browse {
+  flex-basis: 20%;
+  margin: 10px;
+  border: 1px #000 solid;
+  padding: 5px;
+}
+.nav {
+  background-color: #999999;
+  color: #fff;
+  margin: 0;
+  list-style: none;
 }
