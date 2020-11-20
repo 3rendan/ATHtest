@@ -3,17 +3,20 @@ import Style from '../style/Tombstone';
 import Item from '../views/Item';
 import Items from '../views/Items';
 
-const showCategory = ['Creator', 'Subject', 'Rights'];
+const showCategory = ['Creator', 'Subject', 'Rights', 'Identifier'];
 { console.log(showCategory) }
 export default function Tombstone(props) {
 
   return (
     <Style className='col-sm-5'>
-
-      <tr>
-        <th className="mtdt">{ props.item.element_texts[8].element.name }:</th>
-        <td>{ props.item.element_texts[8].text }</td>
-      </tr>
+      { props.item.element_texts.map(marcTag =>{
+        return (
+          <tr>
+            <th className="mtdt">{ marcTag.element.name }:</th>
+            <td>{ marcTag.text }</td>
+          </tr>
+        )}
+      )}
     </Style>
   )
 }
