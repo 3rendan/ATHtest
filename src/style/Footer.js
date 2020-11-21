@@ -6,9 +6,6 @@ const Footer = styled.div`
   background-color: black;
   color: white;
   text-align: center;
-  position: absolute;
-  bottom: 0;
-  width: 100%;
 `;
 
 

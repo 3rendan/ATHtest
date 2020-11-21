@@ -6,7 +6,7 @@ const Navigation = styled.nav`
   color: white;
   font-weight: bold;
   vertical-align: middle;
-  display: 'flex',
+  display: 'flex';
   justifyContent: 'space-around';
   font-size: 1.5rem;
 `;
