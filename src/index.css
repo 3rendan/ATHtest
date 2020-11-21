@@ -80,3 +80,6 @@ a:visited {
   margin: 0;
   list-style: none;
 }
+.nav-item {
+  justify-content: space-around;
+}

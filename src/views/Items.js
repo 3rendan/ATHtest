@@ -4,7 +4,6 @@ import useFetch from '../services/useFetch'
 import Spinner from '../components/Spinner'
 import Style from '../style/CardBrowse'
 import { getUrl } from '../services/global'
-import NavTabs from '../components/NavTabs'
 
 
 // import myStyles from '../style/Main'

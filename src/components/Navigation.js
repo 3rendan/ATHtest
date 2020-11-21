@@ -5,10 +5,7 @@ import Style from '../style/Navigation';
 export default function Navigation() {
     return (
         <Style>
-            <ul>
-                <li><Link to={`/items`}>Browse</Link></li>
-            </ul>
-            
+            <li className='nav-item'><Link to={`/browse`}>Browse</Link></li>        
         </Style>
     )
 }

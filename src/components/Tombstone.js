@@ -6,7 +6,7 @@ import Style from '../style/Tombstone';
 export default function Tombstone(props) {
   const showCategory = ['Creator', 'Subject', 'Rights', 'Identifier', 'Description'];
   return (
-    <Style className='col-sm-5 col-lg-5 col-xl-6'>
+    <Style>
     { props.item.element_texts.map((marcTag) =>{
       if(showCategory.includes(marcTag.element.name)){
         return (

@@ -10,6 +10,7 @@ import About from "./components/About";
 import Navigation from "./components/Navigation";
 import Item from "./views/Item";
 import Items from "./views/Items";
+import Browse from "./views/Browse";
 
 
 import * as serviceWorker from './serviceWorker';
@@ -20,13 +21,13 @@ ReactDOM.render(
   <Router history={hist}>
     <div className='App'>
       <Header />
-      <Navigation />
-      <section className='container'>
-      <Route path='/' exact strict component={ About } />
-      <Route path='/x' exact strict component={ App } />
-      <Route path='/items' exact strict component={ Items } />
-      <Route path='/item/:id' exact strict component={ Item } />
-      </section>
+        <Navigation />
+        <section className='container'>
+          <Route path='/' exact strict component={ About } />
+          <Route path='/browse' exact strict component={ Browse } />
+          <Route path='/items' exact strict component={ Items } />
+          <Route path='/item/:id' exact strict component={ Item } />
+        </section>
       <Footer />
     </div>
   </Router>,
