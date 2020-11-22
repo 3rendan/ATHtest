@@ -5,7 +5,7 @@ const CardBrowse = styled.section`
   color: black;
   text-align: center;
   display: 'flex',
-  justifyContent: 'space-around'
+  justify-content: 'space-around';
 `;
 
 

@@ -68,18 +68,22 @@ a:visited {
   font-family: 'Montserrat', serif;
   text-transform: uppercase;
 }
-.single-browse {
-  flex-basis: 20%;
-  margin: 10px;
-  border: 1px #000 solid;
-  padding: 5px;
-}
+
 .nav {
   background-color: #999999;
   color: #fff;
   margin: 0;
   list-style: none;
 }
-.nav-item {
-  justify-content: space-around;
+.card-browse {
+  margin: auto;
+  border: 1px #000 solid;
+  float: left;
+  display: flex;
+  justify-content: 'space-around';
+  height: 300px;
+}
+.container {
+  overflow: scroll;
+  padding: 2rem 0 2rem 0;
 }

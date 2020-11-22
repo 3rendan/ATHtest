@@ -3,6 +3,7 @@ import useFetch from '../services/useFetch'
 import Spinner from '../components/Spinner'
 import { getCollection } from '../services/global'
 import Tombstone from '../components/Tombstone'
+import Tags from '../components/Tags'
 import NavTabs from '../components/NavTabs'
 // import myStyles from '../style/Main'
 
@@ -19,6 +20,7 @@ import NavTabs from '../components/NavTabs'
         <h5>{ getCollection(item.collection.id)}</h5>
         <NavTabs topics={topics}/>
         <Tombstone item={item} />
+        <Tags item={item}/>
       </section>
     )
   }

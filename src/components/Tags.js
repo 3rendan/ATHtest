@@ -1,38 +1,15 @@
-import React, { Component } from 'react'
-import axios from 'axios';
+import React from 'react'
+import Style from '../style/Tags'
 
-class Tags extends Component {
-  constructor(props) {
-    super(props)
-
-    this.state = {
-      tags: []
-    }
-  }
-  componentDidMount() {
-    axios('http://digital.provath.org/api/tags')
-    .then(res => {
-      this.setState({ tags: res.data })
-    })
-    .catch(error => console.error(error))
-  }
-
-  render() {
-    const { tags } = this.state;
-    console.log(tags);
-
-    return (
-      <div>
-      { tags.map(tag => {
-        return  (
-            <div key={tag.id} className="text-center">
-                <h3>{ tag.name }</h3>
-            </div>
-          )
+export default function Tags(props) {
+  return (
+    <Style>
+      <h3>Tags</h3><br/>
+      { props.item.tags.map((tag) => {
+        return (
+          <p style={{justifyContent: 'space-around'}}>{tag.name}</p>
+        )
       })}
-      </div>
-    )
-  }
+    </Style>
+  )
 }
-
-export default Tags

@@ -2,6 +2,7 @@ import styled from 'styled-components';
 
 
 const Tombstone = styled.table`
+  margin-left: -5px;
   background-color: white;
   display: flex;
   height: 30rem;

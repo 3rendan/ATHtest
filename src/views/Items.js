@@ -23,7 +23,7 @@ const Items = (props) => {
     <Style className="single-browse">
   		{ items.map((item) => {
   			return  (
-  					<div key={item.id} className="card">
+  					<div key={item.id} className="card card-browse" style={{width: '30%'}}>
   					<Link to={`item/${item.id}`} item={item}>
             <img
             className='image-top'
