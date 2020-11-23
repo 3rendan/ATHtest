@@ -2,6 +2,7 @@ import styled from 'styled-components';
 
 
 const Footer = styled.div`
+  padding: 2rem 0 0 0;
   background-color: black;
   color: white;
   text-align: center;
