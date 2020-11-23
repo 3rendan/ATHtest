@@ -83,7 +83,3 @@ a:visited {
   justify-content: 'space-around';
   height: 300px;
 }
-.container {
-  overflow: scroll;
-  padding: 2rem 0 2rem 0;
-}

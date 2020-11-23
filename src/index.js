@@ -8,6 +8,8 @@ import Footer from "./components/Footer";
 import App from "./App";
 import About from "./components/About";
 import Navigation from "./components/Navigation";
+import Collections from "./components/Collections";
+import Collection from "./components/Collection";
 import Item from "./views/Item";
 import Items from "./views/Items";
 import Browse from "./views/Browse";
@@ -25,6 +27,8 @@ ReactDOM.render(
         <section className='container'>
           <Route path='/' exact strict component={ About } />
           <Route path='/browse' exact strict component={ Browse } />
+          <Route path='/collections' exact strict component={ Collections } />
+          <Route path='/collection/:id' exact strict component={ Collection } />
           <Route path='/items' exact strict component={ Items } />
           <Route path='/item/:id' exact strict component={ Item } />
         </section>
