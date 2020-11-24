@@ -9,9 +9,11 @@ const topics = [ 'Items', 'Tags', 'Collections']
 export default function Browse(props) {
     return (
         <Style>
-            <NavTabs topics={topics} />
-            <Items />  
-            <Collections/>         
+        <NavTabs topics={topics} />
+            <div className='flex-container'>
+                <Items />  
+                <Collections/>   
+            </div>      
         </Style>
     )
 }

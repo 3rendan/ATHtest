@@ -3,6 +3,7 @@ import { Link } from "react-router-dom"
 import useFetch from '../services/useFetch'
 import Style from '../style/Collections'
 import { getCollection } from '../services/global'
+import CardBrowse from '../style/CardBrowse'
 
 export default function Collections(props) {
     const { data: collections, loading, error } = useFetch('collections/')
@@ -11,9 +12,13 @@ export default function Collections(props) {
         <Style>
             { collections.map((collection) =>{
                 return (
-
                     //collection title
-                    <Link to={`collection/${collection.id}`} collections={collections}><p>{collection.element_texts[0].text}</p></Link>
+                <CardBrowse className="card-browse">
+                    <Link to={`collection/${collection.id}`} collections={collections}>
+                        <img class="card-img-top" src="..." alt="Card image cap"></img>
+                        <h6 className='card-body'>{collection.element_texts[0].text}</h6>
+                    </Link>
+                </CardBrowse>
                 )
             })}
         </Style>

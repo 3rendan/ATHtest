@@ -32,7 +32,7 @@ ReactDOM.render(
           <Route path='/items' exact strict component={ Items } />
           <Route path='/item/:id' exact strict component={ Item } />
         </section>
-      <Footer />
+    <Footer />
     </div>
   </Router>,
   document.getElementById("root")

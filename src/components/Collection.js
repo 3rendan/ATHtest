@@ -1,13 +1,14 @@
 import React, { useState } from 'react'
 import useFetch from '../services/useFetch'
-import Style from '../style/Collection'
+import Style from '../style/CardBrowse'
 
 export default function Collection(props) {
+
     console.log(props.collections)
     return (
-        <Style>
+        <Style className='cardBrowse'>
            <p>collection</p> 
-           { console.log(props.collections)}
+
         </Style>
     )
 }

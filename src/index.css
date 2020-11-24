@@ -82,4 +82,5 @@ a:visited {
   display: flex;
   justify-content: 'space-around';
   height: 300px;
+  list-style: none;
 }
