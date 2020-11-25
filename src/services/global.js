@@ -26,8 +26,8 @@ export function getCollection(id) {
     }
   }
 
-export function getUrl(arr, x) {
-  if(arr.item.id === x){
-    return arr.file_urls.thumbnail;;
+export function getUrl(obj, x) {
+  if(obj.item.id === x){
+    return obj;
   }
 }

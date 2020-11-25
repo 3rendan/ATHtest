@@ -25,13 +25,13 @@ const Items = (props) => {
   		{ items.map((item) => {
   			return  (
   					<Link to={`item/${item.id}`} item={item}>
-  					<CardBrowse key={item.id}>
+  					<CardBrowse key={item.id} className='card'>
               <img
-                className='image-top'
-                src={ 'http://digital.provath.org/items/show/70' }
+                className='image-top square'
+                src={ (images.find(image => (image.item.id === item.id))).file_urls.square_thumbnail}
                 alt={item.element_texts[0].text} />
               <div className='card-body'>
-                <h5>{item.element_texts[0].text}</h5>
+                <h6>{item.element_texts[0].text}</h6>
   					  </div>
   					  </CardBrowse>
   					</Link>

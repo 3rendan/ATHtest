@@ -24,15 +24,14 @@ ReactDOM.render(
     <div className='App'>
       <Header />
         <Navigation />
-        <section className='container'>
+        <div className='container'>
           <Route path='/' exact strict component={ About } />
           <Route path='/browse' exact strict component={ Browse } />
           <Route path='/collections' exact strict component={ Collections } />
           <Route path='/collection/:id' exact strict component={ Collection } />
           <Route path='/items' exact strict component={ Items } />
           <Route path='/item/:id' exact strict component={ Item } />
-        </section>
-    <Footer />
+        </div>
     </div>
   </Router>,
   document.getElementById("root")

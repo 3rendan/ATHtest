@@ -16,6 +16,10 @@ body {
   font-family: 'Montserrat', sans-serif;
   line-height: 2;
   color: black;
+  position: relative;
+  margin: 0;
+  min-height: 100%;
+  overflow-x: hidden;
 }
 table td, th {
   border-left:10px solid #fff;
@@ -49,11 +53,18 @@ h4 { /* subheading of header */
   margin-bottom: 0;
   font-style: italic;
 }
-h5 { /* for Item.js collection.name subheading | Items.js card title | */
+h5 { /* for Item.js collection.name subheading |  | */
   font-size: 1.25rem;
   font-family: 'Montserrat', sans-serif;
   line-height: 2.25;
 }
+h6 { /* for Item.js collection.name subheading |  | */
+  font-size: 1.15rem;
+  font-family: 'Montserrat', sans-serif;
+  line-height: 2;
+  max-width: 250px;
+}
+
 a {
   color: #C4D425;
 }
@@ -83,4 +94,19 @@ a:visited {
   justify-content: 'space-around';
   height: 300px;
   list-style: none;
+}
+footer {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  background-color: black;
+  color: white;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+.square {
+  margin: auto;
+  padding: 4px;
+  max-width: 300px;
 }

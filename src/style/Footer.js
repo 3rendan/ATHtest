@@ -7,8 +7,7 @@ const Footer = styled.footer`
   color: white;
   text-align: center;
   width: 100%;
-  position: relative;
-  z-index: 999999999;
+  display: block;
 `;
 
 

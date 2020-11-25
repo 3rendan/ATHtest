@@ -10,7 +10,7 @@ export default function Browse(props) {
     return (
         <Style>
         <NavTabs topics={topics} />
-            <div className='flex-container'>
+            <div>
                 <Items />  
                 <Collections/>   
             </div>      
