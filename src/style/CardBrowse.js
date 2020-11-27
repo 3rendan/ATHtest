@@ -6,8 +6,7 @@ const CardBrowse = styled.div`
   border: 1px solid black;
   text-align: center;
   margin: 10px;
-  float: left;
-  min-height: 400px;
+  min-height: 435px;
 `;
 
 

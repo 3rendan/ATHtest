@@ -18,16 +18,20 @@ import NavTabs from '../components/NavTabs'
     if (loading) return <Spinner />;
     console.log(images)
     return (
-      <section  className='col-sm-5'>
-        <h3>{ item.element_texts[0].text }</h3>
-        <h5>{ getCollection(item.collection.id) }</h5>
-        <NavTabs topics={topics}/>
-        <Tombstone item={item} />
-        <Tags item={item}/>
-        <img
-          src={ (images.find(image => (image.item.id === item.id))).file_urls.square_thumbnail}
-          alt={item.element_texts[0].text} />
-      </section>
+      <div className='container'>
+        <section  className='col-sm-5'>
+          <h3>{ item.element_texts[0].text }</h3>
+          <h5>{ getCollection(item.collection.id) }</h5>
+        </section>
+        <section  className='col-sm-5'>
+          <NavTabs topics={topics}/>
+          <Tombstone item={item} />
+          <Tags item={item}/>
+        </section>  
+        <section className='col-sm-6'>
+          <h1>image</h1>
+        </section>
+      </div>
 
     )
   }

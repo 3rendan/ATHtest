@@ -13,7 +13,6 @@ import CardBrowse from '../style/CardBrowse'
 const Items = (props) => {
   const { data: items, loading, error } = useFetch('items');
   const { data: images } = useFetch('files');
-  console.log(items)
   const [ url, setUrl] = useState([]);
 
 
@@ -21,23 +20,23 @@ const Items = (props) => {
   if (error) throw error;
   if (loading) return <Spinner />;
   return (
-    <Board>
+    <div>
   		{ items.map((item) => {
   			return  (
+            <CardBrowse key={item.id} className='card'>
   					<Link to={`item/${item.id}`} item={item}>
-  					<CardBrowse key={item.id} className='card'>
-              <img
-                className='image-top square'
-                src={ (images.find(image => (image.item.id === item.id))).file_urls.square_thumbnail}
-                alt={item.element_texts[0].text} />
-              <div className='card-body'>
-                <h6>{item.element_texts[0].text}</h6>
-  					  </div>
-  					  </CardBrowse>
+                <img
+                  className='image-top square'
+                  src={ (images.find(image => (image.item.id === item.id))).file_urls.square_thumbnail}
+                  alt={item.element_texts[0].text} />
+                <section className='card-body'>
+                  <h6>{item.element_texts[0].text}</h6>
+                </section>
   					</Link>
+              </CardBrowse>
   				)})
   			}
-  		</Board>
+  		</div>
   	)
   }
 

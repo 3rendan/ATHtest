@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 
-const Paragraph = styled.section`
+const Paragraph = styled.article`
   padding: 2em 0 2em 0;
   color: black;
   font-size: 1.35rem;

@@ -9,6 +9,7 @@ export default function Navigation() {
             <li className='nav-item'><Link to={`/collections`}>Collections</Link></li>        
             <li className='nav-item'><Link to={`/`}>About</Link></li>        
             <li className='nav-item'><Link to={`/Items`}>Items</Link></li>        
+            <li className='nav-item'><Link to={`/browse`}>Browse</Link></li>        
         </Style>
     )
 }

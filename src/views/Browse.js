@@ -8,7 +8,7 @@ const topics = [ 'Items', 'Tags', 'Collections']
 
 export default function Browse(props) {
     return (
-        <Style>
+        <Style  className='container'>
         <NavTabs topics={topics} />
             <div>
                 <Items />  
