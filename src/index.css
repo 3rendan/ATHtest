@@ -107,9 +107,7 @@ footer {
   grid-column-gap: 1rem;
 }
 .single-item {
-  margin: 0 auto;
+  margin: auto;
   max-width: 95%;
-}
-.train {
-  border: 1px solid black;
+  display: block;
 }

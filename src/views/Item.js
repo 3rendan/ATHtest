@@ -27,7 +27,7 @@ import NavTabs from '../components/NavTabs'
           <Tombstone item={item} />
           <Tags item={item}/>
         </section>  
-        <section className='train'>
+        <section>
         <img
           className='single-item'
           src='http://digital.provath.org/files/fullsize/8ceebec5ab3c3eb0d53d2a91560d8096.jpg'
