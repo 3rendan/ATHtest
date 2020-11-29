@@ -1,12 +1,13 @@
 import styled from 'styled-components';
 
 
-const StyledHeader = styled.div`
+const Tags = styled.section`
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   text-transform: uppercase;
   border: 1px solid black;
+  list-style: none;
 `;
 
 
-export default StyledHeader;
+export default Tags;

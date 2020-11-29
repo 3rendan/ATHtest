@@ -10,14 +10,14 @@ export default function Tombstone(props) {
     { props.item.element_texts.map((marcTag) =>{
       if(showCategory.includes(marcTag.element.name)){
         return (
-          <tr>
-            <th className="mtdt">{ marcTag.element.name }:</th>
-            <td>{ marcTag.text }</td>
-          </tr>
+          <>
+            <div className="mtdt">{ marcTag.element.name }:</div>
+            <div>{ marcTag.text }</div>
+          </>
         )
       }
     }
     )}
-  </Style>
+    </Style>
   )
 }

@@ -6,31 +6,34 @@ import Tombstone from '../components/Tombstone'
 import Tags from '../components/Tags'
 import NavTabs from '../components/NavTabs'
 
-// import myStyles from '../style/Main'
 
 
   const Item = (props) => {
     const { data: item, loading, error } = useFetch('items/' + props.match.params.id)
     const [ collection, setCollection ] = useState([])
-    const { data: images } = useFetch('files/');
+    // const { data: images, loading, error } = useFetch('files/');
     const topics = ['Info', 'Story', 'Resources']
     if (error) throw error;
     if (loading) return <Spinner />;
-    console.log(images)
     return (
       <div className='container'>
-        <section  className='col-sm-5'>
-          <h3>{ item.element_texts[0].text }</h3>
-          <h5>{ getCollection(item.collection.id) }</h5>
-        </section>
-        <section  className='col-sm-5'>
+      <section>
+        <h3>{ item.element_texts[0].text }</h3>
+        <h5>{ getCollection(item.collection.id) }</h5>
+      </section>
+      <div className='grid'>
+        <section>
           <NavTabs topics={topics}/>
           <Tombstone item={item} />
           <Tags item={item}/>
         </section>  
-        <section className='col-sm-6'>
-          <h1>image</h1>
+        <section className='train'>
+        <img
+          className='single-item'
+          src='http://digital.provath.org/files/fullsize/8ceebec5ab3c3eb0d53d2a91560d8096.jpg'
+          alt={item.element_texts[0].text} />
         </section>
+      </div>
       </div>
 
     )

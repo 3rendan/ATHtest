@@ -2,17 +2,13 @@ import styled from 'styled-components';
 
 
 const Tombstone = styled.table`
-  margin-left: -5px;
-  background-color: white;
-  display: flex;
-  height: 30rem;
-  max-height: 40%;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  grid-gap: .5rem;
+  grid-row-height: 30px;
+  height: 40rem;
   overflow: scroll;
   font-size: 1.1rem;
-  vertical-align: middle;
-  width: 100%;
-  justify-content: space-evenly;
   line-height: 2;
 `;
 

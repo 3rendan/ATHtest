@@ -21,18 +21,8 @@ body {
   min-height: 100%;
   overflow-x: hidden;
 }
-table td, th {
-  border-left:10px solid #fff;
-  border-bottom:10px solid #fff;
-  padding: 10px;
-  width: 100;
-}
-td, th {
-  background-color: #e6e6e6;
-}
-th {
-  width: 30%;
-}
+
+
 h1 { /* heading of header */
     text-align: center;
     text-transform: uppercase;
@@ -68,16 +58,18 @@ a {
   color: #C4D425;
 }
 a:hover {
-  color: #e6e6e6;
+  color: #eee;
 }
 a:visited {
-  color: #e6e6e6;
+  color: #eee;
   text-decoration: none;
 }
-.mtdt {
+.mtdt-category {
   font-family: 'Montserrat', serif;
   text-transform: uppercase;
+  margin-left: 1rem;
 }
+
 
 .nav {
   background-color: #999999;
@@ -107,5 +99,17 @@ footer {
 .square {
   margin: auto;
   padding: 4px;
-  max-width: 300px;
+  max-width: 95%;
+}
+.grid {
+  display: grid;
+  grid-template-columns: 4.5fr 5.5fr;
+  grid-column-gap: 1rem;
+}
+.single-item {
+  margin: 0 auto;
+  max-width: 95%;
+}
+.train {
+  border: 1px solid black;
 }
