@@ -3,10 +3,13 @@ import { Link } from "react-router-dom"
 import useFetch from '../services/useFetch'
 import { getCollection } from '../services/global'
 import CardBrowse from '../style/CardBrowse'
+import Spinner from '../services/Spinner'
 
 export default function Collections(props) {
     const { data: collections, loading, error } = useFetch('collections/')
     // const [ collection, setCollection ] = useState([])
+    if (error) throw error;
+    if (loading) return <Spinner />;
     return (
         <>
             { collections.map((collection) =>{

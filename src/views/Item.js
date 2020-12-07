@@ -1,10 +1,10 @@
 import React, { useEffect, useState } from 'react'
 import useFetch from '../services/useFetch'
-import Spinner from '../components/Spinner'
 import { getCollection } from '../services/global'
 import Tombstone from '../components/Tombstone'
 import Tag from '../components/Tag'
 import NavTabs from '../components/NavTabs'
+import Spinner from '../services/Spinner'
 
 
 

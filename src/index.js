@@ -13,6 +13,7 @@ import Collection from "./components/Collection";
 import Item from "./views/Item";
 import Items from "./views/Items";
 import Browse from "./views/Browse";
+import Spinner from "./services/Spinner";
 
 
 import * as serviceWorker from './serviceWorker';
@@ -26,6 +27,7 @@ ReactDOM.render(
         <Navigation />
         <div className='container'>
           <Route path='/' exact strict component={ About } />
+          <Route path='/s' exact strict component={ Spinner } />
           <Route path='/browse' exact strict component={ Browse } />
           <Route path='/collections' exact strict component={ Collections } />
           <Route path='/collection/:id' exact strict component={ Collection } />

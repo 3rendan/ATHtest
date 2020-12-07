@@ -13,6 +13,7 @@ const NavTabs = styled.nav`
   line-height: 2;
   list-style: none;
   justify-content: space-around;
+  margin-bottom: 1rem;
 `;
 
 
