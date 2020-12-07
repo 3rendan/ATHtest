@@ -3,7 +3,7 @@ import useFetch from '../services/useFetch'
 import Spinner from '../components/Spinner'
 import { getCollection } from '../services/global'
 import Tombstone from '../components/Tombstone'
-import Tags from '../components/Tags'
+import Tag from '../components/Tag'
 import NavTabs from '../components/NavTabs'
 
 
@@ -25,7 +25,7 @@ import NavTabs from '../components/NavTabs'
         <section>
           <NavTabs topics={topics}/>
           <Tombstone item={item} />
-          <Tags item={item}/>
+          <Tag item={item}/>
         </section>  
         <section>
         <img
