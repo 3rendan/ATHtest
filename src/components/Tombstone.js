@@ -11,8 +11,8 @@ export default function Tombstone(props) {
       if(showCategory.includes(marcTag.element.name)){
         return (
           <>
-            <div className="mtdt">{ marcTag.element.name }:</div>
-            <div>{ marcTag.text }</div>
+            <section className="mtdt mtdt-category">{ marcTag.element.name }:</section>
+            <section className="mtdt">{ marcTag.text }</section>
           </>
         )
       }

@@ -19,10 +19,10 @@ const Items = (props) => {
   if (error) throw error;
   if (loading) return <Spinner />;
   return (
-    <div>
+    <>
   		{ items.map((item) => {
   			return  (
-            <CardBrowse key={item.id} className='card'>
+            <CardBrowse key={item.id}>
   					<Link to={`item/${item.id}`} item={item}>
                 <img
                   className='image-top square'
@@ -32,10 +32,10 @@ const Items = (props) => {
                   <h6>{item.element_texts[0].text}</h6>
                 </section>
   					</Link>
-              </CardBrowse>
+            </CardBrowse>
   				)})
   			}
-  		</div>
+  		</>
   	)
   }
 

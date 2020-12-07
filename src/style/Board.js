@@ -2,8 +2,9 @@ import styled from 'styled-components';
 
 
 const Board = styled.div`
-  display: flex;
-  justify-content: space-around;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  justify-content: space-between;
   color: black;
   margin: auto;
 `;

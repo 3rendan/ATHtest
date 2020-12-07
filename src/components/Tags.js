@@ -4,15 +4,13 @@ import Style from '../style/Tags'
 export default function Tags(props) {
   return (
     <>
-    <h5>Tags</h5>
+    <h1 style={{paddingTop: '1rem'}}>Tags</h1>
     <Style>
-      <ul>
       { props.item.tags.map((tag) => {
         return (
-          <li>{tag.name}</li>
+          <p className='tag'>{tag.name}</p>
         )
       })}
-      </ul>
     </Style>
     </>
   )

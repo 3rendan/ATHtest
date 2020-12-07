@@ -64,10 +64,16 @@ a:visited {
   color: #eee;
   text-decoration: none;
 }
+.mtdt {
+  background-color: #eeeeee;
+}
 .mtdt-category {
   font-family: 'Montserrat', serif;
   text-transform: uppercase;
-  margin-left: 1rem;
+}
+.tag {
+  padding: .5rem;
+  text-align: center;
 }
 
 
@@ -77,15 +83,7 @@ a:visited {
   margin: 0;
   list-style: none;
 }
-.card-browse {
-  margin: auto;
-  border: 1px #000 solid;
-  float: left;
-  display: flex;
-  justify-content: 'space-around';
-  height: 300px;
-  list-style: none;
-}
+
 footer {
   position: absolute;
   display: flex;

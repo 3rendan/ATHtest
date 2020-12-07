@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import { Link } from "react-router-dom"
 import useFetch from '../services/useFetch'
-import Style from '../style/Collections'
 import { getCollection } from '../services/global'
 import CardBrowse from '../style/CardBrowse'
 
@@ -9,7 +8,7 @@ export default function Collections(props) {
     const { data: collections, loading, error } = useFetch('collections/')
     // const [ collection, setCollection ] = useState([])
     return (
-        <Style>
+        <>
             { collections.map((collection) =>{
                 return (
                     //collection title
@@ -21,6 +20,6 @@ export default function Collections(props) {
                 </CardBrowse>
                 )
             })}
-        </Style>
+        </>
     )
 }

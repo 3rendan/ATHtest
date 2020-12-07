@@ -1,5 +1,4 @@
 import React from 'react'
-import Style from '../style/Browse.js'
 import Board from '../style/Board.js'
 import NavTabs from '../components/NavTabs'
 import Items from '../views/Items'
@@ -9,11 +8,13 @@ const topics = [ 'Items', 'Tags', 'Collections']
 
 export default function Browse(props) {
     return (
-        <Style  className='container'>
+        <>
         <NavTabs topics={topics} />
             <Board>
-                <Items />  
-            </Board>      
-        </Style>
+                <Items /> 
+                <Collections /> 
+            </Board> 
+        </>     
+        
     )
 }
