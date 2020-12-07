@@ -12,7 +12,8 @@ import Spinner from '../services/Spinner'
     const { data: item, loading, error } = useFetch('items/' + props.match.params.id)
     const [ collection, setCollection ] = useState([])
     // const { data: images, loading, error } = useFetch('files/');
-    const topics = ['Info', 'Story', 'Resources']
+    const topics = ['Info', 'Story', 'Resources'] 
+    const activeKey = 'info';
     if (error) throw error;
     if (loading) return <Spinner />;
     return (

@@ -3,6 +3,7 @@ import { Link } from "react-router-dom"
 import useFetch from '../services/useFetch'
 import { getCollection } from '../services/global'
 import CardBrowse from '../style/CardBrowse'
+import Board from '../style/Board'
 import Spinner from '../services/Spinner'
 
 export default function Collections(props) {
@@ -11,7 +12,7 @@ export default function Collections(props) {
     if (error) throw error;
     if (loading) return <Spinner />;
     return (
-        <>
+        <Board>
             { collections.map((collection) =>{
                 return (
                     //collection title
@@ -23,6 +24,6 @@ export default function Collections(props) {
                 </CardBrowse>
                 )
             })}
-        </>
+        </Board>
     )
 }
