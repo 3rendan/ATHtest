@@ -1,21 +1,25 @@
 import React from 'react'
-import Tabs from 'react-bootstrap/Tabs'
-import Tab from 'react-bootstrap/Tab'
-import Style from '../style/NavTabs'
+import { Tabs, Tab } from '@material-ui/core'
+import Items from '../views/Items'
+import Item from '../views/Item'
+import Collections from '../components/Collections'
+import Tags from '../components/Tags'
 
-export default function NavTabs(props) {
-    const topic = [];
-    const activeKey = '';
+const NavTabs = (props) => {
+
+    const [selectedTab, setSelectedTab] = React.useState(0);
+
+    const handleChange = (event, newValue) => {
+        setSelectedTab(newValue);
+    };
     return (
-        <Style>
-            <Tabs defaultActiveKey={activeKey} id="uncontrolled-tab-example">
-           { props.topics.map((topic)=>{
-               return (
-               <Tab eventKey={topic} title={topic}></Tab>              
-                )
-            })
-           }
-           </Tabs>
-        </Style>
+        
+        <Tabs value={selectedTab} onChange={handleChange} className='navbar'>
+            <Tab label={props.topics[0]} />
+            <Tab label={props.topics[1]} />
+            <Tab label={props.topics[2]} />
+        </Tabs>
+
     )
 }
+export default NavTabs;

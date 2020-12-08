@@ -88,6 +88,17 @@ a:visited {
   margin: 0;
   list-style: none;
 }
+.navbar {
+  background-color: #999999;
+  color: white;
+  display: flex;
+  flex-wrap: wrap;
+  font-size: 1.1rem;
+  vertical-align: middle;
+  width: 100%;
+  justify-content: space-around;
+  margin-bottom: 1rem;
+}
 
 footer {
   position: absolute;

@@ -1,8 +1,8 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { Router, Route } from "react-router-dom";
+import { Router, Route, Redirect } from "react-router-dom";
 import { createBrowserHistory } from "history";
-import './index.css'
+import './index.css';
 import Header from "./components/Header";
 import Footer from "./components/Footer";
 import App from "./App";
@@ -28,7 +28,8 @@ ReactDOM.render(
         <div className='container'>
           <Route path='/' exact strict component={ About } />
           <Route path='/s' exact strict component={ Spinner } />
-          <Route path='/browse' exact strict component={ Browse } />
+          <Redirect exact from='/browse' to='browse/items' />
+          <Route path='/browse/:page?' render={props => <Browse {...props}/>} />
           <Route path='/collections' exact strict component={ Collections } />
           <Route path='/collection/:id' exact strict component={ Collection } />
           <Route path='/items' exact strict component={ Items } />
