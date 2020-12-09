@@ -27,9 +27,8 @@ ReactDOM.render(
         <Navigation />
         <div className='container'>
           <Route path='/' exact strict component={ About } />
-          <Route path='/s' exact strict component={ Spinner } />
-          <Redirect exact from='/browse' to='browse/items' />
-          <Route path='/browse/:page?' render={props => <Browse {...props}/>} />
+          
+          <Route path='/browse' exact strict component={ Browse } />
           <Route path='/collections' exact strict component={ Collections } />
           <Route path='/collection/:id' exact strict component={ Collection } />
           <Route path='/items' exact strict component={ Items } />
