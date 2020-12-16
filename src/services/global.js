@@ -22,12 +22,6 @@ export function getCollection(id) {
         break;
       case 5:
         return 'Prints';
-        break;
     }
   }
 
-export function getUrl(obj, x) {
-  if(obj.item.id === x){
-    return obj;
-  }
-}

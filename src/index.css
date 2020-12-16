@@ -55,10 +55,10 @@ h6 { /* for Item.js collection.name subheading |  | */
   max-width: 250px;
 }
 a {
-  color: #C4D425;
+  color: #fff;
 }
 a:hover {
-  color: #eee;
+  color: #C4D425;
 }
 a:visited {
   color: #eee;

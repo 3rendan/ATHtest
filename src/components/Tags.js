@@ -13,7 +13,6 @@ export default function Tags() {
 
     return (
         <>
-            <h1 style={{paddingTop: '1rem'}}>Tags</h1>
             <Style>
             { tName.map((tag) => {
                 return (

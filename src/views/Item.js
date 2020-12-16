@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import useFetch from '../services/useFetch'
-import { getCollection } from '../services/global'
+import { getCollection, getUrl } from '../services/global'
 import Tombstone from '../components/Tombstone'
 import Tag from '../components/Tag'
 import NavTabs from '../components/NavTabs'
@@ -10,10 +10,10 @@ import Spinner from '../services/Spinner'
 
   const Item = (props) => {
     const { data: item, loading, error } = useFetch('items/' + props.match.params.id)
+    const { data: images } = useFetch('files');
     const [ collection, setCollection ] = useState([])
     // const { data: images, loading, error } = useFetch('files/');
     const topics = ['Info', 'Story', 'Resources'] 
-    const activeKey = 'info';
     if (error) throw error;
     if (loading) return <Spinner />;
     return (
@@ -34,6 +34,7 @@ import Spinner from '../services/Spinner'
           src='http://digital.provath.org/files/fullsize/8ceebec5ab3c3eb0d53d2a91560d8096.jpg'
           alt={item.element_texts[0].text} />
         </section>
+
       </div>
       </div>
 
