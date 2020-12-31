@@ -12,7 +12,7 @@ export default function Collections(props) {
     if (error) throw error;
     if (loading) return <Spinner />;
     return (
-        <Board>
+        <Board className='second'>
             { collections.map((collection) =>{
                 return (
                     //collection title

@@ -7,6 +7,7 @@ import Tags from '../components/Tags.js'
 
 export default function Browse(props) {
     const topics = [ 'Items', 'Tags', 'Collections'];
+
     const { children, value, index, ...other } = props;
 
     const [selectedTab, setSelectedTab] = React.useState(0);
@@ -16,9 +17,15 @@ export default function Browse(props) {
     };
     return (
         <>
-        <NavTabs topics={topics} />
-            
-        </>     
+            <>
+                <NavTabs topics={topics}/>    
+            </>
+            <>
+                <Items />
+                <Collections/>     
+                <Tags/>  
+            </>   
+        </>   
         
     )
 }

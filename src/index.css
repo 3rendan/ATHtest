@@ -125,3 +125,12 @@ footer {
   max-width: 95%;
   display: block;
 }
+.first {
+  visibility: visible;
+}
+.second {
+  visibility: hidden;
+}
+.third {
+  visibility: hidden;
+}

@@ -13,7 +13,7 @@ export default function Tags() {
 
     return (
         <>
-            <Style>
+            <Style className='second'>
             { tName.map((tag) => {
                 return (
                     <p className='tag-browse'>{tag}</p>
