@@ -17,6 +17,7 @@ import Spinner from "./services/Spinner";
 
 
 import * as serviceWorker from './serviceWorker';
+import NavTabs from './components/NavTabs';
 
 let hist = createBrowserHistory();
 
@@ -27,6 +28,7 @@ ReactDOM.render(
         <Navigation />
         <div className='container'>
           <Route path='/' exact strict component={ About } />
+          <Route path='/nav' exact strict component={ NavTabs } />
           
           <Route path='/browse' exact strict component={ Browse } />
           <Route path='/collections' exact strict component={ Collections } />

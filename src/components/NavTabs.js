@@ -9,7 +9,7 @@ const NavTabs = (props) => {
     const [selectedTab, setSelectedTab] = React.useState(0);
 
     const handleChange = (e, newValue) => {
-        console.log(newValue);
+        console.log(newValue)
         setSelectedTab(newValue);
     };
     return (
@@ -19,6 +19,9 @@ const NavTabs = (props) => {
                 <Tab label={props.topics[1]}/>
                 <Tab label={props.topics[2]}/>
             </Tabs>
+            { selectedTab === 0 && <Items/> }
+            { selectedTab === 1 && <Collections/> }
+            { selectedTab === 2 && <Items/> }
         </>
 
     )

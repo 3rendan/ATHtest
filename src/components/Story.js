@@ -1,16 +1,17 @@
 import React from 'react'
-import Style from '../style/Tombstone'
 
-export default function Story() {
+export default function Story(props) {
+    const showCategory = ['Description'];
     return (
-    <Style className='second'>
-      { props.item.element_texts.find(marcTag => marcTag === 'Description')
-          return (
-            <>
-                <section className="mtdt">{ marcTag.text }</section>
-            </>
-        )
-      }
-    </Style>
+    <>
+            { props.item.element_texts.map((marcTag) =>{
+                if(showCategory.includes(marcTag.element.name)){
+                    return (
+                        <>
+                            <section className="paragraph">{ marcTag.text }</section>
+                        </>
+                        )
+                }})}
+    </>
     )
 }

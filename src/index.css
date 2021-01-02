@@ -66,10 +66,23 @@ a:visited {
 }
 .mtdt {
   background-color: #eeeeee;
+  padding: .5rem;
 }
 .mtdt-category {
   font-family: 'Montserrat', serif;
   text-transform: uppercase;
+  text-align: center;
+  padding: 1.5rem;
+}
+.paragraph {
+  font-family: 'EB Garamond', serif;
+  background-color: #eeeeee;
+  width: 100%;
+  height: 40rem;
+  overflow: scroll;
+  font-size: 1.35rem;
+  line-height: 2;
+  padding: 2rem;
 }
 .tag {
   padding: .5rem;
@@ -125,12 +138,4 @@ footer {
   max-width: 95%;
   display: block;
 }
-.first {
-  visibility: visible;
-}
-.second {
-  visibility: hidden;
-}
-.third {
-  visibility: hidden;
-}
+

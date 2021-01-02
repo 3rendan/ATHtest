@@ -1,9 +1,12 @@
 import React, { useEffect, useState } from 'react'
+import { Tabs, Tab } from '@material-ui/core'
 import useFetch from '../services/useFetch'
 import { getCollection, getUrl } from '../services/global'
 import Tombstone from '../components/Tombstone'
+import Story from '../components/Story'
+import Resources from '../components/Resources'
 import Tag from '../components/Tag'
-import NavTabs from '../components/NavTabs'
+
 import Spinner from '../services/Spinner'
 
 
@@ -14,6 +17,12 @@ import Spinner from '../services/Spinner'
     const [ collection, setCollection ] = useState([])
     // const { data: images, loading, error } = useFetch('files/');
     const topics = ['Info', 'Story', 'Resources'] 
+    const [selectedTab, setSelectedTab] = React.useState(0);
+
+    const handleChange = (event, newValue) => {
+        setSelectedTab(newValue);
+    };
+
     if (error) throw error;
     if (loading) return <Spinner />;
     return (
@@ -24,8 +33,16 @@ import Spinner from '../services/Spinner'
       </section>
       <div className='grid'>
         <section>
-          <NavTabs topics={topics}/>
-          <Tombstone item={item} />
+        <>
+          <Tabs value={selectedTab} onChange={handleChange} className='navbar'>
+            <Tab label={topics[0]}/>
+            <Tab label={topics[1]}/>
+            <Tab label={topics[2]}/>
+          </Tabs>
+          { selectedTab === 0 && <Tombstone item={item} /> }
+          { selectedTab === 1 && <Story item={item}/> }
+          { selectedTab === 2 && <Resources item={item} /> }
+        </>
           <Tag item={item}/>
         </section>  
         <section>
