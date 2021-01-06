@@ -6,6 +6,7 @@ const Board = styled.div`
   grid-template-columns: 1fr 1fr 1fr;
   grid-gap: .5rem;
   color: black;
+  padding-top: .5rem;
 `;
 
 

@@ -18,7 +18,12 @@ export default function Browse(props) {
     };
     return (
         <>
-            <Tabs value={selectedTab} onChange={handleChange} className='navbar'>
+            <Tabs 
+            value={selectedTab} 
+            onChange={handleChange} 
+            className='navbar' 
+            variant='fullWidth'
+            aria-label='full width tabs example'>
                 <Tab label={topics[0]}/>
                 <Tab label={topics[1]}/>
                 <Tab label={topics[2]}/>

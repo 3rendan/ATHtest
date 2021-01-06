@@ -11,10 +11,13 @@ COMPONENT LEVEL STYLING ALL OCCURS IN THE /STYLE FOLDER
                 ----------------------------------
 */
 @import url(https://fonts.googleapis.com/css?family=EB+Garamond|Montserrat);
-
+html {
+  background-color: black;
+}
 body {
   font-family: 'Montserrat', sans-serif;
   line-height: 2;
+  background-color: white;
   color: black;
   position: relative;
   margin: 0;
@@ -107,10 +110,9 @@ a:visited {
   display: flex;
   flex-wrap: wrap;
   font-size: 1.1rem;
-  vertical-align: middle;
   width: 100%;
   justify-content: space-around;
-  margin-bottom: 1rem;
+  border-radius: 2rem 2rem 0 0; 
 }
 
 footer {

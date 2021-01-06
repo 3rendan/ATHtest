@@ -6,6 +6,7 @@ const Tags = styled.section`
   grid-template-columns: 1fr 1fr 1fr;
   justify-content: space-between;
   text-transform: uppercase;
+  padding-top: .5rem;
 `;
 
 

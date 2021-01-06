@@ -20,7 +20,7 @@ const Items = (props) => {
   if (error) throw error;
   if (loading) return <Spinner />;
   return (
-    <Board className='first'>
+    <Board>
   		{ items.map((item) => {
   			return  (
             <CardBrowse key={item.id}>

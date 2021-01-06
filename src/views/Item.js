@@ -13,16 +13,14 @@ import Spinner from '../services/Spinner'
 
   const Item = (props) => {
     const { data: item, loading, error } = useFetch('items/' + props.match.params.id)
-    const { data: images } = useFetch('files');
+    const { data: image } = useFetch('files/' + 15)
     const [ collection, setCollection ] = useState([])
-    // const { data: images, loading, error } = useFetch('files/');
     const topics = ['Info', 'Story', 'Resources'] 
     const [selectedTab, setSelectedTab] = React.useState(0);
 
     const handleChange = (event, newValue) => {
         setSelectedTab(newValue);
     };
-
     if (error) throw error;
     if (loading) return <Spinner />;
     return (
@@ -31,10 +29,17 @@ import Spinner from '../services/Spinner'
         <h3>{ item.element_texts[0].text }</h3>
         <h5>{ getCollection(item.collection.id) }</h5>
       </section>
+
       <div className='grid'>
         <section>
         <>
-          <Tabs value={selectedTab} onChange={handleChange} className='navbar'>
+          <Tabs 
+          value={selectedTab} 
+          onChange={handleChange} 
+          className='navbar'
+          indicatorColor='#C4D425' 
+          variant='fullWidth'
+          aria-label='full width tabs example'>
             <Tab label={topics[0]}/>
             <Tab label={topics[1]}/>
             <Tab label={topics[2]}/>
@@ -48,7 +53,7 @@ import Spinner from '../services/Spinner'
         <section>
         <img
           className='single-item'
-          src='http://digital.provath.org/files/fullsize/8ceebec5ab3c3eb0d53d2a91560d8096.jpg'
+          src={ console.log(item.id)}
           alt={item.element_texts[0].text} />
         </section>
 
