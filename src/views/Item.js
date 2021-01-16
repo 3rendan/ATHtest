@@ -13,11 +13,12 @@ import Spinner from '../services/Spinner'
 
   const Item = (props) => {
     const { data: item, loading, error } = useFetch('items/' + props.match.params.id)
-    const { data: image } = useFetch('files/' + 15)
+    const { data: images } = useFetch('files/')
     const [ collection, setCollection ] = useState([])
     const topics = ['Info', 'Story', 'Resources'] 
     const [selectedTab, setSelectedTab] = React.useState(0);
-
+    
+  
     const handleChange = (event, newValue) => {
         setSelectedTab(newValue);
     };
@@ -52,9 +53,9 @@ import Spinner from '../services/Spinner'
         </section>  
         <section>
         <img
-          className='single-item'
-          src={ console.log(item.id)}
-          alt={item.element_texts[0].text} />
+            className='single-item'
+            src={ console.log(images.find((image)=> image.item.id === item.id)) }
+            alt={item.element_texts[0].text} />
         </section>
 
       </div>

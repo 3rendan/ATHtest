@@ -24,4 +24,3 @@ export function getCollection(id) {
         return 'Prints';
     }
   }
-
