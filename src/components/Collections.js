@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import { Link } from "react-router-dom"
 import useFetch from '../services/useFetch'
-import { getCollection } from '../services/global'
+import { collectionImage } from '../services/global'
 import CardBrowse from '../style/CardBrowse'
 import Board from '../style/Board'
 import Spinner from '../services/Spinner'
@@ -17,8 +17,8 @@ export default function Collections(props) {
                 return (
                     //collection title
                 <CardBrowse className="card-browse">
-                    <Link to={`collection/${collection.id}`} collections={collections}>
-                        <img class="card-img-top" src="..." alt="Card image cap"></img>
+                    <Link to={`collection/${collection.id}`}>
+                        <img className='image-top square' src={collectionImage(collection.id)} alt="Card image cap"></img>
                         <h6 className='card-body'>{collection.element_texts[0].text}</h6>
                     </Link>
                 </CardBrowse>

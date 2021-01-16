@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import { Tabs, Tab } from '@material-ui/core'
 import { createMuiTheme, ThemeProvider } from '@material-ui/core/styles'
-import { getCollection, getUrl } from '../services/global'
+import { getCollection } from '../services/global'
 import useFetch from '../services/useFetch'
 import Tombstone from '../components/Tombstone'
 import Story from '../components/Story'

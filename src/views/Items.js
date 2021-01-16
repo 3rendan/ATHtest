@@ -1,8 +1,7 @@
-import React, { useState } from 'react'
+import React from 'react'
 import { Link } from "react-router-dom"
 import useFetch from '../services/useFetch'
 import Board from '../style/Board'
-import { getUrl } from '../services/global'
 import CardBrowse from '../style/CardBrowse'
 import Spinner from '../services/Spinner'
 
