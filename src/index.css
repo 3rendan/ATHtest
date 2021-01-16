@@ -25,7 +25,6 @@ body {
   overflow-x: hidden;
 }
 
-
 h1 { /* heading of header */
     text-align: center;
     text-transform: uppercase;
@@ -52,11 +51,13 @@ h5 { /* for Item.js collection.name subheading |  | */
   line-height: 2.25;
 }
 h6 { /* for Item.js collection.name subheading |  | */
-  font-size: 1.15rem;
+  font-size: 1.35rem;
   font-family: 'Montserrat', sans-serif;
   line-height: 2;
   max-width: 250px;
+  color: #000;
 }
+
 a {
   color: #fff;
 }
