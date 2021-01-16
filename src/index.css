@@ -138,7 +138,8 @@ footer {
 }
 .single-item {
   margin: auto;
-  max-width: 95%;
+  min-width: 95%;
   display: block;
+  
 }
 

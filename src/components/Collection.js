@@ -24,7 +24,7 @@ export default function Collection(props) {
             { collectionItems.map(item => {
   			return  (
                 <CardBrowse key={item.id}>
-                    <Link to={`item/${item.id}`}>
+                    <Link to={`../item/${item.id}`}>
                         <img
                             className='image-top square'
                             src={ (images.find(image => (image.item.id === item.id))).file_urls.square_thumbnail }

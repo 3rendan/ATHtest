@@ -25,23 +25,11 @@ let born = false;
 
   const Item = (props) => {
     const { data: item, loading, error } = useFetch('items/' + props.match.params.id)
-    const { data: images } = useFetch('files/')
+    const pic = parseInt(props.match.params.id) 
+    const { data: images } = useFetch(`files`)
     const [ collection, setCollection ] = useState([])
     const topics = ['Info', 'Story', 'Resources'] 
     const [selectedTab, setSelectedTab] = React.useState(0);
-    const [pic, setPic] =  React.useState([]);
-    useEffect(()=> {
-      console.log('first')
-    },[])
-    useEffect(()=> {
-      if(born){
-        setPic(images.find((image)=> image.item.id === item.id))
-      }  else {
-        born = true;
-      }
-    })
- 
-
   
     const handleChange = (event, newValue) => {
         setSelectedTab(newValue);
@@ -77,13 +65,22 @@ let born = false;
         </>
           <Tag item={item}/>
         </section>  
-        <section>
-        <img
-            className='single-item'
-            src={ console.log(pic) }
-            alt={item.element_texts[0].text} />
-        </section>
-
+        <div>
+        { images.map((image) => {
+              if(image.item.id === item.id){
+                return (
+                  <>
+                    <img
+                    className='single-item'
+                    src={ image.file_urls.square_thumbnail }
+                    alt={item.element_texts[0].text} />
+                  </>
+                )
+              }
+            })
+          }
+            
+        </div>
       </div>
       </div>
 
