@@ -1,4 +1,4 @@
-***INSERT GRAPHIC HERE (include hyperlink in image)***
+![Brendan Ryan](https://avatars1.githubusercontent.com/u/6855710?s=60&u=3df1033fa6cd44e4cc7bb37b083454b6fe0eaec3&v=4)
 
 # ATH SPA
 
