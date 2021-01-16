@@ -9,7 +9,7 @@ import Tag from '../components/Tag'
 
 import Spinner from '../services/Spinner'
 
-
+let born = false;
 
   const Item = (props) => {
     const { data: item, loading, error } = useFetch('items/' + props.match.params.id)
@@ -17,11 +17,24 @@ import Spinner from '../services/Spinner'
     const [ collection, setCollection ] = useState([])
     const topics = ['Info', 'Story', 'Resources'] 
     const [selectedTab, setSelectedTab] = React.useState(0);
+    const [pic, setPic] =  React.useState([]);
+    useEffect(()=> {
+      console.log('first')
+    },[])
+    useEffect(()=> {
+      if(born){
+        setPic(images.find((image)=> image.item.id === item.id))
+      }  else {
+        born = true;
+      }
+    })
+ 
     
   
     const handleChange = (event, newValue) => {
         setSelectedTab(newValue);
     };
+    
     if (error) throw error;
     if (loading) return <Spinner />;
     return (
@@ -54,7 +67,7 @@ import Spinner from '../services/Spinner'
         <section>
         <img
             className='single-item'
-            src={ console.log(images.find((image)=> image.item.id === item.id)) }
+            src={ console.log(pic.url) }
             alt={item.element_texts[0].text} />
         </section>
 
