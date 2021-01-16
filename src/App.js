@@ -1,12 +1,13 @@
-import React from 'react';
+import React from 'react'
+
 /**
  * App
  */
 export default function App (){
-    return (
+    return (       
         <div className="container">
             <main>
             </main>
-        </div>
+        </div>       
     );
   }

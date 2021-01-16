@@ -1,13 +1,25 @@
 import React, { useEffect, useState } from 'react'
 import { Tabs, Tab } from '@material-ui/core'
-import useFetch from '../services/useFetch'
+import { createMuiTheme, ThemeProvider } from '@material-ui/core/styles'
 import { getCollection, getUrl } from '../services/global'
+import useFetch from '../services/useFetch'
 import Tombstone from '../components/Tombstone'
 import Story from '../components/Story'
 import Resources from '../components/Resources'
 import Tag from '../components/Tag'
-
 import Spinner from '../services/Spinner'
+const theme = createMuiTheme({
+    palette: {
+        primary: {
+            main: "#999999"
+        },
+        secondary: {
+            main: "#C4D425"
+        }
+    }
+})
+
+
 
 let born = false;
 
@@ -29,7 +41,7 @@ let born = false;
       }
     })
  
-    
+
   
     const handleChange = (event, newValue) => {
         setSelectedTab(newValue);
@@ -47,17 +59,18 @@ let born = false;
       <div className='grid'>
         <section>
         <>
+        <ThemeProvider theme={theme}>
           <Tabs 
           value={selectedTab} 
-          onChange={handleChange} 
           className='navbar'
-          indicatorColor='#C4D425' 
+          onChange={handleChange} 
           variant='fullWidth'
           aria-label='full width tabs example'>
             <Tab label={topics[0]}/>
             <Tab label={topics[1]}/>
             <Tab label={topics[2]}/>
           </Tabs>
+          </ThemeProvider>
           { selectedTab === 0 && <Tombstone item={item} /> }
           { selectedTab === 1 && <Story item={item}/> }
           { selectedTab === 2 && <Resources item={item} /> }
@@ -67,7 +80,7 @@ let born = false;
         <section>
         <img
             className='single-item'
-            src={ console.log(pic.url) }
+            src={ console.log(pic) }
             alt={item.element_texts[0].text} />
         </section>
 
