@@ -1,6 +1,7 @@
 import React from 'react'
 import useFetch from '../services/useFetch'
 import Spinner from '../services/Spinner'
+import TaggedItems from './TaggedItems'
 
 export default function Tag(props) {
   const { data: tags, loading, error } = useFetch('tags')
@@ -15,6 +16,7 @@ export default function Tag(props) {
           return (
             <>
               <h1>{tag.name}</h1>
+              <TaggedItems tagId={tagId}/>
             </>
           )
         }
