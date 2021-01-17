@@ -16,7 +16,7 @@ export default function Tags(props) {
             { tags.map((tag) => {
                 return (
                     <div key={tag.id}>
-                        <Link to={`/tag/${tag.id}`}>
+                        <Link to={`/tag/${tag.id}`} tag={tag}>
                             <p className='tag-browse'  style={{color: '#000'}}>{ tag.name }</p>
                         </Link>
                     </div>
