@@ -1,17 +1,25 @@
 import React from 'react'
-import Style from '../style/Tags'
+import useFetch from '../services/useFetch'
+import Spinner from '../services/Spinner'
 
 export default function Tag(props) {
+  
+  if (error) throw error;
+  if (loading) return <Spinner />;
   return (
     <>
-    <h1 style={{paddingTop: '1rem'}}>Tags</h1>
-    <Style>
-      { props.item.tags.map((tag) => {
-        return (
-          <p className='tag'>{tag.name}</p>
-        )
-      })}
-    </Style>
-    </>
+    { tags.map((tag) => {
+        if(tag.id === id){
+          return (
+            <>
+              <h1>{tag.name}</h1>
+            </>
+          )
+        }
+      })
+    }
+
+  </>
   )
 }
+

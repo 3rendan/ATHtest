@@ -21,8 +21,6 @@ const theme = createMuiTheme({
 
 
 
-let born = false;
-
   const Item = (props) => {
     const { data: item, loading, error } = useFetch('items/' + props.match.params.id)
     const pic = parseInt(props.match.params.id) 

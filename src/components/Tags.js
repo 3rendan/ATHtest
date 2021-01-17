@@ -1,26 +1,28 @@
 import React from 'react'
+import { Link } from "react-router-dom"
 import Style from '../style/Tags'
 import useFetch from '../services/useFetch'
 import Spinner from '../services/Spinner'
 
-export default function Tags() {
+export default function Tags(props) {
     const { data: tags, loading, error } = useFetch('tags');
-    const tagNames = tags.map((tag) => tag.name);
-    const tName = tagNames.sort();
+
 
     if (error) throw error;
     if (loading) return <Spinner />;
 
     return (
-        <>
-            <Style>
-            { tName.map((tag) => {
+        <Style>
+            { tags.map((tag) => {
                 return (
-                    <p className='tag-browse'>{tag}</p>
+                    <div key={tag.id}>
+                        <Link to={`/tag/${tag.id}`}>
+                            <p className='tag-browse'  style={{color: '#000'}}>{ tag.name }</p>
+                        </Link>
+                    </div>
                 )
             })}
-            </Style>
-            </>
+        </Style>
     )
 }
 
