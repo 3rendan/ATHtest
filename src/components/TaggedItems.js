@@ -8,7 +8,12 @@ import Spinner from '../services/Spinner'
 export default function TaggedItems(props) {
     const { data: items, loading, error } = useFetch('items');
     const { data: images } = useFetch('files');
-    let tag = props.tagId
+    let tagId = props.tagId
+    const itemTags = items.map((item) =>{
+        return item.tags;
+    })
+    let displayItems = []
+    
     
   
   
@@ -16,13 +21,13 @@ export default function TaggedItems(props) {
     if (loading) return <Spinner />;
     return (
         <>
-        {  items.map((item) => {
-            item.tags.map((tag) => {
-                
-            })
-            
-        })
-        }    
+        { itemTags.map((tag)=>{
+            if(tag.id === tagId){
+                return (
+                <p key={tag.id}>Tagged Item</p>
+                )
+            }
+        })}
         </>
     )
 }

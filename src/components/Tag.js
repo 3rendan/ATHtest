@@ -16,7 +16,7 @@ export default function Tag(props) {
           return (
             <>
               <h1>{tag.name}</h1>
-              <TaggedItems tagId={tagId}/>
+              <TaggedItems tag={tagId}/>
             </>
           )
         }
