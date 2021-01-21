@@ -7,6 +7,7 @@ import Tombstone from '../components/Tombstone'
 import Story from '../components/Story'
 import Resources from '../components/Resources'
 import ItemTags from '../components/ItemTags'
+import Socials from '../components/Socials'
 import Spinner from '../services/Spinner'
 const theme = createMuiTheme({
     palette: {
@@ -76,8 +77,7 @@ const theme = createMuiTheme({
                 )
               }
             })
-          }
-            
+          }          
         </div>
       </div>
       </div>
