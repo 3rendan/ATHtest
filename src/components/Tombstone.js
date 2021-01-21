@@ -11,7 +11,7 @@ export default function Tombstone(props) {
           return (
             <>
               <section className="mtdt mtdt-category">{ marcTag.element.name }:</section>
-              <section className="mtdt">{ marcTag.text.replace(/\s*\<.*?\>\s*/g, '') }</section>
+              <section className="mtdt mtdt-content">{ marcTag.text.replace(/\s*\<.*?\>\s*/g, '') }</section>
             </>
         )
       }
