@@ -3,7 +3,7 @@ import Style from '../style/Tombstone';
 
 
 export default function Tombstone(props) {
-  const showCategory = ['Creator', 'Subject', 'Rights', 'Identifier', 'Date', 'Format', 'BASIC genre/form'];
+  const showCategory = ['Creator', 'Subject', 'Rights', 'Identifier', 'Date', 'Format', 'BASIC genre/form', 'Acquisition note(s)'];
   return (
     <Style>
       { props.item.element_texts.map((marcTag) =>{

@@ -6,7 +6,7 @@ import useFetch from '../services/useFetch'
 import Tombstone from '../components/Tombstone'
 import Story from '../components/Story'
 import Resources from '../components/Resources'
-import Tag from '../components/Tag'
+import ItemTags from '../components/ItemTags'
 import Spinner from '../services/Spinner'
 const theme = createMuiTheme({
     palette: {
@@ -61,7 +61,7 @@ const theme = createMuiTheme({
           { selectedTab === 1 && <Story item={item}/> }
           { selectedTab === 2 && <Resources item={item} /> }
         </>
-          <Tag item={item}/>
+          <ItemTags item={item}/>
         </section>  
         <div>
         { images.map((image) => {

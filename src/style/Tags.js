@@ -8,6 +8,7 @@ const Tags = styled.div`
   justify-content: space-between;
   text-transform: uppercase;
   padding-top: .5rem;
+  padding-bottom: 2rem;
 `;
 
 

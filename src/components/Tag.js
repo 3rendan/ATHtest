@@ -5,8 +5,7 @@ import TaggedItems from './TaggedItems'
 
 export default function Tag(props) {
   const { data: tags, loading, error } = useFetch('tags')
-  let tagId = parseInt(props.match.params.id)
-  
+  const tagId = (parseInt(props.match.params.id))
   if (error) throw error;
   if (loading) return <Spinner />;
   return (
@@ -16,7 +15,7 @@ export default function Tag(props) {
           return (
             <>
               <h1>{tag.name}</h1>
-              <TaggedItems tag={tagId}/>
+              <TaggedItems/>
             </>
           )
         }
