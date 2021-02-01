@@ -3,7 +3,7 @@ import Style from '../style/Tombstone';
 
 
 export default function Tombstone(props) {
-  const showCategory = ['Creator', 'Subject', 'Rights', 'Identifier', 'Date', 'Format', 'BASIC genre/form'];
+  const showCategory = ['Creator', 'Subject', 'Rights', 'Identifier', 'Date', 'Format', 'BASIC genre/form', 'Acquisition note(s)'];
   return (
     <Style>
       { props.item.element_texts.map((marcTag) =>{
@@ -11,7 +11,7 @@ export default function Tombstone(props) {
           return (
             <>
               <section className="mtdt mtdt-category">{ marcTag.element.name }:</section>
-              <section className="mtdt">{ marcTag.text.replace(/\s*\<.*?\>\s*/g, '') }</section>
+              <section className="mtdt mtdt-content">{ marcTag.text.replace(/\s*\<.*?\>\s*/g, '') }</section>
             </>
         )
       }

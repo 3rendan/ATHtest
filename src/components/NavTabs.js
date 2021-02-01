@@ -2,7 +2,6 @@ import React from 'react'
 import { Tabs, Tab } from '@material-ui/core'
 import Items from '../views/Items'
 import Collections from '../components/Collections.js'
-import Tags from '../components/Tags.js'
 
 const NavTabs = (props) => {
 
