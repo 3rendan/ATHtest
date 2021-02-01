@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 
 
-const baseUrl = 'http://digital.provath.org/api/';
+const baseUrl = 'https://digital.provath.org/api/';
 
 export default function useFetch(url) {
   const [data, setData] = useState([]);
