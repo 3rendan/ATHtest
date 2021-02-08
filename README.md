@@ -1,10 +1,12 @@
 ![Brendan Ryan](https://avatars1.githubusercontent.com/u/6855710?s=60&u=3df1033fa6cd44e4cc7bb37b083454b6fe0eaec3&v=4)
 
+[![Build Status](http://img.shields.io/travis/badges/badgerbadgerbadger.svg?style=flat-square)](https://travis-ci.org/badges/badgerbadgerbadger) [![License](http://img.shields.io/:license-mit-blue.svg?style=flat-square)](http://badges.mit-license.org)
+
+
+> A React.js single page application using the Omeka API from http://digital.provath.org/api the art collection of the Providence Athenaeum avaible at dpa.brendanryan.xyz.
+
 # ATH SPA
-
-> A React SPA using the Omeka API from http://digital.provath.org/api to display digital representations of the art collection at the Providence Athenaeum.
-
-> Omeka, API, React.js, Bootstrap, 
+> Omeka, API, React.js, Bootstrap, Netlify, JavaScript 
 
 **Badges will go here**
 
