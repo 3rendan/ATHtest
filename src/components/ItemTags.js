@@ -24,6 +24,7 @@ export default function ItemTags(props) {
             </>
           )
         }
+        return null
       })
     }
     </Style>

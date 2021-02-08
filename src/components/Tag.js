@@ -3,7 +3,7 @@ import useFetch from '../services/useFetch'
 import Spinner from '../services/Spinner'
 import TaggedItems from './TaggedItems'
 
-export default function Tag(props) {
+const Tag = (props) =>{
   const { data: tags, loading, error } = useFetch('tags')
   const tagId = (parseInt(props.match.params.id))
   if (error) throw error;
@@ -19,10 +19,12 @@ export default function Tag(props) {
             </>
           )
         }
+        return null
       })
     }
 
   </>
   )
 }
+export default Tag
 

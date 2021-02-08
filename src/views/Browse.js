@@ -19,7 +19,6 @@ const theme = createMuiTheme({
 export default function Browse(props) {
     const topics = [ 'Items', 'Tags', 'Collections'];
 
-    const { children, value, index, ...other } = props;
 
     const [selectedTab, setSelectedTab] = React.useState(0);
 

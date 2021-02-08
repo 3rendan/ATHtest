@@ -1,8 +1,8 @@
-import React, { useState } from 'react'
+import React from 'react'
 import { Link } from "react-router-dom"
 import useFetch from '../services/useFetch'
-import Style from '../style/CardBrowse'
-import { getCollection, inCollection } from '../services/global'
+// import Style from '../style/CardBrowse'
+import getCollection from '../services/getCollection'
 import Board from '../style/Board'
 import Spinner from '../services/Spinner'
 import CardBrowse from '../style/CardBrowse'

@@ -1,13 +1,13 @@
-import React, { useEffect, useState } from 'react'
+import React from 'react'
 import { Tabs, Tab } from '@material-ui/core'
 import { createMuiTheme, ThemeProvider } from '@material-ui/core/styles'
-import { getCollection } from '../services/global'
+import getCollection from '../services/getCollection'
 import useFetch from '../services/useFetch'
 import Tombstone from '../components/Tombstone'
 import Story from '../components/Story'
 import Resources from '../components/Resources'
 import ItemTags from '../components/ItemTags'
-import Socials from '../components/Socials'
+// import Socials from '../components/Socials'
 import Spinner from '../services/Spinner'
 const theme = createMuiTheme({
     palette: {
@@ -24,9 +24,7 @@ const theme = createMuiTheme({
 
   const Item = (props) => {
     const { data: item, loading, error } = useFetch('items/' + props.match.params.id)
-    const pic = parseInt(props.match.params.id) 
     const { data: images } = useFetch(`files`)
-    const [ collection, setCollection ] = useState([])
     const topics = ['Info', 'Story', 'Resources'] 
     const [selectedTab, setSelectedTab] = React.useState(0);
   
@@ -76,6 +74,7 @@ const theme = createMuiTheme({
                   </>
                 )
               }
+              return null
             })
           }          
         </div>
