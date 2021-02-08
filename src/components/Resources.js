@@ -9,10 +9,12 @@ export default function Resources(props) {
                     if(showCategory.includes(marcTag.element.name)){
                         return (
                             <>
-                                <section className="paragraph">{ marcTag.text.replace(/\s*\<.*?\>\s*/g, '') }</section>
+                                <section className="paragraph">{ marcTag.text.replace(/\s*<.*?>\s*/g, '') }</section>
                             </>
                             )
-                    }})}
+                    }
+                    return null
+                    })}
         </>
         )
     }

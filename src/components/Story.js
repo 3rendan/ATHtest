@@ -11,7 +11,9 @@ export default function Story(props) {
                             <section className="paragraph">{ marcTag.text }</section>
                         </>
                         )
-                }})}
+                }
+                return null
+                })}
     </>
     )
 }

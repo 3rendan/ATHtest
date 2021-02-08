@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { Router, Route, Redirect } from "react-router-dom";
+import { Router, Route } from "react-router-dom";
 import { createBrowserHistory } from "history";
 import './index.css';
 import Header from "./components/Header";
