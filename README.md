@@ -1,22 +1,45 @@
-# ATH SPA
-A React.js single page application using the API from http://digital.provath.org/api the art collection of the Providence Athenaeum avaible at dpa.brendanryan.xyz.
+# ATH | SPA
+A React.js single page application using the API from http://digital.provath.org/api to display the art collection of the Providence Athenaeum avaible at dpa.brendanryan.xyz.
 
-<img src="https://i.imgur.com/hwUGJWob.png" style="width:50%;margin:0;">
+<a href="https://imgur.com/hwUGJWo"><img src="https://i.imgur.com/hwUGJWo.png" title="source: imgur.com" /></a>
 
 > Omeka, API, React.js, Bootstrap, Netlify, JavaScript 
 
 [![Build Status](http://img.shields.io/travis/badges/badgerbadgerbadger.svg?style=flat-square)](https://travis-ci.org/badges/badgerbadgerbadger) [![License](http://img.shields.io/:license-mit-blue.svg?style=flat-square)](http://badges.mit-license.org) 
 
-**Badges will go here**
+## Table of Contents (Optional)
 
-- build status
-- devDependencies
-- npm package
-- coverage
-- downloads
-- gitter chat
-- license
-- etc.
+- [NPM Packages](#npm-packages)
+- [Background](#background)
+- [Setup](#setup)
+- [Future Development](#future-development)
+- [FAQ](#faq)
+
+### NPM Packages
+- React 16.13.1
+- Styled Componets 5.2.1
+- Material-UI
+- ReactDOM
+- Bootstrap 4.5.3
+- CORS 2.8.5
+- Express 4.17.1
+- React-dom 16.13.1
+- React-loader-spinner 3.1.14
+- React-router-dom 5.2.0
+
+### Background
+This project was bootstrapped with <a href="https://github.com/facebook/create-react-app">create-react-app</a>. <a href='https://provath.org'>The Providence Athenaeum</a> presently has a site for digital collections available at digital.provath.org managed and created by me using a customized version of <a href="https://github.com/InteractiveMechanics/sckls-omeka">InteractiveMechanics/ sckls-omeka</a> project available on Github. It uses the free CRM <a href="https://omeka.org">Omeka</a>, which provides a robust system for cataloging digital objects to library standards.
+
+
+
+<a href="https://imgur.com/7xCNkfs"><img src="https://i.imgur.com/7xCNkfs.png" title="source: imgur.com" /></a>
+
+### Setup
+### Future development
+
+### FAQ/ Troubleshoot
+
+
 
 
 [![INSERT YOUR GRAPHIC HERE](http://i.imgur.com/dt8AUb6.png)]()
