@@ -48,12 +48,5 @@ Please contact me at brendan.ryan@pm.me with any questions regarding the project
 
 
 
-- Website at <a href="http://fvcproductions.com" target="_blank">`brendanryan.xyz`</a>
-
-
-## License
-
-[![License](http://img.shields.io/:license-mit-blue.svg?style=flat-square)](http://badges.mit-license.org)
-
-- **[MIT license](http://opensource.org/licenses/mit-license.php)**
+<a href="http://brendanryan.xyz" target="_blank">`Website`</a>
 
