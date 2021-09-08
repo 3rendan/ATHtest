@@ -7,7 +7,6 @@ const Navigation = styled.nav`
   background-color: #999999;
   color: white;
   font-size: 1.25rem;
-  font-weight: bold;
   vertical-align: middle;
   margin-bottom: 1.5rem;
   list-style: none;
