@@ -64,7 +64,16 @@ const theme = createMuiTheme({
         </section>
         <div>
         { images.map((image) => {
-              if(image.item.id === item.id){
+              if(item.element_texts.text === 'Sculpture' && image.item.id === item.id){
+                return (
+                  <>
+                    <img
+                    className='sculpture-item'
+                    src={ image.file_urls.fullsize }
+                    alt={item.element_texts[0].text} />
+                  </>
+                )
+              } else if(image.item.id === item.id){
                 return (
                   <>
                     <img
