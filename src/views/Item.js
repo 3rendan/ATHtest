@@ -37,7 +37,6 @@ const theme = createMuiTheme({
     return (
       <div className='container'>
       <section>
-      <h1>NETLIFY</h1>
         <h3>{ item.element_texts[0].text }</h3>
         <h5>{ getCollection(item.collection.id) }</h5>
       </section>
