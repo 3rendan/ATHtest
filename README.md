@@ -19,11 +19,10 @@ A React.js single page application using the API from http://digital.provath.org
 - React 16.13.1
 - Styled Componets 5.2.1
 - Material-UI
-- ReactDOM
 - Bootstrap 4.5.3
 - CORS 2.8.5
 - Express 4.17.1
-- React-dom 16.13.1
+- ReactDOM 16.13.1
 - React-loader-spinner 3.1.14
 - React-router-dom 5.2.0
 

@@ -25,18 +25,19 @@ const theme = createMuiTheme({
   const Item = (props) => {
     const { data: item, loading, error } = useFetch('items/' + props.match.params.id)
     const { data: images } = useFetch(`files`)
-    const topics = ['Info', 'Story', 'Resources'] 
+    const topics = ['Info', 'Story', 'Resources']
     const [selectedTab, setSelectedTab] = React.useState(0);
-  
+
     const handleChange = (event, newValue) => {
         setSelectedTab(newValue);
     };
-    
+
     if (error) throw error;
     if (loading) return <Spinner />;
     return (
       <div className='container'>
       <section>
+      <h1>NETLIFY</h1>
         <h3>{ item.element_texts[0].text }</h3>
         <h5>{ getCollection(item.collection.id) }</h5>
       </section>
@@ -45,10 +46,10 @@ const theme = createMuiTheme({
         <section>
         <>
         <ThemeProvider theme={theme}>
-          <Tabs 
-          value={selectedTab} 
+          <Tabs
+          value={selectedTab}
           className='navbar'
-          onChange={handleChange} 
+          onChange={handleChange}
           variant='fullWidth'
           aria-label='full width tabs example'>
             <Tab label={topics[0]}/>
@@ -61,7 +62,7 @@ const theme = createMuiTheme({
           { selectedTab === 2 && <Resources item={item} /> }
         </>
           <ItemTags item={item}/>
-        </section>  
+        </section>
         <div>
         { images.map((image) => {
               if(image.item.id === item.id){
@@ -76,7 +77,7 @@ const theme = createMuiTheme({
               }
               return null
             })
-          }          
+          }
         </div>
       </div>
       </div>
