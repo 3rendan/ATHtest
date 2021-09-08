@@ -16,7 +16,6 @@ const Items = (props) => {
   if (loading) return <Spinner />;
   return (
     <Board>
-    <h1> SFTP</h1>
   		{ items.map((item) => {
   			return  (
             <CardBrowse key={item.id}>
