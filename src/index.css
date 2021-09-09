@@ -162,3 +162,8 @@ footer {
   max-height: 40rem;
   display: block;
 }
+.painting-item {
+  margin: auto;
+  padding-top: 5rem;
+  display: block;
+}
