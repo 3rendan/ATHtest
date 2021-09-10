@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 
-const Tombstone = styled.table`
+const MetadataTombstone = styled.table`
   display: grid;
   grid-template-columns: 1fr 2fr;
   grid-gap: .5rem;
@@ -13,4 +13,4 @@ const Tombstone = styled.table`
 `;
 
 
-export default Tombstone;
+export default MetadataTombstone;

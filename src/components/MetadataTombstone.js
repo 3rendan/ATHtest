@@ -1,12 +1,11 @@
 import React from 'react';
-import Style from '../style/MetadataTombstone';
+import Style from '../style/Tombstone';
 
-
-const Tombstone = (props) => {
-
-
-  const showCategory = ['Creator', 'Subject', 'Rights', 'Identifier', 'Date', 'Format', 'BASIC genre/form', 'Acquisition note(s)'];
-  return (
+/**
+ * ComponentName
+ */
+const MetadataTombstone = (props) =>{ // eslint-disable-line react/prefer-stateless-function
+  render() {
     <Style>
       { props.item.element_texts.map((marcTag) =>{
         if(showCategory.includes(marcTag.element.name)){
@@ -21,6 +20,11 @@ const Tombstone = (props) => {
     }
     )}
     </Style>
-  )
+  }
 }
-export default Tombstone
+
+MetadataTombstone.propTypes = {
+  prop: PropTypes.type.isRequired
+}
+
+export default MetadataTombstone;
