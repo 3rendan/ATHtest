@@ -11,7 +11,7 @@ export default function ItemTags(props) {
     console.log(itemTags)
     if (error) throw error;
     if (loading) return <Spinner />;
-  
+
   return (
     <>
     <h1>Tags</h1>
