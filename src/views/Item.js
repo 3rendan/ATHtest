@@ -30,19 +30,19 @@ const Item = (props) => {
       <TombstoneImg> {/* this will house image and tombstone in grid */}
         <Tombstone item={ item }/>
         <button className="img-modal" onClick={()=> setIsOpen(true) }><ItemImg item={ item } images={ images }/></button>
-        <Modal open={ isOpen } onClose={ () => setIsOpen(false)} images={ images } item={ item }>
-        { images.map((image) => {
-          if(image.item.id === item.id){
-            return (
-                <img
-                src={ image.file_urls.fullsize }
-                alt={ item.element_texts[0].text }
-                />
-              )
+        <Modal open={ isOpen } onClose={ () => setIsOpen(false)} >
+          { images.map((image) => {
+            if(image.item.id === item.id){
+              return (
+                  <img
+                  src={ image.file_urls.fullsize }
+                  alt={item.element_texts[0].text}
+                  image={ image.file_urls.fullsize }/>
+                )
+              }
+              return null
+            })
             }
-            return null
-          })
-        }
         </Modal>
       </TombstoneImg>
       <div className='socials'>
