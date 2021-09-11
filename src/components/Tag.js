@@ -9,21 +9,21 @@ const Tag = (props) =>{
   if (error) throw error;
   if (loading) return <Spinner />;
   return (
-    <>
+  <div>
     { tags.map((tag) => {
         if(tag.id === tagId){
           return (
-            <>
+            <div>
               <h1>{tag.name}</h1>
               <TaggedItems/>
-            </>
+            </div>
           )
         }
         return null
       })
     }
 
-  </>
+  </div>
   )
 }
 export default Tag

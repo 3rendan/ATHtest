@@ -13,15 +13,15 @@ const ItemTags = (props) => {
     if (loading) return <Spinner />;
 
   return (
-    <>
+    <div>
 
     <Style>
     { tags.map((tag) => {
         if(itemTags.includes(tag.id)){
           return (
-            <>
+            <div>
               <h7>{tag.name}</h7>
-            </>
+            </div>
           )
         }
         return null
@@ -29,7 +29,7 @@ const ItemTags = (props) => {
     }
     </Style>
 
-  </>
+  </div>
   )
 }
 export default ItemTags

@@ -36,7 +36,7 @@ const Item = (props) => {
             return (
                 <img
                 src={ image.file_urls.fullsize }
-                alt={item.element_texts[0].text}
+                alt={ item.element_texts[0].text }
                 />
               )
             }

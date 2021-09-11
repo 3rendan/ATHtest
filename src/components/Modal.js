@@ -22,13 +22,13 @@ const OVERLAY_STYLES = {
 const Modal = ({ open, children, onClose }) => {
   if(!open) return null
   return (
-    <>
+    <div>
       <div style={OVERLAY_STYLES} />
       <div style={MODAL_STYLES}>
         <button className='modal-btn' onClick={()=> onClose()}>x</button>
-        { console.log(children)}
+        { console.log(children) }
       </div>
-    </>
+    </div>
   )
 }
 
