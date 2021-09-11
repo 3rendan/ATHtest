@@ -129,8 +129,27 @@ a:visited {
   height: 5rem;
 }
 .socials {
+  padding-top: 1.5rem;
   display: grid;
-  grid-template-columns: 5.5fr 4.5fr;
+  grid-template-columns: 1.5fr 1fr;
+}
+.socials a {
+  color: #000;
+}
+.social-item-1 {
+  margin: auto;
+  justify-content: end;
+  display: block;
+}
+.social-item-2 {
+  margin: auto;
+  justify-content: center;
+  display: block;
+}
+.social-item-3 {
+  margin: auto;
+  justify-content: start;
+  display: block;
 }
 footer {
   position: absolute;
@@ -156,17 +175,20 @@ footer {
   margin: auto;
   min-width: 95%;
   display: block;
+  justify-items: center;
   padding-top: 5rem;
 }
 .sculpture-item {
   margin: auto;
-  padding: 5rem;
-  max-height: 40rem;
+  padding-top: 5rem;
+  max-height: 35rem;
+  justify-items: center;
   display: block;
 }
 .painting-item {
   margin: auto;
   padding: auto;
   max-height: 35rem;
+  justify-items: center;
   display: block;
 }
