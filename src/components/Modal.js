@@ -26,7 +26,7 @@ const Modal = ({ open, children, onClose }) => {
       <div style={OVERLAY_STYLES} />
       <div style={MODAL_STYLES}>
         <button className='modal-btn' onClick={()=> onClose()}>x</button>
-        <img src="https://digital.provath.org/files/fullsize/b0d1dadbfb34984e605506f9b29a0227.jpg" alt='fu'/>
+        { console.log(children)}
       </div>
     </>
   )

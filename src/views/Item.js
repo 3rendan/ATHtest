@@ -31,8 +31,18 @@ const Item = (props) => {
         <Tombstone item={ item }/>
         <button className="img-modal" onClick={()=> setIsOpen(true) }><ItemImg item={ item } images={ images }/></button>
         <Modal open={ isOpen } onClose={ () => setIsOpen(false)} images={ images } item={ item }>
-          modal
-
+        { images.map((image) => {
+          if(image.item.id === item.id){
+            return (
+                <img
+                src={ image.file_urls.fullsize }
+                alt={item.element_texts[0].text}
+                />
+              )
+            }
+            return null
+          })
+        }
         </Modal>
       </TombstoneImg>
       <div className='socials'>
