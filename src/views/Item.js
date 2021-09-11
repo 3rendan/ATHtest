@@ -1,6 +1,7 @@
-import React from 'react';
+import React, { useState } from 'react';
 import getCollection from '../services/getCollection'
 import useFetch from '../services/useFetch'
+import Modal from '../components/Modal'
 
 import Tombstone from '../components/Tombstone'
 import ItemTags from '../components/ItemTags'
@@ -17,6 +18,7 @@ import Spinner from '../services/Spinner'
 const Item = (props) => {
     const { data: item, loading, error } = useFetch('items/' + props.match.params.id)
     const { data: images } = useFetch(`files`)
+    const [ isOpen, setIsOpen ] = useState(false)
     if (error) throw error;
     if (loading) return <Spinner />;
     return (
@@ -27,7 +29,11 @@ const Item = (props) => {
       </section>
       <TombstoneImg> {/* this will house image and tombstone in grid */}
         <Tombstone item={ item }/>
-        <ItemImg item={ item } images={ images }/>
+        <button className="img-modal" onClick={()=> setIsOpen(true) }><ItemImg item={ item } images={ images }/></button>
+        <Modal open={ isOpen } onClose={ () => setIsOpen(false)} images={ images } item={ item }>
+          modal
+
+        </Modal>
       </TombstoneImg>
       <div className='socials'>
         <h1>Tags</h1>
