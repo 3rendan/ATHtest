@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { Tabs, Tab } from '@material-ui/core';
 import MetadataTombstone from '../components/MetadataTombstone';
 import Story from '../components/Story';

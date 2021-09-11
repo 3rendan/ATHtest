@@ -1,11 +1,11 @@
-import React, { useState } from 'react';
+//import React, { useState } from 'react';
 import { Router, Route } from "react-router-dom";
 import { createBrowserHistory } from "history";
 import './index.css';
 import Header from "./components/Header";
 import Footer from "./components/Footer";
 import About from "./components/About";
-import Modal from "./components/Modal";
+//import Modal from "./components/Modal";
 import Navigation from "./components/Navigation";
 import NavTabs from "./components/NavTabs";
 import Collections from "./components/Collections";
