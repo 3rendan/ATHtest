@@ -1,28 +1,18 @@
 import React from 'react';
 import getCollection from '../services/getCollection'
 import useFetch from '../services/useFetch'
+
 import Tombstone from '../components/Tombstone'
-import Story from '../components/Story'
-import Resources from '../components/Resources'
+import ItemTags from '../components/ItemTags'
+import Dwnlds from '../components/Dwnlds'
 import ItemImg from '../components/ItemImg'
+import Socials from '../components/Socials'
+
+
 import TombstoneImg from '../style/TombstoneImg'
 import TagsDwnlds from '../style/TagsDwnlds'
-// import Socials from '../components/Socials'
 import Spinner from '../services/Spinner'
 
-// Material UI tab stuff
-import { Tabs, Tab } from '@material-ui/core'
-import { createMuiTheme, ThemeProvider } from '@material-ui/core/styles'
-const theme = createMuiTheme({
-    palette: {
-        primary: {
-            main: "#999999"
-        },
-        secondary: {
-            main: "#C4D425"
-        }
-    }
-})
 
 const Item = (props) => {
     const { data: item, loading, error } = useFetch('items/' + props.match.params.id)
@@ -39,6 +29,14 @@ const Item = (props) => {
         <Tombstone item={ item }/>
         <ItemImg item={ item } images={ images }/>
       </TombstoneImg>
+      <div className='socials'>
+        <h1>Tags</h1>
+        <Socials />
+      </div>
+      <TagsDwnlds>
+        <ItemTags item={ item }/>
+        <Dwnlds item={ item }/>
+      </TagsDwnlds>
       </div>
     )
   }

@@ -3,8 +3,9 @@ import { Tabs, Tab } from '@material-ui/core';
 import MetadataTombstone from '../components/MetadataTombstone';
 import Story from '../components/Story';
 import Resources from '../components/Resources';
-import Style from '../style/MetadataTombstone';
+import Style from '../style/Tombstone';
 import { createMuiTheme, ThemeProvider } from '@material-ui/core/styles'
+
 const theme = createMuiTheme({
     palette: {
         primary: {
@@ -25,7 +26,7 @@ const Tombstone = (props) => {
   };
 
   return (
-    <>
+    <Style>
       {/* Material UI tabs for tomstone */}
         <ThemeProvider theme={theme}>
           <Tabs
@@ -43,7 +44,7 @@ const Tombstone = (props) => {
           { selectedTab === 0 && <MetadataTombstone item={ props.item } /> }
           { selectedTab === 1 && <Story item={ props.item }/> }
           { selectedTab === 2 && <Resources item={ props.item } /> }
-    </>
+    </Style>
 )
 
 

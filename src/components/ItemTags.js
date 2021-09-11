@@ -3,7 +3,7 @@ import useFetch from '../services/useFetch'
 import Spinner from '../services/Spinner'
 import Style from '../style/Tags'
 
-export default function ItemTags(props) {
+const ItemTags = (props) => {
     const { data: tags, loading, error } = useFetch('tags')
     const itemTags = props.item.tags.map((tag) => {
         return tag.id
@@ -14,7 +14,7 @@ export default function ItemTags(props) {
 
   return (
     <>
-    <h1>Tags</h1>
+
     <Style>
     { tags.map((tag) => {
         if(itemTags.includes(tag.id)){
@@ -32,3 +32,4 @@ export default function ItemTags(props) {
   </>
   )
 }
+export default ItemTags
