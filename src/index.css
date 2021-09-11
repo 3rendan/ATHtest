@@ -14,6 +14,9 @@ COMPONENT LEVEL STYLING ALL OCCURS IN THE /STYLE FOLDER
 html {
   background-color: black;
 }
+/* * {
+  border: solid lightgray 1px;
+} */
 body {
   font-family: 'Montserrat', sans-serif;
   line-height: 2;
@@ -108,8 +111,6 @@ a:visited {
   text-align: center;
   font-size: 2rem;
 }
-
-
 .nav {
   background-color: #999999;
   color: #fff;
@@ -118,15 +119,19 @@ a:visited {
 }
 .navbar {
   background-color: #999999;
+  /* border-radius: 1rem; */
   color: white;
   display: flex;
   flex-wrap: wrap;
   font-size: 1.1rem;
   width: 100%;
   justify-content: space-around;
-  border-radius: 2rem 2rem 0 0; 
+  height: 5rem;
 }
-
+.socials {
+  display: grid;
+  grid-template-columns: 5.5fr 4.5fr;
+}
 footer {
   position: absolute;
   display: flex;
@@ -142,15 +147,26 @@ footer {
   padding: 4px;
   max-width: 95%;
 }
-.grid {
+
+.dwnlds {
   display: grid;
-  grid-template-columns: 4.5fr 5.5fr;
-  grid-column-gap: 1rem;
+  grid-template-rows: repeat(3, 1fr);
 }
 .single-item {
   margin: auto;
   min-width: 95%;
   display: block;
-  
+  padding-top: 5rem;
 }
-
+.sculpture-item {
+  margin: auto;
+  padding: 5rem;
+  max-height: 40rem;
+  display: block;
+}
+.painting-item {
+  margin: auto;
+  padding: auto;
+  max-height: 35rem;
+  display: block;
+}

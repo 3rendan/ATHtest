@@ -1,24 +1,52 @@
-import React from 'react';
+import React, { useState } from 'react';
+import { Tabs, Tab } from '@material-ui/core';
+import MetadataTombstone from '../components/MetadataTombstone';
+import Story from '../components/Story';
+import Resources from '../components/Resources';
 import Style from '../style/Tombstone';
+import { createMuiTheme, ThemeProvider } from '@material-ui/core/styles'
+
+const theme = createMuiTheme({
+    palette: {
+        primary: {
+            main: "#999999"
+        },
+        secondary: {
+            main: "#C4D425"
+        }
+    }
+})
 
 
 const Tombstone = (props) => {
-  const showCategory = ['Creator', 'Subject', 'Rights', 'Identifier', 'Date', 'Format', 'BASIC genre/form', 'Acquisition note(s)'];
+  const topics = ['Info', 'Story', 'Resources']
+  const [selectedTab, setSelectedTab] = React.useState(0); // Material UI
+  const handleChange = (event, newValue) => {
+      setSelectedTab(newValue);
+  };
+
   return (
     <Style>
-      { props.item.element_texts.map((marcTag) =>{
-        if(showCategory.includes(marcTag.element.name)){
-          return (
-            <>
-              <section className="mtdt mtdt-category">{ marcTag.element.name }:</section>
-              <section className="mtdt mtdt-content">{ marcTag.text.replace(/\s*<.*?>\s*/g, '') }</section>
-            </>
-        )
-      }
-      return null;
-    }
-    )}
+      {/* Material UI tabs for tomstone */}
+        <ThemeProvider theme={theme}>
+          <Tabs
+          value={selectedTab}
+          className='navbar'
+          onChange={handleChange}
+          variant='fullWidth'
+          aria-label='full width tabs example'>
+            <Tab label={topics[0]}/>
+            <Tab label={topics[1]}/>
+            <Tab label={topics[2]}/>
+          </Tabs>
+        </ThemeProvider>
+          {/* selecting which info displays */}
+          { selectedTab === 0 && <MetadataTombstone item={ props.item } /> }
+          { selectedTab === 1 && <Story item={ props.item }/> }
+          { selectedTab === 2 && <Resources item={ props.item } /> }
     </Style>
-  )
+)
+
+
 }
 export default Tombstone

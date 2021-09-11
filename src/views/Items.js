@@ -21,8 +21,8 @@ const Items = (props) => {
             <CardBrowse key={item.id}>
   					<Link to={`item/${item.id}`}>
                 <img
-                  className='image-top square'
-                  src={ (images.find(image => (image.item.id === item.id))).file_urls.thumbnail }
+                  className='square'
+                  src={ (images.find(image => (image.item.id === item.id))).file_urls.square_thumbnail }
                   alt={item.element_texts[0].text} />
                 <section className='card-body'>
                   <h6>{item.element_texts[0].text}</h6>

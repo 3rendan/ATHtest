@@ -1,15 +1,14 @@
 import styled from 'styled-components';
 
 
-const Tombstone = styled.table`
+const Tombstone = styled.div`
   display: grid;
-  grid-template-columns: 1fr 2fr;
-  grid-gap: .5rem;
-  grid-row-height: 30px;
+  grid-template-rows: 1fr 5fr;
   height: 40rem;
-  overflow: scroll;
+  overflow: hidden;
   font-size: 1.1rem;
   line-height: 2;
+  background-color: #eee;
 `;
 
 
