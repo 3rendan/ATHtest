@@ -14,9 +14,9 @@ const NavTabs = (props) => {
     return (
         <>
             <Tabs value={selectedTab} onChange={handleChange} className='navbar'>
-                <Tab label={props.topics[0]}/>
-                <Tab label={props.topics[1]}/>
-                <Tab label={props.topics[2]}/>
+                <h1><Tab label={props.topics[0]}/></h1>
+                <h1><Tab label={props.topics[1]}/></h1>
+                <h1><Tab label={props.topics[2]}/></h1>
             </Tabs>
             { selectedTab === 0 && <Items/> }
             { selectedTab === 1 && <Collections/> }
@@ -26,4 +26,3 @@ const NavTabs = (props) => {
     )
 }
 export default NavTabs;
-

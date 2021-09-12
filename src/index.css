@@ -34,6 +34,12 @@ h1 { /* heading of header */
     font-size: 1.5rem;
     line-height: 2.75;
 }
+h2 { /* heading of header */
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 1rem;
+    line-height: 2.5;
+}
 
 h3 { /* for Item.js title of header */
   padding: 2rem 0 .5rem 1rem;
@@ -118,9 +124,8 @@ a:visited {
   list-style: none;
 }
 .navbar {
-  background-color: #999999;
   /* border-radius: 1rem; */
-  color: white;
+  color: #000;
   display: flex;
   flex-wrap: wrap;
   font-size: 1.1rem;
@@ -198,4 +203,7 @@ footer {
   max-height: 35rem;
   justify-items: center;
   display: block;
+}
+.dwnld-btn {
+  color: #000;
 }

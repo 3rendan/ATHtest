@@ -26,7 +26,7 @@ const Modal = ({ open, children, onClose }) => {
       <div style={OVERLAY_STYLES} />
       <div style={MODAL_STYLES}>
         <button className='modal-btn' onClick={()=> onClose()}>x</button>
-        <h1>{ children }</h1>
+        { children }
       </div>
     </div>
   )

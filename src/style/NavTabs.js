@@ -2,8 +2,7 @@ import styled from 'styled-components';
 
 
 const NavTabs = styled.nav`
-  background-color: #999999;
-  color: white;
+  color: #999999;
   display: flex;
   flex-wrap: wrap;
   overflow: scroll;

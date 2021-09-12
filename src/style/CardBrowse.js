@@ -2,10 +2,10 @@ import styled from 'styled-components';
 
 
 const CardBrowse = styled.section`
-  border: 1px solid black;
   text-align: center;
   min-height: 435px;
-  border: 1px #000 solid;
+  border-top: 1.5rem #999999 solid;
+  border-radius: 5px 5px 0 0;
 `;
 
 export default CardBrowse;

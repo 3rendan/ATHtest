@@ -14,7 +14,7 @@ const Tag = (props) =>{
         if(tag.id === tagId){
           return (
             <div>
-              <h1>{tag.name}</h1>
+              <h2>{tag.name}</h2>
               <TaggedItems/>
             </div>
           )

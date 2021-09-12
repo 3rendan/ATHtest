@@ -6,7 +6,7 @@ import Style from '../style/MetadataTombstone';
  */
 
 const MetadataTombstone = (props) =>{ // eslint-disable-line react/prefer-stateless-function
-  const showCategory = ['Creator', 'Subject', 'Rights', 'Identifier', 'Date', 'Format', 'BASIC genre/form', 'Acquisition note(s)'];
+  const showCategory = ['Creator', 'Subject', 'Date', 'BASIC genre/form', 'Acquisition note(s)', 'Rights', 'Identifier' ];
   return(
     <Style>
       { props.item.element_texts.map((marcTag) =>{
