@@ -35,6 +35,7 @@ const Item = (props) => {
             if(image.item.id === item.id){
               return (
                   <img
+                  className='img-modal'
                   src={ image.file_urls.fullsize }
                   alt={item.element_texts[0].text}
                   image={ image.file_urls.fullsize }/>

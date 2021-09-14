@@ -6,6 +6,13 @@ const ItemBoard = styled.div`
   grid-template-columns: 1fr 1fr 1fr;
   grid-gap: .5rem;
   color: black;
+  @media only screen and (max-width: 600px) {
+    display: inline-grid;
+    grid-template-columns: 1fr 1fr;
+
+
+  }
+
 `;
 
 

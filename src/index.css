@@ -130,7 +130,7 @@ a:visited {
   flex-wrap: wrap;
   font-size: 1.1rem;
   width: 100%;
-  justify-content: space-around;
+  /* justify-content: space-around; */
   height: 5rem;
 }
 .socials {
@@ -141,21 +141,12 @@ a:visited {
 .socials a {
   color: #000;
 }
-.social-item-1 {
-  margin: auto;
-  justify-content: end;
-  display: block;
-}
-.social-item-2 {
-  margin: auto;
-  justify-content: center;
-  display: block;
-}
-.social-item-3 {
+.social-item {
   margin: auto;
   justify-content: start;
   display: block;
 }
+
 footer {
   position: absolute;
   display: flex;
@@ -167,11 +158,21 @@ footer {
   left: 0;
 }
 .img-modal {
+  margin: auto;
   border: none;
   background-color: #fff;
+  padding-bottom: 2rem;
+  max-height: 75vh;
 }
-.modal_btn {
-  float: right;
+.modal-btn {
+  display: block;
+  text-transform: uppercase;
+  min-width: 10rem;
+  border-radius: 5px;
+  padding: .25rem;
+  background-color: #C4D425;
+  color: #fff;
+  margin: auto;
 }
 .square {
   margin: auto;
@@ -189,21 +190,58 @@ footer {
   display: block;
   justify-items: center;
   padding-top: 5rem;
+  max-height: 45vh;
 }
 .sculpture-item {
   margin: auto;
   padding-top: 5rem;
-  max-height: 35rem;
+  max-height: 45vh;
   justify-items: center;
   display: block;
 }
 .painting-item {
   margin: auto;
   padding: auto;
-  max-height: 35rem;
+  max-height: 45vh;
   justify-items: center;
   display: block;
 }
 .dwnld-btn {
   color: #000;
+  display: block;
+  text-transform: uppercase;
+  background-color: #999999;
+  margin: 1rem;
+  min-width: 25rem;
+  border-radius: 5px;
+  padding: .25rem;
+  font-style: bolder;
+  color: #fff;
+}
+
+
+/* mobile styling */
+@media only screen and (max-width: 600px) {
+  .dwnld-btn {
+    max-width: 66vw;
+  }
+  .socials {
+    display: block;
+  }
+  .sculpture-item.painting-item.single-item {
+    display: block;
+    margin: auto;
+    max-width: 66%;
+  }
+  .social-item {
+    margin-left: 5px;
+
+  }
+  .socials {
+    display: block;
+    margin: auto;
+  }
+
+
+
 }
