@@ -8,7 +8,7 @@ export default function Navigation() {
             <li className='nav-item'><Link to={`/`}>About</Link></li>
             <li className='nav-item'><Link to={`/browse`}>Browse</Link></li>
             <li className='nav-item'><Link to={`/collections`}>Collections</Link></li>
-            <li className='nav-item'><a href="http://provath.org">Library Home</a></li>        
+            <li className='nav-item'><a href="http://provath.org">Library Home</a></li>
         </Style>
     )
 }

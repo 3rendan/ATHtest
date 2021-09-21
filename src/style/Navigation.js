@@ -10,6 +10,7 @@ const Navigation = styled.nav`
   vertical-align: middle;
   margin-bottom: 1.5rem;
   list-style: none;
+  
 `;
 
 
