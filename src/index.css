@@ -14,9 +14,9 @@ COMPONENT LEVEL STYLING ALL OCCURS IN THE /STYLE FOLDER
 html {
   background-color: black;
 }
-/* * {
+* {
   border: solid lightgray 1px;
-} */
+}
 body {
   font-family: 'Montserrat', sans-serif;
   line-height: 2;
@@ -217,6 +217,11 @@ footer {
   padding: .25rem;
   font-style: bolder;
   color: #fff;
+}
+.about-img {
+  margin: auto;
+  display: block;
+  padding-bottom: 2.5rem;
 }
 
 

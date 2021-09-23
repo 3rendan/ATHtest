@@ -4,7 +4,7 @@ import Style from '../style/Tags'
 import useFetch from '../services/useFetch'
 import Spinner from '../services/Spinner'
 
-export default function Tags(props) {
+const Tags = (props) => {
     const { data: tags, loading, error } = useFetch('tags');
 
 
@@ -16,7 +16,7 @@ export default function Tags(props) {
             { tags.map((tag) => {
                 return (
                     <div key={tag.id}>
-                        <Link to={`/tag/${tag.id}`} tag={tag}>
+                        <Link to={`/tag/${tag.id}`} tag={tag} tagId={ tag.id }>
                             <p className='tag-browse'  style={{color: '#000'}}>{ tag.name }</p>
                         </Link>
                     </div>
@@ -25,4 +25,4 @@ export default function Tags(props) {
         </Style>
     )
 }
-
+export default Tags

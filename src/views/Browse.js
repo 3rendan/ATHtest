@@ -16,7 +16,7 @@ const theme = createMuiTheme({
   })
 
 
-export default function Browse(props) {
+const Browse = (props) => {
     const topics = [ 'Items', 'Tags', 'Collections'];
 
 
@@ -28,10 +28,10 @@ export default function Browse(props) {
     return (
         <>
         <ThemeProvider theme={theme}>
-            <Tabs 
-            value={selectedTab} 
-            onChange={handleChange} 
-            className='navbar' 
+            <Tabs
+            value={selectedTab}
+            onChange={handleChange}
+            className='navbar'
             variant='fullWidth'
             aria-label='full width tabs example'>
                 <Tab label={topics[0]}/>
@@ -41,8 +41,9 @@ export default function Browse(props) {
             </ThemeProvider>
             { selectedTab === 0 && <Items/> }
             { selectedTab === 1 && <Tags/> }
-            { selectedTab === 2 && <Collections/> }  
-        </> 
-        
+            { selectedTab === 2 && <Collections/> }
+        </>
+
     )
 }
+export default Browse

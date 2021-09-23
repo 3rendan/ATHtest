@@ -15,7 +15,7 @@ const Tag = (props) =>{
           return (
             <div>
               <h2>{tag.name}</h2>
-              <TaggedItems/>
+              <TaggedItems tagId={ props.match.params.id }/>
             </div>
           )
         }
