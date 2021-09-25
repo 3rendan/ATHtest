@@ -6,7 +6,6 @@ const TaggedItems = (props) => {
   const { data: items, loading, error } = useFetch('items');
   const { data: images } = useFetch('files');
   //const id = parseInt(props.match.params.id)
-  let tagId = props.tagId
 
 
 
@@ -14,16 +13,13 @@ const TaggedItems = (props) => {
   if (loading) return <Spinner />;
   return (
     <>
-      { items.forEach((item) =>{
-          let idArr = [];
-          item.tags.map((tag) =>{
-            idArr.push(tag.id)
-          })
-          console.log(idArr)
-          })
+      { items.map((item) =>{
+        let tagId = props.tagId
+        if (item.tags.some((e) => e.id === 6)){
+            console.log(item.id)
+          }
         })
-      })
-    }
+        }
     </>
   )
 }
