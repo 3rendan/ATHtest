@@ -3,9 +3,9 @@ A React.js single page application using the API from http://digital.provath.org
 
 <a href="https://imgur.com/hwUGJWo"><img src="https://i.imgur.com/hwUGJWo.png" title="source: imgur.com" /></a>
 
-> Omeka, API, React.js, Bootstrap, Netlify, JavaScript 
+> Omeka, API, React.js, Bootstrap, Netlify, JavaScript
 
-[![Build Status](http://img.shields.io/travis/badges/badgerbadgerbadger.svg?style=flat-square)](https://travis-ci.org/badges/badgerbadgerbadger) [![License](http://img.shields.io/:license-mit-blue.svg?style=flat-square)](http://badges.mit-license.org) 
+[![Build Status](http://img.shields.io/travis/badges/badgerbadgerbadger.svg?style=flat-square)](https://travis-ci.org/badges/badgerbadgerbadger) [![License](http://img.shields.io/:license-mit-blue.svg?style=flat-square)](http://badges.mit-license.org)
 
 ## Table of Contents (Optional)
 
@@ -33,7 +33,7 @@ This project was bootstrapped with <a href="https://github.com/facebook/create-r
 <a href="https://imgur.com/7xCNkfs"><img src="https://i.imgur.com/7xCNkfs.png" title="source: imgur.com" /></a>
 
 ### Future development
-The data provided by the Omeka is unwieldy and not intuitive. I decided to stop at this point in the development of the front-end to begin creating a GraphQL server based off the Omeka API in order to streamline and improve data retrieval from the server. The project is hosted on GitHub. 
+The data provided by the Omeka is unwieldy and not intuitive. I decided to stop at this point in the development of the front-end to begin creating a GraphQL server based off the Omeka API in order to streamline and improve data retrieval from the server. The project is hosted on GitHub.
 After the server is built the plan is to use this as the institutions public site while maintaining the backend Omeka CMS used by librarians.
 
 ### FAQ/ Troubleshoot
@@ -48,4 +48,3 @@ Please contact me at brendan.ryan@pm.me with any questions regarding the project
 
 
 <a href="http://brendanryan.xyz" target="_blank">`Website`</a>
-

@@ -13,11 +13,11 @@ const TaggedItems = (props) => {
   if (loading) return <Spinner />;
   return (
     <>
-      { items.map((item) =>{
+      { items.flatMap((item) =>{
         let tagId = props.tagId
-        if (item.tags.some((e) => e.id === 6)){
-            console.log(item.id)
-          }
+        item.tags.flatMap((e) =>{
+          console.log(e)
+        })
         })
         }
     </>
