@@ -235,13 +235,12 @@ footer {
   .socials {
     display: block;
   }
-  .sculpture-item {
+  .sculpture-item, .single-item {
     display: none;
   }
   .m-sculpture-item, .m-single-item {
     display: block;
     max-width: 90%;
-    max-height: 45vh;
     margin: auto;
   }
   .social-item {
