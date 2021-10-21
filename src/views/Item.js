@@ -7,6 +7,7 @@ import Tombstone from '../components/Tombstone'
 import ItemTags from '../components/ItemTags'
 import Dwnlds from '../components/Dwnlds'
 import ItemImg from '../components/ItemImg'
+import MobileImg from '../components/MobileImg'
 import Socials from '../components/Socials'
 
 
@@ -27,6 +28,7 @@ const Item = (props) => {
         <h3>{ item.element_texts[0].text }</h3>
         <h5>{ getCollection(item.collection.id) }</h5>
       </section>
+      <MobileImg  item={ item } images={ images }/>
       <TombstoneImg> {/* this will house image and tombstone in grid */}
         <Tombstone item={ item }/>
         <button className="img-modal" onClick={()=> setIsOpen(true) }><ItemImg item={ item } images={ images }/></button>

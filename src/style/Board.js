@@ -7,8 +7,6 @@ const Board = styled.div`
   justify-content: space-around;
   color: black;
   padding: .5rem 0 2rem 0;
-
-
   @media only screen and (max-width: 768px) {
     display: grid;
     grid-template-columns: 1fr 1fr;

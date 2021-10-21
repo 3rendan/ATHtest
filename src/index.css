@@ -14,9 +14,7 @@ COMPONENT LEVEL STYLING ALL OCCURS IN THE /STYLE FOLDER
 html {
   background-color: black;
 }
-/* * {
-  border: solid lightgray 1px;
-} */
+/*  */
 body {
   font-family: 'Montserrat', sans-serif;
   line-height: 2;
@@ -222,6 +220,10 @@ footer {
   margin: auto;
   display: block;
   padding-bottom: 2.5rem;
+  max-width: 95%;
+}
+.m-sculpture-item, .m-single-item {
+  display: none;
 }
 
 
@@ -233,10 +235,14 @@ footer {
   .socials {
     display: block;
   }
-  .sculpture-item.painting-item.single-item {
+  .sculpture-item {
+    display: none;
+  }
+  .m-sculpture-item, .m-single-item {
     display: block;
+    max-width: 90%;
+    max-height: 45vh;
     margin: auto;
-    max-width: 66%;
   }
   .social-item {
     margin-left: 5px;
