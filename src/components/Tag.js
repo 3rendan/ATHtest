@@ -1,7 +1,6 @@
 import React from 'react'
 import useFetch from '../services/useFetch'
 import Spinner from '../services/Spinner'
-import TaggedItems from './TaggedItems'
 
 const Tag = (props) =>{
   const { data: tags, loading, error } = useFetch('tags')
@@ -15,7 +14,7 @@ const Tag = (props) =>{
           return (
             <div>
               <h2>{tag.name}</h2>
-              <TaggedItems tagId={ props.match.params.id }/>
+              <p>hello</p>
             </div>
           )
         }
