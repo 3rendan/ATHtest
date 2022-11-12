@@ -1,20 +1,10 @@
 import React from 'react'
 import { Tabs, Tab } from '@material-ui/core'
-import { createMuiTheme, ThemeProvider } from '@material-ui/core/styles'
-import Items from '../views/Items'
-import Collections from '../components/Collections.js'
-import Tags from '../components/Tags.js'
-const theme = createMuiTheme({
-    palette: {
-        primary: {
-            main: "#999999"
-        },
-        secondary: {
-            main: "#C4D425"
-        }
-    }
-  })
-
+import { ThemeProvider } from '@material-ui/core/styles'
+import Items from '../components/browse/Items'
+import Collections from '../components/browse/Collections.js'
+import Tags from '../components/browse/Tags.js'
+import theme from '../style/general/Layout'
 
 const Browse = (props) => {
     const topics = [ 'Items', 'Tags', 'Collections'];

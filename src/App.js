@@ -2,18 +2,18 @@ import React from 'react';
 import { Router, Route } from "react-router-dom";
 import { createBrowserHistory } from "history";
 import './index.css';
-import Header from "./components/Header";
-import Footer from "./components/Footer";
-import About from "./components/About";
+import Header from "./components/layout/Header";
+import Footer from "./components/layout/Footer";
+import About from "./components/general/About";
 //import Modal from "./components/Modal";
-import Navigation from "./components/Navigation";
-import NavTabs from "./components/NavTabs";
-import Collections from "./components/Collections";
-import Collection from "./components/Collection";
-import Tags from "./components/Tags";
-import Tag from "./components/Tag";
+import Navigation from "./components/layout/Navigation";
+import NavTabs from "./components/layout/NavTabs";
+import Collections from "./components/browse/Collections";
+import Collection from "./components/browse/Collection";
+import Tags from "./components/browse/Tags";
+import TaggedItems from "./components/browse/TaggedItems";
 import Item from "./views/Item";
-import Items from "./views/Items";
+import Items from "./components/browse/Items";
 import Browse from "./views/Browse";
 
 let hist = createBrowserHistory();
@@ -34,7 +34,7 @@ export default function App (){
               <Route path='/collections' exact strict component={ Collections } />
               <Route path='/collection/:id' exact strict component={ Collection } />
               <Route path='/tags' exact strict component={ Tags } />
-              <Route path='/tag/:id' exact strict component={ Tag } />
+              <Route path='/tag/:id' exact strict component={ TaggedItems } />
               <Route path='/items' exact strict component={ Items } />
               <Route path='/item/:id' exact strict component={ Item } />
             </div>

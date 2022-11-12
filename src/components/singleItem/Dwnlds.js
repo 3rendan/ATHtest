@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import { Link, BrowserRouter as Router } from 'react-router-dom'
-import Style from '../style/Dwnlds'
+import Style from '../../style/singleItem/Dwnlds'
 import Modal from './Modal'
 
 

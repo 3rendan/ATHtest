@@ -1,7 +1,8 @@
 import React from 'react'
-import useFetch from '../services/useFetch'
-import Spinner from '../services/Spinner'
-import Style from '../style/Tags'
+import { Link } from "react-router-dom"
+import useFetch from '../../services/useFetch'
+import Spinner from '../../services/Spinner'
+import Style from '../../style/singleItem/Tags'
 
 const ItemTags = (props) => {
     const { data: tags, loading, error } = useFetch('tags')
@@ -14,13 +15,14 @@ const ItemTags = (props) => {
 
   return (
     <div>
-
     <Style>
     { tags.map((tag) => {
         if(itemTags.includes(tag.id)){
           return (
             <div>
-              <h7>{tag.name}</h7>
+              <Link to={`/tag/${tag.id}`}>
+                <h7>{tag.name}</h7>
+              </Link>
             </div>
           )
         }

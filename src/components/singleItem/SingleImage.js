@@ -1,7 +1,6 @@
 import React from 'react'
-import useFetch from '../services/useFetch'
-import Spinner from '../services/Spinner'
-
+import useFetch from '../../services/useFetch'
+import Spinner from '../../services/Spinner'
 
 export default function SingleImage(props) {
     const { data: images, loading, error } = useFetch('files/')
