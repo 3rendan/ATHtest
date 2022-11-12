@@ -1,21 +1,11 @@
 import React from 'react';
 import { Tabs, Tab } from '@material-ui/core';
-import MetadataTombstone from '../components/MetadataTombstone';
-import Story from '../components/Story';
-import Resources from '../components/Resources';
-import Style from '../style/Tombstone';
-import { createMuiTheme, ThemeProvider } from '@material-ui/core/styles'
-
-const theme = createMuiTheme({
-    palette: {
-        primary: {
-            main: "#999999"
-        },
-        secondary: {
-            main: "#C4D425"
-        }
-    }
-})
+import { ThemeProvider } from '@material-ui/core/styles'
+import MetadataTombstone from './MetadataTombstone';
+import Story from './Story';
+import Resources from './Resources';
+import Style from '../../style/singleItem/Tombstone';
+import theme from '../../style/general/Layout'
 
 
 const Tombstone = (props) => {

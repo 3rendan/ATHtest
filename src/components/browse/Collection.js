@@ -1,11 +1,11 @@
 import React from 'react'
 import { Link } from "react-router-dom"
-import useFetch from '../services/useFetch'
+import useFetch from '../../services/useFetch'
 // import Style from '../style/CardBrowse'
-import getCollection from '../services/getCollection'
-import Board from '../style/Board'
-import Spinner from '../services/Spinner'
-import CardBrowse from '../style/CardBrowse'
+import getCollection from '../../services/getCollection'
+import Board from '../../style/browse/Board'
+import Spinner from '../../services/Spinner'
+import CardBrowse from '../../style/browse/CardBrowse'
 
 export default function Collection(props) {
     const { data: items, loading, error } = useFetch('items');
@@ -16,7 +16,6 @@ export default function Collection(props) {
     if (error) throw error;
     if (loading) return <Spinner />;
   
-
     return (
         <>
             <h1>{ getCollection(id)} </h1>

@@ -1,5 +1,5 @@
 import React from 'react';
-import Style from '../style/MetadataTombstone';
+import Style from '../../style/singleItem/MetadataTombstone';
 
 /**
  * ComponentName

@@ -1,6 +1,6 @@
 {
   "name": "testing",
-  "version": "0.1.0",
+  "version": "2.01.001",
   "private": true,
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^1.2.36",
@@ -19,8 +19,9 @@
     "react-dom": "^16.13.1",
     "react-loader-spinner": "^3.1.14",
     "react-router-dom": "^5.2.0",
-    "react-scripts": "^4.0.3",
-    "styled-components": "^5.2.1"
+    "react-scripts": "^5.0.1",
+    "styled-components": "^5.2.1",
+    "timers-browserify": "^2.0.12"
   },
   "scripts": {
     "start": "react-scripts start",

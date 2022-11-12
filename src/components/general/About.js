@@ -1,5 +1,5 @@
 import React from 'react';
-import Style from '../style/Paragraph'
+import Style from '../../style/singleItem/Paragraph'
 
 const About = () => {
   return (

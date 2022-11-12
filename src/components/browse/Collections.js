@@ -1,10 +1,10 @@
 import React from 'react'
 import { Link } from "react-router-dom"
-import useFetch from '../services/useFetch'
-import collectionImage from '../services/collectionImage'
-import CardBrowse from '../style/CardBrowse'
-import Board from '../style/Board'
-import Spinner from '../services/Spinner'
+import useFetch from '../../services/useFetch'
+import collectionImage from '../../services/collectionImage'
+import CardBrowse from '../../style/browse/CardBrowse'
+import Board from '../../style/browse/Board'
+import Spinner from '../../services/Spinner'
 
 const Collections = (props) => {
     const { data: collections, loading, error } = useFetch('collections/')

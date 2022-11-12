@@ -1,20 +1,16 @@
 import React, { useState } from 'react';
 import getCollection from '../services/getCollection'
 import useFetch from '../services/useFetch'
-import Modal from '../components/Modal'
-
-import Tombstone from '../components/Tombstone'
-import ItemTags from '../components/ItemTags'
-import Dwnlds from '../components/Dwnlds'
-import ItemImg from '../components/ItemImg'
-import MobileImg from '../components/MobileImg'
-import Socials from '../components/Socials'
-
-
-import TombstoneImg from '../style/TombstoneImg'
-import TagsDwnlds from '../style/TagsDwnlds'
+import Modal from '../components/singleItem/Modal'
+import Tombstone from '../components/singleItem/Tombstone'
+import ItemTags from '../components/singleItem/ItemTags'
+import Dwnlds from '../components/singleItem/Dwnlds'
+import ItemImg from '../components/singleItem/ItemImg'
+import MobileImg from '../components/singleItem/MobileImg'
+import Socials from '../components/singleItem/Socials'
+import TombstoneImg from '../style/singleItem/TombstoneImg'
+import TagsDwnlds from '../style/singleItem/TagsDwnlds'
 import Spinner from '../services/Spinner'
-
 
 const Item = (props) => {
     const { data: item, loading, error } = useFetch('items/' + props.match.params.id)
