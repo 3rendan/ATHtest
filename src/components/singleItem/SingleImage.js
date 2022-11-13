@@ -1,11 +1,10 @@
-import React from 'react'
-import useFetch from '../../services/useFetch'
-import Spinner from '../../services/Spinner'
+import React, { useContext } from 'react'
+import ItemsContext from '../../context/ItemsContext'
+import Bars from '../../services/Bars'
 
 export default function SingleImage(props) {
-    const { data: images, loading, error } = useFetch('files/')
-    if (error) throw error;
-    if (loading) return <Spinner />;
+    const { images, imagesLoading } = useContext(ItemsContext)
+    if (imagesLoading) return <Bars />
     return (
         <>
         { target = images.filter(image => image.item.id === props.item.id)}

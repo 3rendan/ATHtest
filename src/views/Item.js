@@ -10,14 +10,14 @@ import MobileImg from '../components/singleItem/MobileImg'
 import Socials from '../components/singleItem/Socials'
 import TombstoneImg from '../style/singleItem/TombstoneImg'
 import TagsDwnlds from '../style/singleItem/TagsDwnlds'
-import Spinner from '../services/Spinner'
+import Bars from '../services/Bars'
 
 const Item = (props) => {
     const { data: item, loading, error } = useFetch('items/' + props.match.params.id)
     const { data: images } = useFetch(`files`)
     const [ isOpen, setIsOpen ] = useState(false)
     if (error) throw error;
-    if (loading) return <Spinner />;
+    if (loading) return <Bars />;
     return (
       <div className='container'>
       <section>  {/* title and collection row */}

@@ -1,7 +1,7 @@
 import React from 'react'
-import { Link } from "react-router-dom"
+import { Link } from 'react-router-dom'
 import useFetch from '../../services/useFetch'
-import Spinner from '../../services/Spinner'
+import Bars from '../../services/Bars'
 import Style from '../../style/singleItem/Tags'
 
 const ItemTags = (props) => {
@@ -11,7 +11,7 @@ const ItemTags = (props) => {
     })
     console.log(itemTags)
     if (error) throw error;
-    if (loading) return <Spinner />;
+    if (loading) return <Bars />;
 
   return (
     <div>

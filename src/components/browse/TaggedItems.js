@@ -1,21 +1,24 @@
-import React from 'react'
-import useFetch from '../../services/useFetch'
+import React, { useContext } from 'react'
 import Board from '../../style/browse/Board'
 import BrowseItem from './BrowseItem'
-import Spinner from '../../services/Spinner'
-
+import ItemsContext from '../../context/ItemsContext'
+import Bars from '../../services/Bars'
+  
 const TaggedItems = (props) => {
-  const { data: items, loading, error } = useFetch('items');
-  if (error) throw error;
-  if (loading) return <Spinner />;
+  const { items, isLoading } = useContext(ItemsContext)
+  if (isLoading) return <Bars />
+
   return (
     <Board>
-      { console.log(props) }
+      <div className="row col-12">
+        <h1 className="text-center">What tag is this?</h1>
+      </div>
+      <br />
   		{ items.map((item) => {
   			return  (
-            <BrowseItem item={item} />
-  				)})
-  			}
+          <BrowseItem item={item} />
+        )})
+      }
   		</Board>
   	)
   }

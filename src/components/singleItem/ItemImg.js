@@ -1,6 +1,4 @@
 import React from 'react'
-//import getCollection from '../services/getCollection'
-//import useFetch from '../services/useFetch'
 
 const ItemImg = (props) => {
 

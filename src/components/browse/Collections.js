@@ -1,16 +1,16 @@
 import React from 'react'
-import { Link } from "react-router-dom"
+import { Link } from 'react-router-dom'
 import useFetch from '../../services/useFetch'
 import collectionImage from '../../services/collectionImage'
 import CardBrowse from '../../style/browse/CardBrowse'
 import Board from '../../style/browse/Board'
-import Spinner from '../../services/Spinner'
+import Bars from '../../services/Bars'
 
 const Collections = (props) => {
     const { data: collections, loading, error } = useFetch('collections/')
     // const [ collection, setCollection ] = useState([])
     if (error) throw error;
-    if (loading) return <Spinner />;
+    if (loading) return <Bars />;
     return (
         <Board>
             { collections.map((collection) =>{
