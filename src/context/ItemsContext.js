@@ -1,6 +1,4 @@
 import React, { createContext, useState, useEffect } from "react"
-
-
 const ItemsContext = createContext()
 
 export const ItemsProvider =({children}) => {
@@ -18,24 +16,23 @@ export const ItemsProvider =({children}) => {
     }, [])
 
     const fetchItems = async () => {
-        const response = await fetch('/items');
+        const response = await fetch('items');
         const data = await response.json()
         setItems(data)
         setIsLoading(false)
-    }
+    }   
     const fetchImages = async () => {
-        const response = await fetch('/files');
+        const response = await fetch('files');
         const data= await response.json()
         setImages(data)
         setImagesLoading(false)
     }
     const fetchTags = async () => {
-        const response = await fetch('/tags');
+        const response = await fetch('tags');
         const data= await response.json()
         setTags(data)
         setTagsLoading(false)
     }
-
 
     return <ItemsContext.Provider value={{
         items,

@@ -4,7 +4,6 @@ import CardBrowse from '../../style/browse/CardBrowse'
 import ItemsContext from '../../context/ItemsContext'
 import Bars from '../../services/Bars'
 
-
 const BrowseItem = (props) => {
     const { images, imagesLoading } = useContext(ItemsContext)
     if (imagesLoading) return <Bars />
@@ -22,5 +21,4 @@ const BrowseItem = (props) => {
         </CardBrowse>
     )
 }
-
 export default BrowseItem;

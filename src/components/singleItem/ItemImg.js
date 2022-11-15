@@ -1,40 +1,23 @@
-import React from 'react'
+import React, { useContext, useState, useEffect } from 'react'
+import ItemsContext from '../../context/ItemsContext'
+
 
 const ItemImg = (props) => {
+  const { images } = useContext(ItemsContext)
+  const findImage = (num, obj) => {
+    obj.map((arr) => {
+      arr.find(img => img.item.id === num)
+    })
+  }
 
   return (
     <div className='grid-item-2'>
-    { props.images.map((image) => {
-          if(props.item.collection.id === 1 && image.item.id === props.item.id){
-            return (
-                <img
-                className='sculpture-item'
-                src={ image.file_urls.fullsize }
-                alt={props.item.element_texts[0].text}
-                image={ image.file_urls.fullsize }/>
-            )
-          } else if(image.item.id === props.item.id){
-            return (
-                <img
-                className='single-item'
-                src={ image.file_urls.square_thumbnail }
-                alt={props.item.element_texts[0].text}
-                image={ image.file_urls.fullsize }/>
-            )
-          } else if(props.item.collection.id === 2 && image.item.id === props.item.id){
-            return (
-                <img
-                className='single-item'
-                src={ image.file_urls.fullsize }
-                alt={props.item.element_texts[0].text}
-                image={ image.file_urls.fullsize }/>
-            )
-          }
-          return null
-        })
-      }
-
-      </div>
+      <img
+                className='square'
+                src={ findImage(props.item.id, images).file_urls.square_thumbnail }
+                alt={props.item.element_texts[0].text} />
+                <h6>{props.item.element_texts[0].text}</h6>
+    </div>
   )
 }
 
