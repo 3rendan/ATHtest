@@ -1,9 +1,9 @@
-import { createMuiTheme } from '@material-ui/core/styles'
+import { createTheme } from '@material-ui/core/styles'
 // import * as Constants from '../../constants'
 const primaryColor = "#999999"
 const secondaryColor = "#C4D425"
 
-const theme = createMuiTheme({
+const theme = createTheme({
     palette: {
         primary: {
             main: primaryColor

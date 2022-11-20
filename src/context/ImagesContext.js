@@ -12,18 +12,18 @@ export const ImagesProvider =({children}) => {
     }, [])
 
     const fetchImages = async () => {
-        const response = await fetch(baseUrl + 'files');
+        const response = await fetch('https://digital.provath.org/api/files');
         const data = await response.json()
         setImages(data)
         setIsLoading(false)
     }
 
 
-    return <ImagesContext.Provider value={{
+    return <GlobalContext.Provider value={{
         images,
         isLoading
     }}>
         { children }
-    </ImagesContext.Provider>
+    </GlobalContext.Provider>
 }
 export default ImagesContext

@@ -13,7 +13,7 @@ const Items = () => {
     <Board>
     { items.map((item) => {
       return  (
-        <BrowseItem item={item} />
+        <BrowseItem item={item} key={item.id} />
       )}
     )}
     </Board>

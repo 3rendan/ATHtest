@@ -1,28 +1,24 @@
-import React, { useEffect, useState } from 'react'
+import React from 'react'
+import useItem from '../../hooks/useItem'
+import getCollection from '../../services/getCollection'
 import Bars from '../../services/Bars'
-import ItemImg from './ItemImg'
+import { useParams } from 'react-router-dom'
 
-const SingleItem = (props) =>  {
-    const [ item, setItem ] = useState({})
-    const [ itemLoading, setItemLoading ] = useState(true)
-    const fetchItem = async (id) => {
-        const response = await fetch('https://digital.provath.org/api/items/' + id);
-        const data = await response.json()
-        setItem(data)
-        setItemLoading(false)
-    }  
-    useEffect(() => {
-        fetchItem(props.id)
-    }, []) 
-    
-    if(itemLoading) return <Bars />
-       
+
+const SingleItem = () =>  {
+    const { id } = useParams()
+    const res = useItem(id)
+    const item = res.item
+    if (res.loading) return <Bars />
+
     return (
         <div>
-            <h3>{ item.element_texts[0].text }</h3>
-            
+            <section>  {/* title and collection row */}
+                <h3>{item.element_texts[0].text}</h3>
+                <h5>{getCollection(item.collection.id)}</h5>
+            </section>
+
         </div>
   )
 }
 export default SingleItem
-

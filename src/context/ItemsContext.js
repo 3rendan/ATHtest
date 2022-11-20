@@ -1,4 +1,5 @@
 import React, { createContext, useState, useEffect } from "react"
+import axios from 'axios'
 const ItemsContext = createContext()
 
 export const ItemsProvider =({children}) => {
@@ -8,30 +9,45 @@ export const ItemsProvider =({children}) => {
     const [ isLoading, setIsLoading ] = useState(true)
     const [ imagesLoading, setImagesLoading ] = useState(true)
     const [ tagsLoading, setTagsLoading ] = useState(true)
+    const archive = axios.create({
+        baseURL: `https://digital.provath.org/api/`
+    })
 
     useEffect(() => {
-        fetchItems()
-        fetchImages()
-        fetchTags()
+        getItems()
+        getImages()
+        getTags()
+        // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [])
+   
+    const getItems = async () => {
+        try {
+            const res = await archive.get(`items`);
+            setItems(res.data)
+            setIsLoading(false)
+        } catch (err) {
+            console.error(err)
+        }
+    } 
 
-    const fetchItems = async () => {
-        const response = await fetch('items');
-        const data = await response.json()
-        setItems(data)
-        setIsLoading(false)
-    }   
-    const fetchImages = async () => {
-        const response = await fetch('files');
-        const data= await response.json()
-        setImages(data)
-        setImagesLoading(false)
+    const getImages = async () => {
+        try {
+            const res = await archive.get(`files`);
+            setImages(res.data)
+            setImagesLoading(false)
+        } catch (err) {
+            console.error(err)
+        }
     }
-    const fetchTags = async () => {
-        const response = await fetch('tags');
-        const data= await response.json()
-        setTags(data)
-        setTagsLoading(false)
+    
+    const getTags = async () => {
+        try {
+            const res = await archive.get(`tags`);
+            setTags(res.data)
+            setTagsLoading(false)
+        } catch (err) {
+            console.error(err)
+        }
     }
 
     return <ItemsContext.Provider value={{
@@ -40,7 +56,7 @@ export const ItemsProvider =({children}) => {
         isLoading,
         imagesLoading,
         tags,
-        tagsLoading
+        tagsLoading,
     }}>
         { children }
     </ItemsContext.Provider>

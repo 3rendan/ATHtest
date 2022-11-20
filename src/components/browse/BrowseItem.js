@@ -6,9 +6,11 @@ import Bars from '../../services/Bars'
 
 const BrowseItem = (props) => {
     const { images, imagesLoading } = useContext(ItemsContext)
+
     if (imagesLoading) return <Bars />
+
     return  (
-        <CardBrowse key={props.item.id}>
+        <CardBrowse>
             <Link to={`item/${props.item.id}`}>           
             <section className='card-body'>
             <img
@@ -21,4 +23,4 @@ const BrowseItem = (props) => {
         </CardBrowse>
     )
 }
-export default BrowseItem;
+export default BrowseItem
