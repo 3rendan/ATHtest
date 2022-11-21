@@ -1,13 +1,14 @@
-import React, { useContext } from 'react'
+import React from 'react'
 import { Link } from 'react-router-dom'
 import CardBrowse from '../../style/browse/CardBrowse'
-import ItemsContext from '../../context/ItemsContext'
 import Bars from '../../services/Bars'
+import useItemImage from '../../hooks/useItemImage'
 
 const BrowseItem = (props) => {
-    const { images, imagesLoading } = useContext(ItemsContext)
+    const res = useItemImage(props.item.id)
+    const image = res.image
 
-    if (imagesLoading) return <Bars />
+    if (res.loading) return <Bars />
 
     return  (
         <CardBrowse>
@@ -15,7 +16,7 @@ const BrowseItem = (props) => {
             <section className='card-body'>
             <img
                 className='square'
-                src={ (images.find(image => (image.item.id === props.item.id))).file_urls.square_thumbnail }
+                src={ image.file_urls.square_thumbnail }
                 alt={props.item.element_texts[0].text} />
                 <h6>{props.item.element_texts[0].text}</h6>
             </section>

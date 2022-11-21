@@ -1,28 +1,18 @@
-import { useEffect, useState } from "react"
-import axios from 'axios'
+import { useEffect, useState, useContext } from "react"
+import ItemsContext from '../context/ItemsContext'
 
 function useItemImage(id) {
-    const [ loading1, setLoading1 ] = useState(true)
+    const [ loading, setLoading ] = useState(true)
     const [ image, setImage ] = useState([])
-    const [ error, setError ] = useState(null)
-
+    const { images } = useContext(ItemsContext)
+    
     useEffect(() =>{
-        const getImage = async () => {
-            try {
-                const res = await axios.get(`https://digital.provath.org/api/files`);
-                const images = await res.data
-                // This returns an object when id is hardcoded
-                const imageObject = await images.find(image => image.item.id === id)
-                setImage(imageObject)
-                setLoading1(false)
-            } catch (err) {
-                setError(err)
-                setLoading1(false)
-            }
-        }
-        getImage()
+        const idInt = parseInt(id)
+        const url = images.find(image => image.item.id === idInt)
+        setImage(url)
+        setLoading(false)
         // eslint-disable-next-line react-hooks/exhaustive-deps
     },[]) 
-    return { image, loading1, error }
+    return { image, loading }
 }
 export default useItemImage

@@ -5,6 +5,7 @@ function useItem(id) {
     const [ loading, setLoading ] = useState(true)
     const [ error, setError ] = useState(null)
     const [ item, setItem ] = useState([])
+    
     useEffect(() =>{
         const getItem = async () => {
             try {

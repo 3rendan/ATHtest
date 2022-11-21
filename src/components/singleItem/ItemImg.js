@@ -1,22 +1,19 @@
-import React, { useContext, useEffect } from 'react'
-import ItemsContext from '../../context/ItemsContext'
-
+import React from 'react'
+import ProgressBar from '../../services/ProgressBar'
+import { useParams } from 'react-router-dom'
+import useItemImage from '../../hooks/useItemImage'
 
 const ItemImg = (props) => {
-  const { images } = useContext(ItemsContext)
-  
-  const setImg = (id) =>{
-    if(images.map(image => image.item.id === props.item.id)){
-      return images.files_url.square_thumbnail
-    }
-  }
+  const { id } = useParams()
+  const res = useItemImage(id)
+  const image = res.image
+  console.log(image)
 
+  if (res.loading) return <ProgressBar />
+  
   return (
     <div className='grid-item-2'>
-      <img
-        className={ window.screen.width > 820 ? 'square' : 'm-single-image'}
-        src={ props.src }
-        alt={props.item.element_texts[0].text} />
+      <img src={image.file_urls.square_thumbnail} alt={props.title}/>
     </div>
   )
 }
