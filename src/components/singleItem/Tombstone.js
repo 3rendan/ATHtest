@@ -1,16 +1,16 @@
 import React from 'react';
 import { Tabs, Tab } from '@material-ui/core';
 import { ThemeProvider } from '@material-ui/core/styles'
-import MetadataTombstone from './MetadataTombstone';
-import Story from './Story';
-import Resources from './Resources';
-import Style from '../../style/singleItem/Tombstone';
+import Metadata from './Metadata';
+import Story from './Story'
+import Resources from './Resources'
+import Style from '../../style/singleItem/Tombstone'
 import theme from '../../style/general/Layout'
 
 
 const Tombstone = (props) => {
   const topics = ['Info', 'Story', 'Resources']
-  const [selectedTab, setSelectedTab] = React.useState(0); // Material UI
+  const [selectedTab, setSelectedTab] = React.useState(0) // Material UI
   const handleChange = (event, newValue) => {
       setSelectedTab(newValue);
   };
@@ -31,9 +31,9 @@ const Tombstone = (props) => {
           </Tabs>
         </ThemeProvider>
           {/* selecting which info displays */}
-          { selectedTab === 0 && <MetadataTombstone item={ props.item } /> }
-          { selectedTab === 1 && <Story item={ props.item }/> }
-          { selectedTab === 2 && <Resources item={ props.item } /> }
+          { selectedTab === 0 && <Metadata /> }
+          { selectedTab === 1 && <Story /> }
+          { selectedTab === 2 && <Resources /> }
     </Style>
 )
 

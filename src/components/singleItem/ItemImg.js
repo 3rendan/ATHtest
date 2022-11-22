@@ -13,7 +13,7 @@ const ItemImg = (props) => {
   
   return (
     <div className='grid-item-2'>
-      <img src={image.file_urls.square_thumbnail} alt={props.title}/>
+      <img src={image.file_urls.square_thumbnail} alt={props.title} className='single-item' />
     </div>
   )
 }

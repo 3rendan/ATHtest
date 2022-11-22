@@ -1,40 +1,21 @@
 import React from 'react'
+import ProgressBar from '../../services/ProgressBar'
+import { useParams } from 'react-router-dom'
+import useItemImage from '../../hooks/useItemImage'
 
 const MobileImg = (props) => {
-  return (
-  <div className='grid-item-2'>
-  { props.images.map((image) => {
-        if(props.item.collection.id === 1 && image.item.id === props.item.id){
-          return (
-              <img
-              className='m-sculpture-item'
-              src={ image.file_urls.fullsize }
-              alt={props.item.element_texts[0].text}
-              image={ image.file_urls.fullsize }/>
-          )
-        } else if(image.item.id === props.item.id){
-          return (
-              <img
-              className='m-single-item'
-              src={ image.file_urls.square_thumbnail }
-              alt={props.item.element_texts[0].text}
-              image={ image.file_urls.fullsize }/>
-          )
-        } else if(props.item.collection.id === 2 && image.item.id === props.item.id){
-          return (
-              <img
-              className='m-single-item'
-              src={ image.file_urls.fullsize }
-              alt={props.item.element_texts[0].text}
-              image={ image.file_urls.fullsize }/>
-          )
-        }
-        return null
-      })
-    }
+  const { id } = useParams()
+  const res = useItemImage(id)
+  const image = res.image
+  console.log(image)
 
+  if (res.loading) return <ProgressBar />
+
+  return (
+    <div className='grid-item-2'>
+      <img src={image.file_urls.square_thumbnail} alt={props.title} className='m-single-item'/>
     </div>
-)
+  )
 }
 
 export default MobileImg

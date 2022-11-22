@@ -1,25 +1,30 @@
-import React, { useContext } from 'react'
+import React from 'react'
 import Board from '../../style/browse/Board'
 import BrowseItem from './BrowseItem'
-import ItemsContext from '../../context/ItemsContext'
+import useTagged from '../../hooks/useTagged'
 import Bars from '../../services/Bars'
+import { useParams } from 'react-router-dom'
   
 const TaggedItems = (props) => {
-  const { items, isLoading } = useContext(ItemsContext)
-  if (isLoading) return <Bars />
+  const { id } = useParams()
+  const res = useTagged(id)
+  // console.log(id)
+  const items = res.taggedItems
+  // console.log(items)
+
+  if (res.loading) return <Bars />
 
   return (
     <Board>
-      <div className="row col-12">
-        <h1 className="text-center">What tag is this?</h1>
+      <div className="row">
+        <h1>Tag Name</h1>
       </div>
-      <br />
-  		{ items.map((item) => {
-  			return  (
-          <BrowseItem item={item} />
-        )})
-      }
-  		</Board>
+    { items.map((item) => {
+      return  (
+        <BrowseItem item={item} key={item.id} />
+      )}
+    )}
+    </Board>
   	)
   }
   export default TaggedItems;
