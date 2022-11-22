@@ -8,16 +8,15 @@ import { useParams } from 'react-router-dom'
 const TaggedItems = (props) => {
   const { id } = useParams()
   const res = useTagged(id)
-  // console.log(id)
   const items = res.taggedItems
-  // console.log(items)
-
+  const tagName = res.tagName
+  
   if (res.loading) return <Bars />
 
   return (
     <Board>
-      <div className="row">
-        <h1>Tag Name</h1>
+      <div className="row col-12">
+        <h1>{tagName}</h1>
       </div>
     { items.map((item) => {
       return  (
