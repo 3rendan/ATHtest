@@ -7,7 +7,6 @@ const MobileImg = (props) => {
   const { id } = useParams()
   const res = useItemImage(id)
   const image = res.image
-  console.log(image)
 
   if (res.loading) return <ProgressBar />
 

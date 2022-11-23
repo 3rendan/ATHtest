@@ -1,9 +1,9 @@
 import React from 'react'
+import { useParams } from 'react-router-dom'
 import Board from '../../style/browse/Board'
 import BrowseItem from './BrowseItem'
 import useTagged from '../../hooks/useTagged'
 import Bars from '../../services/Bars'
-import { useParams } from 'react-router-dom'
   
 const TaggedItems = (props) => {
   const { id } = useParams()

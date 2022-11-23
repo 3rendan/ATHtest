@@ -4,7 +4,6 @@ import styled from 'styled-components';
 const Tombstone = styled.div`
   display: grid;
   grid-template-rows: 1fr 5fr;
-  height: 50vh;
   overflow: hidden;
   font-size: 1.1rem;
   line-height: 2;
