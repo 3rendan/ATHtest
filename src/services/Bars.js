@@ -4,7 +4,9 @@ import {secondaryColor} from '../../src/constants'
 
 const Bars = () => {
   return (
-    <Loader type="Bars" color={secondaryColor} height={80} width={80}/>
+    <div className="col-12 text-center">
+      <Loader type="Bars" color={secondaryColor}/>
+    </div>
   )
 }
 
