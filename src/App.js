@@ -15,6 +15,7 @@ import Item from "./views/Item"
 import Items from "./components/browse/Items"
 import Browse from "./views/Browse"
 import { ItemsProvider } from './context/ItemsContext'
+const package_json = require('../package.json');
 
 let hist = createBrowserHistory()
 
@@ -39,7 +40,7 @@ export default function App (){
               <Route path='/items' exact strict component={ Items } />
               <Route path='/item/:id' exact strict component={ Item } />
             </div>
-            <Footer />
+            <Footer version={package_json.version}/>
         </div>
         <div className="container">
           <main>
