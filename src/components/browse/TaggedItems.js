@@ -1,22 +1,29 @@
 import React from 'react'
-import useFetch from '../../services/useFetch'
+import { useParams } from 'react-router-dom'
 import Board from '../../style/browse/Board'
 import BrowseItem from './BrowseItem'
-import Spinner from '../../services/Spinner'
-
+import useTagged from '../../hooks/useTagged'
+import Bars from '../../services/Bars'
+  
 const TaggedItems = (props) => {
-  const { data: items, loading, error } = useFetch('items');
-  if (error) throw error;
-  if (loading) return <Spinner />;
+  const { id } = useParams()
+  const res = useTagged(id)
+  const items = res.taggedItems
+  const tagName = res.tagName
+  
+  if (res.loading) return <Bars />
+
   return (
     <Board>
-      { console.log(props) }
-  		{ items.map((item) => {
-  			return  (
-            <BrowseItem item={item} />
-  				)})
-  			}
-  		</Board>
+      <div className="row col-12">
+        <h1>{tagName}</h1>
+      </div>
+    { items.map((item) => {
+      return  (
+        <BrowseItem item={item} key={item.id} />
+      )}
+    )}
+    </Board>
   	)
   }
   export default TaggedItems;

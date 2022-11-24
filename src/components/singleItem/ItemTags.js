@@ -1,37 +1,22 @@
 import React from 'react'
-import { Link } from "react-router-dom"
-import useFetch from '../../services/useFetch'
-import Spinner from '../../services/Spinner'
-import Style from '../../style/singleItem/Tags'
-
+import { Link } from 'react-router-dom'
 const ItemTags = (props) => {
-    const { data: tags, loading, error } = useFetch('tags')
-    const itemTags = props.item.tags.map((tag) => {
-        return tag.id
-    })
-    console.log(itemTags)
-    if (error) throw error;
-    if (loading) return <Spinner />;
-
+  const { tags } = props.item
+  
   return (
-    <div>
-    <Style>
-    { tags.map((tag) => {
-        if(itemTags.includes(tag.id)){
-          return (
-            <div>
-              <Link to={`/tag/${tag.id}`}>
-                <h7>{tag.name}</h7>
-              </Link>
-            </div>
-          )
-        }
-        return null
-      })
-    }
-    </Style>
-
-  </div>
+    <>
+    <h2>Tags</h2> 
+    <div className="tag-blob">
+  { tags.map((tag) => {
+    return (
+        <Link to={`/tag/${tag.id}`}>
+          <h7>{tag.name}</h7>
+        </Link>
+      )
+    })
+  }
+  </div> 
+  </>
   )
 }
 export default ItemTags

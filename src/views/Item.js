@@ -1,23 +1,43 @@
-import React, { useState } from 'react';
-import getCollection from '../services/getCollection'
-import useFetch from '../services/useFetch'
-import Modal from '../components/singleItem/Modal'
+import React, { useContext, useEffect, useState } from 'react'
+import { useParams } from 'react-router-dom'
+import Bars from '../services/Bars'
+import ItemTitle from '../components/singleItem/ItemTitle'
+import ItemImg from '../components/singleItem/ItemImg'
+import MobileImg from '../components/singleItem/MobileImg'
 import Tombstone from '../components/singleItem/Tombstone'
 import ItemTags from '../components/singleItem/ItemTags'
 import Dwnlds from '../components/singleItem/Dwnlds'
-import ItemImg from '../components/singleItem/ItemImg'
-import MobileImg from '../components/singleItem/MobileImg'
 import Socials from '../components/singleItem/Socials'
-import TombstoneImg from '../style/singleItem/TombstoneImg'
-import TagsDwnlds from '../style/singleItem/TagsDwnlds'
-import Spinner from '../services/Spinner'
+import ItemsContext from '../context/ItemsContext'
 
-const Item = (props) => {
-    const { data: item, loading, error } = useFetch('items/' + props.match.params.id)
-    const { data: images } = useFetch(`files`)
-    const [ isOpen, setIsOpen ] = useState(false)
-    if (error) throw error;
-    if (loading) return <Spinner />;
+const Item = () =>  {
+    const { id } = useParams()
+    const { items, isLoading } = useContext(ItemsContext)
+    const [ archiveItem, setArchiveItem ] = useState({})
+
+    const intId = parseInt(id)
+    useEffect(() =>{
+        const storedItem = localStorage.getItem('stored-item')
+        const getArchiveItem = () => {
+            if(storedItem !== null){
+                setArchiveItem(JSON.parse(storedItem))
+            } else {
+                setArchiveItem(items.find(item => item.id === intId))
+            }
+        }
+        getArchiveItem() 
+        return () => {
+            localStorage.removeItem('stored-item')
+        } 
+        // eslint-disable-next-line react-hooks/exhaustive-deps
+    })
+    useEffect(() => {
+        localStorage.setItem('stored-item', JSON.stringify(archiveItem))
+    }, [archiveItem])
+
+
+    if (isLoading) return <Bars />
+    
     return (
       <div className='container'>
       <section>  {/* title and collection row */}
@@ -69,5 +89,5 @@ const Item = (props) => {
       </TagsDwnlds>
       </div>
     )
-  }
-  export default Item
+}
+export default Item

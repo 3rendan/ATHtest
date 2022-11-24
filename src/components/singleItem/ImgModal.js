@@ -1,27 +1,20 @@
 import React, { useState } from 'react'
+import useItemImage from '../../hooks/useItemImage'
+import ProgressBar from '../../services/ProgressBar'
 import Modal from './Modal'
 
 const ImgModal = (props) => {
   const [ isOpen, setIsOpen ] = useState(false)
+  const res = useItemImage(props.id)
+  const image = res.image
+
+  if(!isOpen) return null
+  if (res.loading) return <ProgressBar />
   return (
     <div>
-    <Modal open={ isOpen } onClose={ () => setIsOpen(false)} >
-      { props.images.map((image) => {
-        if(image.item.id === props.item.id){
-          return (
-              <img
-              className='img-modal'
-              src={ image.file_urls.fullsize }
-              alt={props.item.element_texts[0].text}
-              image={ image.file_urls.fullsize }/>
-            )
-          }
-          return null
-        })
-        }
-    </Modal>
+      <img className='img-modal' src={ image.file_urls.fullsize } alt={props.title} image={ image.file_urls.fullsize }/>
+      
     </div>
   )
 }
-
 export default ImgModal

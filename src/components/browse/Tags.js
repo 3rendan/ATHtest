@@ -1,14 +1,13 @@
-import React from 'react'
-import { Link } from "react-router-dom"
+import React, { useContext } from 'react'
+import { Link } from 'react-router-dom'
 import Style from '../../style/singleItem/Tags'
-import useFetch from '../../services/useFetch'
-import Spinner from '../../services/Spinner'
+import Bars from '../../services/Bars'
+import ItemsContext from '../../context/ItemsContext'
 
 const Tags = (props) => {
-    const { data: tags, loading, error } = useFetch('tags');
+    const { tags, tagsLoading } = useContext(ItemsContext)
 
-    if (error) throw error;
-    if (loading) return <Spinner />;
+    if (tagsLoading) return <Bars />;
 
     return (
         <Style>

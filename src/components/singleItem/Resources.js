@@ -1,11 +1,19 @@
 import React from 'react'
+import { useParams } from 'react-router-dom'
+import useItem from '../../hooks/useItem'
+import Bars from '../../services/Bars'
 
 
 export default function Resources(props) {
-    const showCategory = ["Citation/reference note(s)"];
+    const { id } = useParams()
+    const res = useItem(id)
+    const item = res.item
+    const showCategory = ["Citation/reference note(s)"]
+
+    if(res.loading) return <Bars />
     return (
         <>
-                { props.item.element_texts.map((marcTag) =>{
+                { item.element_texts.map((marcTag) =>{
                     if(showCategory.includes(marcTag.element.name)){
                         return (
                             <>

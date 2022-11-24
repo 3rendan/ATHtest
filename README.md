@@ -33,8 +33,11 @@ This project was bootstrapped with <a href="https://github.com/facebook/create-r
 <a href="https://imgur.com/7xCNkfs"><img src="https://i.imgur.com/7xCNkfs.png" title="source: imgur.com" /></a>
 
 ### Future development
-The data provided by the Omeka is unwieldy and not intuitive. I decided to stop at this point in the development of the front-end to begin creating a GraphQL server based off the Omeka API in order to streamline and improve data retrieval from the server. The project is hosted on GitHub.
-After the server is built the plan is to use this as the institutions public site while maintaining the backend Omeka CMS used by librarians.
+* SASS for styling
+* responsive styling through SASS
+* Item positioning
+* Flex styling for single item page
+* useTagged hook
 
 ### FAQ/ Troubleshoot
 Please contact me at brendan.ryan@pm.me with any questions regarding the project. I would be happy to help anyone with questions or who is working to develop their own Omeka site at their institution.

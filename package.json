@@ -1,7 +1,8 @@
 {
-  "name": "testing",
-  "version": "2.01.001",
+  "name": "ath-spa",
+  "version": "2.3.9",
   "private": true,
+  "proxy": "https://digital.provath.org/api/",
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^1.2.36",
     "@fortawesome/free-brands-svg-icons": "^5.15.4",
@@ -15,6 +16,7 @@
     "cors": "^2.8.5",
     "express": "^4.17.1",
     "font-awesome": "^4.7.0",
+    "node-sass": "^8.0.0",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
     "react-loader-spinner": "^3.1.14",
