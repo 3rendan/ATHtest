@@ -27,7 +27,7 @@ A React.js single page application using the API from http://digital.provath.org
 - React-router-dom 5.2.0
 
 ### Background
-This project was bootstrapped with <a href="https://github.com/facebook/create-react-app">create-react-app</a>. <a href='https://provath.org'>The Providence Athenaeum</a> presently has a site for digital collections available at digital.provath.org managed and created by me using a customized version of <a href="https://github.com/InteractiveMechanics/sckls-omeka">InteractiveMechanics/ sckls-omeka</a> project available on Github. It uses the free CRM <a href="https://omeka.org">Omeka</a>, which provides a robust system for cataloging digital objects to library standards.
+This project was bootstrapped with <a href="https://github.com/facebook/create-react-app">create-react-app</a>. <a href='https://provath.org'>The Providence Athenaeum</a> presently has a site for digital collections available at digital.provath.org I created using a customized version of <a href="https://github.com/InteractiveMechanics/sckls-omeka">InteractiveMechanics/ sckls-omeka</a> project available on Github. It uses the free CRM <a href="https://omeka.org">Omeka</a>, which provides a robust system for cataloging digital objects to library standards.
 
 
 <a href="https://imgur.com/7xCNkfs"><img src="https://i.imgur.com/7xCNkfs.png" title="source: imgur.com" /></a>
