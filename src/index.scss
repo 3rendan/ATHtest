@@ -288,8 +288,9 @@ footer {
 .about-img {
   margin: auto;
   display: block;
-  padding-bottom: 2.5rem;
+  margin-bottom: 2.5rem;
   max-width: 95%;
+  box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 5px 5px rgba(0,0,0,0.22);
 }
 .m-sculpture-item, .m-single-item {
   display: none;
