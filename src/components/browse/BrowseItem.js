@@ -10,7 +10,7 @@ const BrowseItem = (props) => {
     if (res.loading) return <Bars />
 
     return  (
-        <CardBrowse>
+        <div className='card-browse'>
             <a href={`/item/${props.item.id}`}>           
             <section className='card-body'>
             <img
@@ -20,7 +20,7 @@ const BrowseItem = (props) => {
                 <h6>{props.item.element_texts[0].text}</h6>
             </section>
             </a>
-        </CardBrowse>
+        </div>
     )
 }
 export default BrowseItem

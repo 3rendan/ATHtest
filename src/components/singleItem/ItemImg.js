@@ -13,7 +13,7 @@ const ItemImg = (props) => {
   return (
     <div className='frame'>
       <span className="helper"></span>
-      <img src={image.file_urls.square_thumbnail} alt={props.title} />
+      <img className='tombstone-img' src={image.file_urls.square_thumbnail} alt={props.title} />
     </div>
   )
 }

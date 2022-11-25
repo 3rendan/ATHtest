@@ -1,7 +1,7 @@
 # ATH | SPA
-A React.js single page application using the API from http://digital.provath.org/api to display the art collection of the Providence Athenaeum avaible at dpa.brendanryan.xyz.
+A React.js single page application using the API from http://digital.provath.org/api to display the art collection of the Providence Athenaeum avaible at dpa.brendanryan.xyz. The present version uses ContextAPI and custom hooks to populate the state with data.
 
-<a href="https://imgur.com/hwUGJWo"><img src="https://i.imgur.com/hwUGJWo.png" title="source: imgur.com" /></a>
+<a href="https://imgur.com/095zXi5"><img src="https://imgur.com/095zXi5.png" title="source: imgur.com" /></a>
 
 > Omeka, API, React.js, Bootstrap, Netlify, JavaScript
 
@@ -30,14 +30,16 @@ A React.js single page application using the API from http://digital.provath.org
 This project was bootstrapped with <a href="https://github.com/facebook/create-react-app">create-react-app</a>. <a href='https://provath.org'>The Providence Athenaeum</a> presently has a site for digital collections available at digital.provath.org I created using a customized version of <a href="https://github.com/InteractiveMechanics/sckls-omeka">InteractiveMechanics/ sckls-omeka</a> project available on Github. It uses the free CRM <a href="https://omeka.org">Omeka</a>, which provides a robust system for cataloging digital objects to library standards.
 
 
-<a href="https://imgur.com/7xCNkfs"><img src="https://i.imgur.com/7xCNkfs.png" title="source: imgur.com" /></a>
+<a href="https://imgur.com/FjIqBsZ"><img src="https://imgur.com/FjIqBsZ" title="source: imgur.com" /></a>
 
 ### Future development
 * SASS for styling
 * responsive styling through SASS
 * Item positioning
 * Flex styling for single item page
-* useTagged hook
+* box shadows on items display page
+* Modal for metadata on mobile
+* Horizontal scroll of collection items on browse page
 
 ### FAQ/ Troubleshoot
 Please contact me at brendan.ryan@pm.me with any questions regarding the project. I would be happy to help anyone with questions or who is working to develop their own Omeka site at their institution.

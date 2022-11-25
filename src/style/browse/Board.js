@@ -2,6 +2,7 @@ import styled from 'styled-components';
 
 
 const Board = styled.div`
+  text-align: center;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
@@ -13,6 +14,9 @@ const Board = styled.div`
   }
   @media only screen and (max-width: 600px) {
     display: block;
+  }
+  body {
+    background-color: #eeeeee;
   }
 `;
 

@@ -5,12 +5,12 @@ const ItemTags = (props) => {
   
   return (
     <>
-    <h2>Tags</h2> 
+    <h1 className='item-title-text'>Tags</h1> 
     <div className="tag-blob">
   { tags.map((tag) => {
     return (
         <Link to={`/tag/${tag.id}`}>
-          <h7>{tag.name}</h7>
+          <h7 className='tag-name'>{tag.name}</h7>
         </Link>
       )
     })

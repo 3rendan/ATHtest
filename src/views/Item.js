@@ -53,7 +53,7 @@ const Item = () =>  {
             </div>
         </div>
         <div className="row">
-            <div className="col-7">
+            <div className="col-7 item-tags">
                 <ItemTags item={archiveItem} />
             </div>
             <div className="col-5">
