@@ -1,6 +1,6 @@
 {
   "name": "ath-spa",
-  "version": "2.5.3",
+  "version": "2.5.4",
   "private": true,
   "proxy": "https://digital.provath.org/api/",
   "dependencies": {

@@ -8,7 +8,7 @@ const Tombstone = styled.div`
   font-size: 1.1rem;
   line-height: 2;
   background-color: #eee;
-  max-height: 50vh;
+  height: 60vh;
   box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 2px 2px rgba(0,0,0,0.22);
 `;
 
