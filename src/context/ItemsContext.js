@@ -1,62 +1,50 @@
-import React, { createContext, useState, useEffect } from "react"
+import React, { createContext, useReducer, useEffect } from "react"
+import itemsReducer from "./ItemsReducer"
 import axios from 'axios'
 const ItemsContext = createContext()
 
 export const ItemsProvider =({children}) => {
-    const [ items, setItems ] = useState([])
-    const [ images, setImages ] = useState([])
-    const [ tags, setTags ] = useState([])
-    const [ isLoading, setIsLoading ] = useState(true)
-    const [ imagesLoading, setImagesLoading ] = useState(true)
-    const [ tagsLoading, setTagsLoading ] = useState(true)
+    const intialState = {
+        item: [],
+        items: [],
+        loading: true
+    }
+    const [ state, dispatch] = useReducer(itemsReducer, intialState)
     const archive = axios.create({
         baseURL: `https://digital.provath.org/api/`
     })
 
     useEffect(() => {
+        getItem()
         getItems()
-        getImages()
-        getTags()
         // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [])
    
     const getItems = async () => {
-        try {
-            const res = await archive.get(`items`);
-            setItems(res.data)
-            setIsLoading(false)
-        } catch (err) {
-            console.error(err)
-        }
+        const res = await archive.get(`items`);
+        dispatch({
+            type: 'GET_ITEMS',
+            payload: res.data,
+        })
+
+    } 
+    const getItem = async () => {
+        console.log(id)
+        const res = await archive.get(`items`)
+        const items = res.data
+        dispatch({
+            type: 'GET_ITEM',
+            payload: items.find(item => item.id === intId),
+        })
+
     } 
 
-    const getImages = async () => {
-        try {
-            const res = await archive.get(`files`);
-            setImages(res.data)
-            setImagesLoading(false)
-        } catch (err) {
-            console.error(err)
-        }
-    }
-    
-    const getTags = async () => {
-        try {
-            const res = await archive.get(`tags`);
-            setTags(res.data)
-            setTagsLoading(false)
-        } catch (err) {
-            console.error(err)
-        }
-    }
-
     return <ItemsContext.Provider value={{
-        items,
-        images,
-        isLoading,
-        imagesLoading,
-        tags,
-        tagsLoading,
+        items: state.items,
+        loading: state.loading,
+        item: state.item,
+        getItems
+
     }}>
         { children }
     </ItemsContext.Provider>

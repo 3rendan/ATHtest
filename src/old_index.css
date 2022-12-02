@@ -1,0 +1,327 @@
+// Variables
+@import url(https://fonts.googleapis.com/css?family=EB+Garamond|Montserrat);
+$light-grey: #EEEEEE;
+$grey: #b6b6b6;
+$dark-grey: #999999;
+$green: #C4D425; 
+$body-font: 'Montserrat', sans-serif;
+$serif-font: 'EB Garamond', serif;
+
+// Mobile breakpoints
+@mixin phone {
+  @media (max-width: 640px) {
+    @content   
+  }
+}
+@mixin tablet {
+  @media (max-width: 820px) {
+    @content   
+  }
+}
+@mixin sm-desktop {
+  @media (max-width: 1024px) {
+    @content   
+  }
+}
+@mixin desktop {
+  @media (max-width: 1280px) {
+    @content   
+  }
+}
+@mixin lg-desktop {
+  @media (min-width: 1400px) {
+    @content   
+  }
+}
+
+html {
+  background-color: black;
+}
+/*  */
+body {
+  font-family: $body-font;
+  line-height: 2;
+  background-color: white;
+  position: relative;
+  margin: 0;
+  min-height: 100%;
+  overflow-x: hidden;
+  :has(.card-browse){
+    background-color: #eeeeee;
+  }
+}
+.card-browse {
+  background: #fff;
+  text-align: center;
+  display: inline-block;
+  max-width: 31%;
+  border-top: 1.5rem #999999 solid;
+  border-top-right-radius: .25rem;
+  border-top-left-radius: .25rem;
+  margin-bottom: .75rem;
+  position: relative;
+  box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+  @include phone {
+    min-height: 45vh;
+    max-width: 95%;
+    margin: auto;
+  }
+  @include tablet {
+    min-height: 66vh;
+    max-width: 90%;
+    margin: auto;
+  }
+}
+
+h1 { /* heading of header */
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 1.5rem;
+    line-height: 2.75;
+    @include phone {
+      line-height: 2;
+    }
+}
+h2 { /* heading of header */
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 1rem;
+    line-height: 2.5;
+}
+
+h3 { /* for Item.js title of header */
+  padding: 2rem 0 .5rem 1rem;
+  font-size: 2rem;
+  font-family: $serif-font;
+  color: black;
+  font-style: italic;
+}
+h4 { /* subheading of header */
+  font-size: 1.25rem;
+  font-family: $serif-font;
+  margin-bottom: 0;
+  font-style: italic;
+}
+h5 { /* for Item.js collection.name subheading |  | */
+  font-size: 1.25rem;
+  font-family: $body-font;
+  line-height: 2.25;
+}
+h6 { /* for Item.js collection.name subheading |  | */
+  font-size: 1.35rem;
+  font-family: $body-font;
+  line-height: 2;
+  color: #000;
+}
+h7 { /* for ItemTags.js  */
+  font-family: $body-font;
+  line-height: 2;
+  color: #000;
+  text-transform: uppercase;
+  padding: 1rem;
+  display: inline-block;
+}
+
+a {
+  color: #fff;
+}
+a:hover {
+  color: $green;
+}
+a:visited {
+  color: $light-grey;
+  text-decoration: none;
+}
+.tag-blob {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+.mtdt {
+  background-color: $light-grey;
+  padding: .5rem;
+}
+.mtdt-category {
+  font-family: 'Montserrat', serif;
+  text-transform: uppercase;
+  text-align: center;
+  padding: 1.5rem;
+}
+.mtdt-content {
+  font-family: $serif-font;
+  padding: 1.5rem;
+}
+.paragraph {
+  font-family: $serif-font;
+  background-color: $light-grey;
+  width: 100%;
+  overflow: scroll;
+  font-size: 1.35rem;
+  line-height: 2;
+  padding: 2rem;
+}
+.tag {
+  padding: .5rem;
+  text-align: center;
+}
+.tag-browse {
+  padding: .5rem;
+  text-align: center;
+  font-size: 2rem;
+}
+.nav {
+  background-color: $dark-grey;
+  color: #fff;
+  margin: 0;
+  list-style: none;
+}
+.navbar {
+  /* border-radius: 1rem; */
+  color: #000;
+  display: flex;
+  flex-wrap: wrap;
+  font-size: 1.1rem;
+  width: 100%;
+  /* justify-content: space-around; */
+  height: 5rem;
+}
+.socials {
+  padding-top: 1.5rem;
+  display: grid;
+  grid-template-columns: 1.5fr 1fr;
+}
+.socials a {
+  color: #000;
+}
+.social-item {
+  background-color: $dark-grey;
+  padding: .5rem;
+  border-radius: .5rem;
+  margin: 0 1rem;
+  box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 2px 2px rgba(0,0,0,0.22);
+}
+
+
+footer {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  background-color: black;
+  color: white;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+.img-modal {
+  margin: auto;
+  border: none;
+  background-color: #fff;
+  padding-bottom: 2rem;
+  max-height: 75vh;
+}
+.modal-btn {
+  display: block;
+  text-transform: uppercase;
+  min-width: 10rem;
+  border-radius: 5px;
+  padding: .25rem;
+  background-color: $green;
+  color: #fff;
+  margin: auto;
+}
+.square {
+  margin: auto;
+  padding: 4px;
+  max-width: 95%;
+}
+
+.dwnlds {
+  display: grid;
+  grid-template-rows: repeat(3, 1fr);
+}
+.single-item {
+  margin: auto;
+  max-width: 95%;
+  vertical-align: middle;
+}
+// These classes vertically align single-item image to the middle of div
+.frame {
+  width: 95%;
+  height: 95%;      /* equals max image height */
+  white-space: nowrap;  
+  text-align: center; 
+  margin: 1em 0;
+}
+.helper {
+  display: inline-block;
+  height: 100%;
+  vertical-align: middle;
+}
+.tombstone-img {
+  box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 5px 5px rgba(0,0,0,0.22);
+}
+.item-title-text, .tag-name {
+  text-shadow: 2px 2px $light-grey;
+}
+.nav-item, .title-text {
+  text-shadow: .25px .25px $light-grey;
+}
+.item-tags {
+  margin-top: 1rem;
+}
+.dwnld-btn {
+  display: block;
+  text-transform: uppercase;
+  background-color: $dark-grey;
+  margin: auto;
+  min-width: 25rem;
+  border-radius: 5px;
+  padding: .25rem;
+  font-style: bolder;
+  border: none;
+  color: #fff;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+}
+.about-img {
+  margin: auto;
+  display: block;
+  margin-bottom: 2.5rem;
+  max-width: 95%;
+  box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 5px 5px rgba(0,0,0,0.22);
+}
+.m-sculpture-item, .m-single-item {
+  display: none;
+}
+
+
+/* mobile styling */
+@media only screen and (max-width: 600px) {
+  .dwnld-btn {
+    max-width: 66vw;
+  }
+  .socials {
+    display: block;
+  }
+  .sculpture-item, .single-item {
+    display: none;
+  }
+  .m-sculpture-item, .m-single-item {
+    display: block;
+    max-width: 90%;
+    margin: auto;
+  }
+  .social-item {
+    background-color: $dark-grey;
+    padding: .75rem;
+    border-radius: .25rem;
+  }
+  .socials {
+    display: block;
+    margin: auto;
+  }
+
+
+
+}

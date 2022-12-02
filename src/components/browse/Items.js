@@ -5,9 +5,10 @@ import Bars from '../../services/Bars'
 import ItemsContext from '../../context/ItemsContext'
 
 const Items = () => {
-  const { items, isLoading } = useContext(ItemsContext)
+  const { items, loading, getItems } = useContext(ItemsContext)
+  console.log(items)
 
-  if (isLoading) return <Bars />
+  if (loading) return <Bars />
 
   return (
     <Board>

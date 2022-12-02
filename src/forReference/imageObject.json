@@ -1,0 +1,29 @@
+{
+    "id": 14,
+    "url": "http://digital.provath.org/api/files/14",
+    "file_urls": {
+      "original": "http://digital.provath.org/files/original/8ceebec5ab3c3eb0d53d2a91560d8096.jpg",
+      "fullsize": "http://digital.provath.org/files/fullsize/8ceebec5ab3c3eb0d53d2a91560d8096.jpg",
+      "thumbnail": "http://digital.provath.org/files/thumbnails/8ceebec5ab3c3eb0d53d2a91560d8096.jpg",
+      "square_thumbnail": "http://digital.provath.org/files/square_thumbnails/8ceebec5ab3c3eb0d53d2a91560d8096.jpg"
+    },
+    "added": "2018-01-31T20:00:48+00:00",
+    "modified": "2020-09-25T13:25:54+00:00",
+    "filename": "8ceebec5ab3c3eb0d53d2a91560d8096.jpg",
+    "authentication": "042ba81ef85b9df6c3a9ec09b24fc4b1",
+    "has_derivative_image": true,
+    "mime_type": "image/jpeg",
+    "order": null,
+    "original_filename": "PA-9999-11.jpg",
+    "size": 5017208,
+    "stored": true,
+    "type_os": "JPEG image data, JFIF standard 1.01",
+    "metadata": 0,
+    "item": {
+      "id": 20,
+      "url": "http://digital.provath.org/api/items/20",
+      "resource": "items"
+    },
+    "element_texts": [],
+    "extended_resources": []
+  }
