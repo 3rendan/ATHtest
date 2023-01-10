@@ -1,6 +1,6 @@
 {
   "name": "ath-spa",
-  "version": "2.5.4",
+  "version": "2.5.5",
   "private": true,
   "proxy": "https://digital.provath.org/api/",
   "dependencies": {
@@ -26,7 +26,7 @@
     "timers-browserify": "^2.0.12"
   },
   "scripts": {
-    "start": "react-scripts start",
+    "start": "PORT=5656 react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
